@@ -384,7 +384,7 @@
                 </div>
 
                 <div class="hero-back-nav">
-                    <a href="nos-realisations.html" class="btn-back-hero">
+                    <a href="nos-realisations.html" onclick="goBack(event)" class="btn-back-hero">
                         ← Retour aux réalisations
                     </a>
                 </div>
@@ -428,7 +428,7 @@
             <div class="project-gallery" id="p-gallery"></div>
 
             <div style="display: flex; justify-content: center; margin-top: 60px;">
-                <a href="nos-realisations.html" class="btn btn-outline-dark">← Retour aux réalisations</a>
+                <a href="nos-realisations.html" onclick="goBack(event)" class="btn btn-outline-dark">← Retour aux réalisations</a>
             </div>
         </section>
 
@@ -506,6 +506,16 @@
         const urlParams = new URLSearchParams(window.location.search);
         const projectId = urlParams.get('id');
         const project = window.PROJECTS_DATA ? window.PROJECTS_DATA[projectId] : null;
+
+        // Retour intelligent
+        function goBack(e) {
+            e.preventDefault();
+            if (document.referrer && document.referrer.includes(window.location.host)) {
+                window.history.back();
+            } else {
+                window.location.href = 'nos-realisations.html';
+            }
+        }
 
         // Helpers SEO : maj des balises <head> selon le projet courant
         function setMeta(name, content) {
