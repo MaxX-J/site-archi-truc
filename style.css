@@ -1626,11 +1626,28 @@ img.marquee-item {
 }
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ══════════════════════════════════════════════════════════════════ 
    RESPONSIVE
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+══════════════════════════════════════════════════════════════════  */
 
-/* â”€â”€ Tablet (â‰¤ 1024px) â”€â”€ */
+/* ── Laptops (≤ 1440px) ── */
+@media (max-width: 1440px) {
+    .header-container {
+        padding: 0 4%;
+    }
+    .desktop-nav ul {
+        gap: 12px;
+    }
+    .desktop-nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .logo-img {
+        height: 52px;
+    }
+}
+
+/* ── Tablet (≤ 1024px) ── */
 @media (max-width: 1024px) {
     .header-container {
         padding: 0 5%;
@@ -1653,34 +1670,8 @@ img.marquee-item {
     .section-padding {
         padding: 60px 0;
     }
-}
 
-/* â”€â”€ Mobile (â‰¤ 768px) â”€â”€ */
-@media (max-width: 768px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Header */
-    header {
-        padding: 16px 0;
-    }
-
-    header.scrolled {
-        padding: 12px 0;
-    }
-
-    .header-container {
-        padding: 0 20px;
-    }
-
-    .logo-img {
-        height: 48px;
-    }
-
-    /* Mobile Nav */
+    /* Activer le menu burger dès la tablette (1024px) pour éviter les chevauchements */
     .desktop-nav {
         display: none;
     }
@@ -1733,6 +1724,34 @@ img.marquee-item {
         transform: rotate(-45deg) translate(5px, -5px);
         background: var(--text);
     }
+}
+
+/* â”€â”€ Mobile (â‰¤ 768px) â”€â”€ */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+        padding: 16px 0;
+    }
+
+    header.scrolled {
+        padding: 12px 0;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .logo-img {
+        height: 48px;
+    }
+
+    /* Mobile Nav styles are now handled at 1024px */
 
     /* Sections */
     .section-padding {
