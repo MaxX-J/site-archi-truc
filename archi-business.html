@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/webp" href="assets/Favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aménagement d'espaces pros à Béziers | Archi Business — Architruc</title>
+    <meta name="description"
+        content="Conception, mobilier contract et installation pour vos espaces pros à Béziers et en Occitanie : hôtels, bureaux, coworking, retail et collectivités.">
+    <link rel="canonical" href="https://www.archi-truc.com/archi-business.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Archi Business — Architecture d'intérieur pro à Béziers">
+    <meta property="og:description"
+        content="De la conception à la livraison, on transforme vos espaces pros. Hôtellerie, bureaux, coworking, retail, collectivités.">
+    <meta property="og:image"
+        content="assets/images/realisations/professionnels/05-hotel-la-prison/hotel-la-prison-mobilier-bureau-design-beziers-architecte-interieur-1.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Fonts (alignées sur le reste du site) -->
+    <link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.archi-truc.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Archi Business", "item": "https://www.archi-truc.com/archi-business.html" }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ═══════════════════════════════════════════════
+           ARCHI BUSINESS — Styles spécifiques à la page
+        ═══════════════════════════════════════════════ */
+
+        /* ── Hero ── */
+        .business-hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--bg-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .business-hero-bg.active {
+            opacity: 1;
+        }
+
+        .business-hero-slider-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            transform: scale(1.04);
+            animation: heroZoom 20s var(--ease) forwards;
+        }
+
+        .business-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.8));
+            z-index: 1;
+        }
+
+        .business-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 40px 20px;
+        }
+
+        .business-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .business-hero .hero-sub {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ── Compare Slider (Plan ⇆ Rendu interactif) ── */
+        .compare-slider {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            aspect-ratio: 4/3;
+            margin: 60px auto 0;
+            overflow: hidden;
+            user-select: none;
+            cursor: ew-resize;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+            background: var(--bg-soft);
+        }
+
+        .compare-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
+        .compare-overlay {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            clip-path: inset(0 50% 0 0);
+            transition: clip-path 0.05s linear;
+            background: white;
+            /* fond derrière le plan si transparent */
+        }
+
+        .compare-overlay img {
+            object-fit: contain;
+            /* le plan reste lisible, pas cropé */
+            background: white;
+        }
+
+        .compare-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: var(--orange);
+            transform: translateX(-50%);
+            pointer-events: none;
+            transition: left 0.05s linear;
+        }
+
+        .compare-handle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 52px;
+            height: 52px;
+            background: var(--orange);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .compare-handle::after {
+            content: '⇆';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .compare-label {
+            position: absolute;
+            top: 24px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: white;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 8px 14px;
+            border-radius: 2px;
+            pointer-events: none;
+            backdrop-filter: blur(8px);
+        }
+
+        .compare-label--left {
+            left: 24px;
+        }
+
+        .compare-label--right {
+            right: 24px;
+        }
+
+        .compare-hint {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        /* ── 3 Piliers ── */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .pillar {
+            text-align: left;
+        }
+
+        .pillar-num {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .pillar h3 {
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+
+        .pillar p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* ── Secteurs (Typographic Accordion - Sans Photo) ── */
+        .sectors-layout {
+            display: flex;
+            gap: 80px;
+            align-items: flex-start;
+            margin-top: 60px;
+        }
+
+        .sectors-sidebar {
+            flex: 1;
+            position: sticky;
+            top: 140px;
+        }
+
+        .sectors-sidebar h2 {
+            font-size: clamp(2rem, 3.5vw, 2.8rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .sectors-sidebar p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .sectors-sidebar-deco {
+            margin-top: 40px;
+        }
+
+        .sectors-list {
+            flex: 1.5;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .sector-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 32px 0;
+            transition: var(--transition);
+        }
+
+        .sector-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .sector-num {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin-right: 30px;
+            display: inline-block;
+            width: 30px;
+        }
+
+        .sector-item-header h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+            color: var(--text);
+            transition: color 0.3s var(--ease), transform 0.3s var(--ease);
+            flex-grow: 1;
+        }
+
+        .sector-plus {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .sector-plus::before,
+        .sector-plus::after {
+            content: '';
+            position: absolute;
+            background: var(--text);
+            transition: transform 0.3s var(--ease), background-color 0.3s var(--ease);
+        }
+
+        .sector-plus::before {
+            top: 6px;
+            left: 0;
+            width: 14px;
+            height: 2px;
+        }
+
+        .sector-plus::after {
+            top: 0;
+            left: 6px;
+            width: 2px;
+            height: 14px;
+        }
+
+        .sector-item-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .sector-item-details-inner {
+            padding: 24px 0 8px 60px;
+            /* Aligné avec le début du texte du titre */
+        }
+
+        .sector-item-details p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        /* Hover States pour Desktop */
+        @media (hover: hover) {
+            .sector-item:hover .sector-item-header h3 {
+                color: var(--orange);
+                transform: translateX(6px);
+            }
+
+            .sector-item:hover .sector-plus::before,
+            .sector-item:hover .sector-plus::after {
+                background-color: var(--orange);
+            }
+
+            .sector-item:hover .sector-plus::after {
+                transform: rotate(90deg);
+            }
+        }
+
+        /* État Actif (quand l'accordéon est déplié) */
+        .sector-item.active .sector-item-header h3 {
+            color: var(--orange);
+        }
+
+        .sector-item.active .sector-plus::after {
+            transform: rotate(90deg);
+        }
+
+        .sector-item.active .sector-plus::before,
+        .sector-item.active .sector-plus::after {
+            background-color: var(--orange);
+        }
+
+        /* Tags de l'accordéon */
+        .sector-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .sector-tag {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: var(--text-light);
+            padding: 5px 12px;
+            border-radius: 100px;
+            transition: var(--transition);
+        }
+
+        .sector-item.active .sector-tag,
+        .sector-item:hover .sector-tag {
+            border-color: rgba(234, 84, 13, 0.2);
+            color: var(--orange);
+            background: rgba(234, 84, 13, 0.02);
+        }
+
+        /* ── Méthode (timeline horizontale) ── */
+        .method-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .method-step {
+            text-align: center;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .method-step-num {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+
+        .method-step h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .method-step p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        /* Pointillé orange entre les étapes */
+        .method-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 22px;
+            right: -18%;
+            width: 36%;
+            height: 2px;
+            background-image: linear-gradient(to right, var(--orange) 50%, transparent 50%);
+            background-size: 8px 2px;
+            opacity: 0.5;
+        }
+
+        /* ── Method Section (Simple Horizontal Timeline) ── */
+        .method-section {
+            padding: 90px 0;
+            background: var(--bg-soft);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 991px) {
+
+            .pillars-grid,
+            .sectors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .method-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px 30px;
+            }
+
+            .method-step:not(:last-child)::after {
+                display: none;
+            }
+
+            .sectors-layout {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .sectors-sidebar {
+                position: static;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .pillars-grid,
+            .sectors-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .method-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px 16px;
+            }
+
+            .sectors-layout {
+                gap: 24px;
+                margin-top: 24px;
+            }
+
+            .sectors-sidebar h2 {
+                font-size: clamp(1.6rem, 6vw, 2rem);
+            }
+
+            .method-section {
+                padding: 50px 0;
+            }
+
+            .method-timeline {
+                margin-top: 40px;
+            }
+
+            .method-step-num {
+                font-size: 2rem;
+            }
+
+            .sector-item {
+                padding: 20px 0;
+            }
+
+            .sector-num {
+                margin-right: 14px;
+                font-size: 0.95rem;
+            }
+
+            .sector-item-title {
+                font-size: 1rem;
+            }
+
+            .pillar {
+                text-align: left;
+            }
+
+            .business-hero {
+                min-height: 100svh;
+            }
+
+            .business-hero h1 {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .business-hero .hero-sub {
+                font-size: 0.95rem;
+            }
+
+            .compare-slider {
+                margin: 32px auto 0;
+            }
+        }
+
+        /* ── Section Marques Pro B2B (Défilement Horizontal au Scroll - Full Screen) ── */
+        #partenaires-mobilier {
+            background-color: var(--bg-white);
+            position: relative;
+            z-index: 5;
+            /* Section plus longue = défilement horizontal plus lent et plus posé (sensation showroom) */
+            height: 720vh;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-white);
+        }
+
+        .horizontal-scroll-track {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            width: max-content;
+            padding: 0 18vw;
+            will-change: transform;
+            height: 100%;
+        }
+
+        .horizontal-intro {
+            width: 440px;
+            flex-shrink: 0;
+            padding-right: 50px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .horizontal-intro h2 {
+            font-size: 3.3rem;
+            line-height: 1.05;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 22px;
+            letter-spacing: -1.8px;
+        }
+
+        /* Le chiffre clé ressort comme point d'entrée de la section */
+        .horizontal-intro h2 .accent-num {
+            color: var(--orange);
+        }
+
+        .horizontal-intro p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .horizontal-intro .intro-cta {
+            margin-top: 30px;
+        }
+
+        /* ── Logos épars ── */
+        .sc-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 220px;
+            /* Boîte de largeur fixe commune */
+            height: 90px;
+            /* Boîte de hauteur fixe commune */
+        }
+
+        .sc-logo a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .sc-logo img {
+            /* Hauteur de cap commune (logo-wall) : tous les logos partagent la même
+               hauteur optique, puis --s ne fait qu'égaliser le poids visuel résiduel */
+            --s: 1;
+            height: 46px;
+            width: auto;
+            max-width: 185px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            filter: grayscale(1) opacity(0.8);
+            transform: scale(var(--s));
+            transform-origin: center;
+            transition: filter 0.35s var(--ease), transform 0.35s var(--ease);
+        }
+
+        .sc-logo:hover img {
+            filter: grayscale(0) opacity(1);
+            transform: scale(calc(var(--s) * 1.08));
+        }
+
+        .sc-logo img[src*="Logo_vitra_black"],
+        .sc-logo img[src*="usm"],
+        .sc-logo img[src*="BuzziSpace-Logo"] {
+            filter: grayscale(1) brightness(0) opacity(0.78);
+        }
+
+        .sc-logo:hover img[src*="Logo_vitra_black"],
+        .sc-logo:hover img[src*="usm"],
+        .sc-logo:hover img[src*="BuzziSpace-Logo"] {
+            filter: grayscale(0) brightness(1) opacity(1);
+        }
+
+        /* Compensation optique par marque : égalise le poids visuel à hauteur de cap commune.
+           Wordmarks gras et larges → réduits ; emblèmes/logos multi-lignes → agrandis. */
+        .sc-logo img[src*="hay.webp"] {
+            --s: 0.78;
+        }
+
+        .sc-logo img[src*="Logo_vitra_black"] {
+            --s: 0.9;
+        }
+
+        .sc-logo img[src*="usm"] {
+            --s: 0.85;
+        }
+
+        .sc-logo img[src*="Kettal"] {
+            --s: 1.05;
+        }
+
+        .sc-logo img[src*="logo-pedrali"] {
+            --s: 0.95;
+        }
+
+        .sc-logo img[src*="BuzziSpace-Logo"] {
+            --s: 1.55;
+        }
+
+        .sc-logo img[src*="sancal"] {
+            --s: 0.88;
+        }
+
+        .sc-logo img[src*="enea.svg"] {
+            --s: 0.9;
+        }
+
+        .sc-logo img[src*="ondarreta"] {
+            --s: 0.9;
+        }
+
+        .sc-logo img[src*="logo-interstuhl"] {
+            --s: 0.95;
+        }
+
+        .sc-logo img[src*="forma5"] {
+            --s: 1.6;
+        }
+
+        .sc-logo img[src*="frezza"] {
+            --s: 0.92;
+        }
+
+        .sc-logo img[src*="Schönbush"] {
+            --s: 0.95;
+        }
+
+        .sc-logo img[src*="Lintex"] {
+            --s: 1.05;
+        }
+
+        .sc-logo img[src*="logo-softline"] {
+            --s: 1.3;
+        }
+
+        .sc-logo img[src*="howe.svg"] {
+            --s: 0.85;
+        }
+
+        .sc-logo img[src*="EXTENDO"] {
+            --s: 1.3;
+        }
+
+        .sc-logo img[src*="Paola-lenti"] {
+            --s: 1.25;
+        }
+
+        .sc-logo img[src*="pattio"] {
+            --s: 1.0;
+        }
+
+        .sc-logo img[src*="logo-akaba"] {
+            --s: 1.25;
+        }
+
+        .sc-logo img[src*="vauzelle-ligne"] {
+            --s: 1.2;
+        }
+
+        /* ── Photos éparsées ── */
+        .sc-photo {
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sc-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s var(--ease);
+        }
+
+        .sc-photo:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Dégradé bas pour la lisibilité de la légende */
+        .sc-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0) 45%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Légende éditoriale : marque · type d'espace */
+        .sc-caption {
+            position: absolute;
+            left: 18px;
+            bottom: 16px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            color: #fff;
+        }
+
+        .sc-caption .cap-brand {
+            font-family: var(--font-title);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .sc-caption .cap-type {
+            font-family: var(--font-sans);
+            font-size: 0.66rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+
+        /* Tailles & rotations des photos — moins nombreuses, plus grandes */
+        .sc-photo--a {
+            width: 360px;
+            height: 500px;
+            transform: rotate(-2deg);
+        }
+
+        .sc-photo--b {
+            width: 640px;
+            height: 420px;
+            transform: rotate(1.5deg);
+        }
+
+        .sc-photo--c {
+            width: 400px;
+            height: 560px;
+            transform: rotate(-1deg);
+        }
+
+        .sc-photo--d {
+            width: 620px;
+            height: 400px;
+            transform: rotate(2deg);
+        }
+
+        .sc-photo--e {
+            width: 420px;
+            height: 580px;
+            transform: rotate(-1.5deg);
+        }
+
+        .sc-photo--f {
+            width: 460px;
+            height: 300px;
+            transform: rotate(1deg);
+        }
+
+        /* Offsets verticaux */
+        .up-xl {
+            margin-top: -200px;
+        }
+
+        .up-lg {
+            margin-top: -130px;
+        }
+
+        .up-md {
+            margin-top: -70px;
+        }
+
+        .up-sm {
+            margin-top: -30px;
+        }
+
+        .dn-sm {
+            margin-top: 30px;
+        }
+
+        .dn-md {
+            margin-top: 70px;
+        }
+
+        .dn-lg {
+            margin-top: 130px;
+        }
+
+        .dn-xl {
+            margin-top: 200px;
+        }
+
+        /* Léger chevauchement latéral sur certains éléments */
+        .pull-l {
+            margin-left: -50px;
+        }
+
+        .pull-r {
+            margin-right: -50px;
+        }
+
+        /* Giant Typographic Watermark Background */
+        .bg-watermark {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .bg-watermark-text {
+            font-family: var(--font-title);
+            font-size: 90vh;
+            font-weight: 900;
+            /* Lettres en contour (outline) : plus graphique et assumé qu'un aplat,
+               mais l'opacité de départ reste basse et se révèle au scroll (JS). */
+            color: transparent;
+            -webkit-text-stroke: 2.5px rgba(18, 18, 18, 0.14);
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            will-change: transform, opacity;
+            line-height: 0.82;
+            opacity: 0.3;
+        }
+
+        /* Scrollbar Indicator Progress Bar */
+        .scroll-indicator-wrap {
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 10;
+        }
+
+        .scroll-indicator-label {
+            font-family: var(--font-title);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.35);
+            letter-spacing: 0.1em;
+            user-select: none;
+        }
+
+        .scroll-indicator-line {
+            width: 240px;
+            height: 4px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-indicator-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 80px;
+            background: var(--orange);
+            border-radius: 4px;
+            transform: translateX(0);
+            will-change: transform;
+        }
+
+        /* CTA with trailing circle icon */
+        .btn-with-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text);
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: transform 0.3s var(--ease), background-color 0.3s var(--ease), color 0.3s var(--ease);
+        }
+
+        .btn:hover .btn-icon-circle {
+            transform: translateX(4px);
+            background-color: var(--orange);
+            color: white;
+        }
+
+        header.scrolled .btn:hover .btn-icon-circle {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .horizontal-intro h2 {
+                font-size: 2.2rem;
+            }
+
+            .sc-photo--a {
+                width: 240px;
+                height: 340px;
+            }
+
+            .sc-photo--b {
+                width: 420px;
+                height: 270px;
+            }
+
+            .sc-photo--c {
+                width: 270px;
+                height: 380px;
+            }
+
+            .sc-photo--d {
+                width: 400px;
+                height: 260px;
+            }
+
+            .sc-photo--e {
+                width: 280px;
+                height: 390px;
+            }
+
+            .sc-photo--f {
+                width: 370px;
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .horizontal-intro h2 {
+                font-size: 1.9rem;
+            }
+
+            .sc-logo {
+                width: 160px;
+            }
+
+            .sc-logo img {
+                height: 48px;
+                max-width: 150px;
+            }
+
+            .sc-photo--a {
+                width: 190px;
+                height: 270px;
+            }
+
+            .sc-photo--b {
+                width: 320px;
+                height: 210px;
+            }
+
+            .sc-photo--c {
+                width: 210px;
+                height: 300px;
+            }
+
+            .sc-photo--d {
+                width: 310px;
+                height: 200px;
+            }
+
+            .sc-photo--e {
+                width: 220px;
+                height: 310px;
+            }
+
+            .sc-photo--f {
+                width: 290px;
+                height: 190px;
+            }
+
+            .up-xl {
+                margin-top: -130px;
+            }
+
+            .up-lg {
+                margin-top: -90px;
+            }
+
+            .up-md {
+                margin-top: -50px;
+            }
+
+            .up-sm {
+                margin-top: -20px;
+            }
+
+            .dn-sm {
+                margin-top: 20px;
+            }
+
+            .dn-md {
+                margin-top: 50px;
+            }
+
+            .dn-lg {
+                margin-top: 90px;
+            }
+
+            .dn-xl {
+                margin-top: 130px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-blobs">
+            <div class="loader-blob"></div>
+            <div class="loader-blob"></div>
+        </div>
+        <div class="loader-brand">Architruc</div>
+    </div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="showrooms.html">Archi concept</a></li>
+                    <li><a href="archi-nous.html">Archi nous</a></li>
+                    <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+                    <li><a href="marques.html">Nos Marques</a></li>
+                    <li><a href="archi-business.html" class="nav-active">Archi business</a></li>
+                    <li><a href="archi-bonne-annee.html">Archi bonne année</a></li>
+                    <li><a href="contact.html" class="nav-contact-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════ HERO ═══════════ -->
+        <section class="business-hero">
+            <div class="business-hero-slider-wrap" id="business-hero-slider">
+                <div class="business-hero-bg active"
+                    style="background-image: url('assets/images/hero-slideshow/business-hero-1.jpg');"></div>
+                <div class="business-hero-bg"
+                    style="background-image: url('assets/images/hero-slideshow/business-hero-2.jpg');"></div>
+                <div class="business-hero-bg"
+                    style="background-image: url('assets/images/hero-slideshow/business-hero-3.jpg');"></div>
+            </div>
+            <div class="business-hero-overlay"></div>
+            <div class="container hero-content fade-up">
+                <p class="hero-eyebrow">Espaces professionnels</p>
+                <h1>
+                    Vos espaces pros,<br>
+                    <span class="italic">conçus de A à Z.</span>
+                </h1>
+                <p class="hero-sub">
+                    De la conception à la pose, une équipe locale et un interlocuteur unique pour transformer
+                    vos bureaux, hôtels, boutiques ou espaces publics.
+                </p>
+                <div class="cta-group" style="justify-content: center;">
+                    <a href="contact.html" class="btn btn-primary">Parlons de votre projet</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="dots-symbol">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <span>DÉCOUVRIR</span>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ PHRASE DE MARQUE B2B ═══════════ -->
+        <section class="marque-phrase">
+            <div class="deco-blob deco-blob--left"></div>
+            <div class="deco-blob deco-blob--right"></div>
+            <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="blob-divider blob-divider--orange fade-up">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <p class="fade-up">
+                    Vous concevez votre activité.<br>
+                    <em>Nous concevons l'espace qui la révèle.</em>
+                </p>
+                <div class="blob-divider blob-divider--orange fade-up">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ NOTRE APPROCHE — 3 PILIERS ═══════════ -->
+        <section id="approche" class="section-padding bg-soft" style="position: relative; overflow: hidden;">
+            <div class="deco-emblem deco-emblem--lg deco-emblem--tr"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header fade-up" style="text-align: center; margin-left: auto; margin-right: auto;">
+                    <span class="subtitle">Notre métier</span>
+                    <h2>Trois piliers, un projet</h2>
+                    <p>Mobilier et mise en œuvre.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar fade-up">
+                        <span class="pillar-num">01</span>
+                        <h3>Conception</h3>
+                        <p>Plans 2D, modélisations 3D, choix des matériaux, scénographie des espaces.
+                            Vous visualisez le résultat avant le premier coup de pelle.</p>
+                    </div>
+                    <div class="pillar fade-up delay-1">
+                        <span class="pillar-num">02</span>
+                        <h3>Mobilier professionnel</h3>
+                        <p>Tarifs partenaires, normes contract pour l'usage intensif, accès direct
+                            à plus de 80 marques de design éditeur. La rigueur d'un grand compte, en local.</p>
+                    </div>
+                    <div class="pillar fade-up delay-2">
+                        <span class="pillar-num">03</span>
+                        <h3>Mise en œuvre</h3>
+                        <p>Logistique gérée dans nos entrepôts, livraison coordonnée et montage par nos
+                            propres monteurs salariés. Un interlocuteur unique de bout en bout.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ ILS NOUS ONT FAIT CONFIANCE — MARQUEE LOGOS CLIENTS ═══════════ -->
+        <div class="container" style="text-align: center; margin-bottom: 40px; margin-top: 100px;">
+            <span class="subtitle">Ils nous ont fait confiance</span>
+        </div>
+        <div class="marquee-band">
+            <div class="marquee-track">
+                <!-- ── Série 1 ── -->
+                <img src="assets/Logo-client/Halles-beziers.webp" alt="Halles de Béziers" class="marquee-item"
+                    loading="lazy" width="150" height="53">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/EXE-LOGO_SOUKI-NOIR.png" alt="Souki Lodges &amp; Spa" class="marquee-item"
+                    loading="lazy" width="1099" height="1332">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/vogo_logo-150x150-1.png" alt="VOGO" class="marquee-item" loading="lazy"
+                    width="148" height="142">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/EQUANS_INEO_Blocmarque.webp" alt="INEO — Equans" class="marquee-item"
+                    loading="lazy" width="372" height="127">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/ARLETT_LOGO_CIRCULAIRE-COMPLET_NOIR-ORANGE-GRIS.png" alt="Arlett"
+                    class="marquee-item" loading="lazy" width="3536" height="3633">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/Technilum_Logo.webp" alt="Technilum" class="marquee-item" loading="lazy"
+                    width="1200" height="299">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/hotel-la-prison.webp" alt="Hôtel La Prison" class="marquee-item"
+                    loading="lazy" width="349" height="268">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/la-villa-guy.webp" alt="La Villa Guy" class="marquee-item" loading="lazy"
+                    width="378" height="214">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+
+                <!-- ── Série 2 — copie pour boucle continue ── -->
+                <img src="assets/Logo-client/Halles-beziers.webp" alt="Halles de Béziers" class="marquee-item"
+                    loading="lazy" width="150" height="53">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/EXE-LOGO_SOUKI-NOIR.png" alt="Souki Lodges &amp; Spa" class="marquee-item"
+                    loading="lazy" width="1099" height="1332">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/vogo_logo-150x150-1.png" alt="VOGO" class="marquee-item" loading="lazy"
+                    width="148" height="142">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/EQUANS_INEO_Blocmarque.webp" alt="INEO — Equans" class="marquee-item"
+                    loading="lazy" width="372" height="127">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/ARLETT_LOGO_CIRCULAIRE-COMPLET_NOIR-ORANGE-GRIS.png" alt="Arlett"
+                    class="marquee-item" loading="lazy" width="3536" height="3633">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/Technilum_Logo.webp" alt="Technilum" class="marquee-item" loading="lazy"
+                    width="1200" height="299">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/hotel-la-prison.webp" alt="Hôtel La Prison" class="marquee-item"
+                    loading="lazy" width="349" height="268">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                <img src="assets/Logo-client/la-villa-guy.webp" alt="La Villa Guy" class="marquee-item" loading="lazy"
+                    width="378" height="214">
+                <div class="marquee-sep">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ═══════════ DU PLAN AU RENDU ═══════════ -->
+        <section class="section-padding" style="position: relative; overflow: hidden;">
+            <div class="deco-emblem deco-emblem--lg deco-emblem--mid-l"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header fade-up" style="text-align: center; margin-left: auto; margin-right: auto;">
+                    <span class="subtitle">Conception</span>
+                    <h2>Du plan à la réalité</h2>
+                    <p>Aucune surprise une fois sur place.</p>
+                </div>
+
+                <div class="compare-slider fade-up" id="compare-slider">
+                    <!-- Image de fond : la photo réelle -->
+                    <img src="assets/conception/rendu-photo.jpg" alt="Rendu réel de l'espace livré" class="compare-img"
+                        loading="lazy" width="1200" height="899">
+
+                    <!-- Overlay : le plan 2D, masqué progressivement avec clip-path -->
+                    <div class="compare-overlay" id="compare-overlay">
+                        <img src="assets/conception/plan-2d.png" alt="Plan 2D d'aménagement" class="compare-img"
+                            loading="lazy" width="1050" height="866">
+                    </div>
+
+                    <!-- Labels coins -->
+                    <span class="compare-label compare-label--left">Plan</span>
+                    <span class="compare-label compare-label--right">Rendu</span>
+
+                    <!-- Poignée orange à glisser -->
+                    <div class="compare-handle" id="compare-handle"></div>
+                </div>
+
+                <p class="compare-hint fade-up">⇆ Glissez pour comparer</p>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ POUR QUI — 6 SECTEURS ═══════════ -->
+        <section id="secteurs" class="section-padding bg-soft" style="position: relative;">
+            <div class="deco-emblem deco-emblem--xl deco-emblem--mid-r"></div>
+            <div class="container sectors-layout" style="position: relative; z-index: 1;">
+                <!-- Sidebar descriptive collée au scroll -->
+                <div class="sectors-sidebar fade-up">
+                    <span class="subtitle">Pour qui</span>
+                    <h2>Les secteurs que nous accompagnons</h2>
+                    <p>Chaque domaine a ses contraintes, ses normes et ses usages. Notre équipe adapte sa démarche à
+                        votre métier pour concevoir des espaces uniques qui incarnent vos valeurs.</p>
+                    <div class="sectors-sidebar-deco">
+                        <div class="blob-divider blob-divider--orange">
+                            <div class="blob-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liste en accordéon typographique interactif -->
+                <div class="sectors-list">
+                    <!-- 01. Hôtellerie & Resto -->
+                    <div class="sector-item fade-up">
+                        <div class="sector-item-header">
+                            <span class="sector-num">01</span>
+                            <h3>Hôtellerie, cafés &amp; restauration</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Hôtels de charme, restaurants gastronomiques et terrasses. Nous créons des parcours
+                                    clients fluides et des atmosphères mémorables, en sélectionnant du mobilier certifié
+                                    pour l'usage intensif.</p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Lobbies &amp; Accueils</span>
+                                    <span class="sector-tag">Chambres &amp; Suites</span>
+                                    <span class="sector-tag">Salles de restauration</span>
+                                    <span class="sector-tag">Terrasses outdoor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02. Bureaux -->
+                    <div class="sector-item fade-up delay-1">
+                        <div class="sector-item-header">
+                            <span class="sector-num">02</span>
+                            <h3>Bureaux &amp; sièges sociaux</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Espaces de travail performants, alliant ergonomie, confort acoustique et identité
+                                    visuelle. Nous pensons les flux pour favoriser le bien-être individuel et la
+                                    synergie collective.</p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Open spaces</span>
+                                    <span class="sector-tag">Bureaux de direction</span>
+                                    <span class="sector-tag">Salles de conseil</span>
+                                    <span class="sector-tag">Espaces détente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03. Coworking -->
+                    <div class="sector-item fade-up delay-2">
+                        <div class="sector-item-header">
+                            <span class="sector-num">03</span>
+                            <h3>Coworking &amp; espaces partagés</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Aménagement de tiers-lieux hybrides, flexibles et chaleureux. Des configurations
+                                    modulables qui s'adaptent aux nouveaux modes de travail nomades et aux besoins de
+                                    réunions créatives.</p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Postes partagés</span>
+                                    <span class="sector-tag">Cabines acoustiques</span>
+                                    <span class="sector-tag">Zones créatives</span>
+                                    <span class="sector-tag">Espaces repas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04. Retail -->
+                    <div class="sector-item fade-up">
+                        <div class="sector-item-header">
+                            <span class="sector-num">04</span>
+                            <h3>Retail, boutiques &amp; showrooms</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Scénographies marchandes et parcours d'achats immersifs. Nous valorisons vos
+                                    collections à travers un mobilier d'exposition sur-mesure et des éclairages ciblés.
+                                </p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Concept stores</span>
+                                    <span class="sector-tag">Showrooms de marque</span>
+                                    <span class="sector-tag">Boutiques éphémères</span>
+                                    <span class="sector-tag">Présentoirs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 05. Collectivités -->
+                    <div class="sector-item fade-up delay-1">
+                        <div class="sector-item-header">
+                            <span class="sector-num">05</span>
+                            <h3>Collectivités &amp; secteur public</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Médiathèques, bibliothèques, universités et accueils administratifs. Une maîtrise
+                                    stricte des contraintes normatives (ERP, PMR) combinée à une recherche de
+                                    convivialité d'usage.</p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Espaces de lecture</span>
+                                    <span class="sector-tag">Accueils publics</span>
+                                    <span class="sector-tag">Salles polyvalentes</span>
+                                    <span class="sector-tag">Mobilier robuste</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 06. Professions Libérales -->
+                    <div class="sector-item fade-up delay-2">
+                        <div class="sector-item-header">
+                            <span class="sector-num">06</span>
+                            <h3>Professions libérales</h3>
+                            <span class="sector-plus"></span>
+                        </div>
+                        <div class="sector-item-details">
+                            <div class="sector-item-details-inner">
+                                <p>Cabinets médicaux, études notariales, juridiques et agences de conseil. Des
+                                    intérieurs élégants, chaleureux et discrets qui inspirent la confiance et préservent
+                                    la confidentialité.</p>
+                                <div class="sector-tags">
+                                    <span class="sector-tag">Cabinets de consultation</span>
+                                    <span class="sector-tag">Salles d'attente</span>
+                                    <span class="sector-tag">Bureaux privatifs</span>
+                                    <span class="sector-tag">Salons de réception</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ PARTENAIRES MOBILIER CONTRACT (21 MARQUES PRO - HORIZONTAL SCROLL ON VERTICAL SCROLL) ═══════════ -->
+        <section id="partenaires-mobilier">
+            <div class="sticky-wrapper">
+                <!-- Giant Typographic Parallax Watermark -->
+                <div class="bg-watermark">
+                    <div class="bg-watermark-text">
+                        DESIGN&nbsp;&nbsp;&nbsp;DESIGN&nbsp;&nbsp;&nbsp;DESIGN
+                    </div>
+                </div>
+
+                <div class="horizontal-scroll-track">
+
+                    <!-- Intro -->
+                    <div class="horizontal-intro">
+                        <span class="subtitle">Design d'exception</span>
+                        <h2><span class="accent-num">Nos maisons de design</span>, une exigence commune</h2>
+                        <p>Pour répondre aux exigences des espaces recevant du public, nous collaborons directement avec
+                            les plus grands éditeurs de mobilier design.</p>
+                        <a href="marques.html" class="btn btn-outline-dark btn-with-icon intro-cta">
+                            Découvrir nos marques
+                            <span class="btn-icon-circle">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Vitra -->
+                    <div class="sc-logo up-xl">
+                        <a href="https://www.vitra.com" target="_blank" rel="noopener" title="Vitra">
+                            <img src="assets/Logo-marques/Logo_vitra_black.svg" alt="Vitra" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo 1 : Lounge Chair (portrait) -->
+                    <div class="sc-photo sc-photo--e dn-lg">
+                        <img src="assets/images/Vitrine/USM_orange.webp" alt="USM Haller Orange" loading="lazy">
+
+                    </div>
+
+                    <!-- HAY -->
+                    <div class="sc-logo dn-xl pull-l">
+                        <a href="https://www.hay.com" target="_blank" rel="noopener" title="HAY">
+                            <img src="assets/Logo-marques/hay.webp" alt="HAY" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- USM -->
+                    <div class="sc-logo up-md">
+                        <a href="https://www.usm.com" target="_blank" rel="noopener" title="USM">
+                            <img src="assets/Logo-marques/usm.webp" alt="USM" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo 2 : Mikado Meeting (paysage) -->
+                    <div class="sc-photo sc-photo--b up-lg">
+                        <img src="assets/images/hero-slideshow/business-hero-1.jpg" alt="Espace de réunion contract"
+                            loading="lazy">
+
+                    </div>
+
+                    <!-- Pedrali -->
+                    <div class="sc-logo dn-md pull-l">
+                        <a href="https://www.pedrali.com" target="_blank" rel="noopener" title="Pedrali">
+                            <img src="assets/Logo-marques/logo-pedrali.avif" alt="Pedrali" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Kettal -->
+                    <div class="sc-logo up-xl">
+                        <a href="https://www.kettal.com" target="_blank" rel="noopener" title="Kettal">
+                            <img src="assets/Logo-marques/Kettal.png" alt="Kettal" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- BuzziSpace -->
+                    <div class="sc-logo dn-lg">
+                        <a href="https://www.buzzispace.com" target="_blank" rel="noopener" title="BuzziSpace">
+                            <img src="assets/Logo-marques/BuzziSpace-Logo.png" alt="BuzziSpace" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo 3 : Standard Chair Prouvé (portrait) -->
+                    <div class="sc-photo sc-photo--c up-md pull-l">
+                        <img src="assets/images/Vitrine/9891272_Referenz - DHBW Villingen Schwenningen 27_v_fullbleed_1440x.jpg"
+                            alt="Référence DHBW Villingen" loading="lazy">
+
+                    </div>
+
+                    <!-- Interstuhl -->
+                    <div class="sc-logo up-xl">
+                        <a href="https://www.interstuhl.com" target="_blank" rel="noopener" title="Interstuhl">
+                            <img src="assets/Logo-marques/logo-interstuhl.webp" alt="Interstuhl" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Sancal -->
+                    <div class="sc-logo dn-xl">
+                        <a href="https://www.sancal.com" target="_blank" rel="noopener" title="Sancal">
+                            <img src="assets/Logo-marques/sancal.png" alt="Sancal" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo : Vitra showroom (paysage) -->
+                    <div class="sc-photo sc-photo--b up-xl pull-l">
+                        <img src="assets/images/hero-slideshow/business-hero-3.jpg" alt="Espace Contract"
+                            loading="lazy">
+
+                    </div>
+
+                    <!-- Enea -->
+                    <div class="sc-logo dn-sm">
+                        <a href="https://eneadesign.com" target="_blank" rel="noopener" title="Enea">
+                            <img src="assets/Logo-marques/enea.svg" alt="Enea" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Ondarreta -->
+                    <div class="sc-logo up-lg">
+                        <a href="https://www.ondarreta.com" target="_blank" rel="noopener" title="Ondarreta">
+                            <img src="assets/Logo-marques/ondarreta.webp" alt="Ondarreta" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Forma 5 -->
+                    <div class="sc-logo up-xl pull-l">
+                        <a href="https://www.forma5.com" target="_blank" rel="noopener" title="Forma 5">
+                            <img src="assets/Logo-marques/forma5.webp" alt="Forma 5" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Frezza -->
+                    <div class="sc-logo dn-lg">
+                        <a href="https://www.frezza.com" target="_blank" rel="noopener" title="Frezza">
+                            <img src="assets/Logo-marques/frezza.png" alt="Frezza" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo : Cassina Soriana (portrait) -->
+                    <div class="sc-photo sc-photo--e up-lg">
+                        <img src="assets/images/Vitrine/usm-2.jpg" alt="USM Haller Bureau" loading="lazy">
+
+                    </div>
+
+                    <!-- Schönbuch -->
+                    <div class="sc-logo dn-xl pull-l">
+                        <a href="https://www.schoenbuch.com" target="_blank" rel="noopener" title="Schönbuch">
+                            <img src="assets/Logo-marques/Schönbush.png" alt="Schönbuch" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Lintex -->
+                    <div class="sc-logo up-md">
+                        <a href="https://www.lintex.com" target="_blank" rel="noopener" title="Lintex">
+                            <img src="assets/Logo-marques/Lintex.svg" alt="Lintex" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Softline -->
+                    <div class="sc-logo up-xl">
+                        <a href="https://www.softline-design.com" target="_blank" rel="noopener" title="Softline">
+                            <img src="assets/Logo-marques/logo-softline.png" alt="Softline" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Howe -->
+                    <div class="sc-logo dn-md pull-l">
+                        <a href="https://www.howe.com" target="_blank" rel="noopener" title="Howe">
+                            <img src="assets/Logo-marques/howe.svg" alt="Howe" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo : On the Rocks Edra (portrait) -->
+                    <div class="sc-photo sc-photo--a up-lg">
+                        <img src="assets/images/Vitrine/9725717_Standard Chair, Prouvé Blé Vert_v_fullbleed_1440x.jpg"
+                            alt="Standard Chair Prouvé" loading="lazy">
+
+                    </div>
+
+                    <!-- Extendo -->
+                    <div class="sc-logo dn-xl">
+                        <a href="https://www.extendo.it" target="_blank" rel="noopener" title="Extendo">
+                            <img src="assets/Logo-marques/EXTENDO.png" alt="Extendo" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Paola Lenti -->
+                    <div class="sc-logo up-lg pull-l">
+                        <a href="https://www.paolalenti.it" target="_blank" rel="noopener" title="Paola Lenti">
+                            <img src="assets/Logo-marques/Paola-lenti.png" alt="Paola Lenti" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Photo : Zanotta ZaZa sofa (paysage) -->
+                    <div class="sc-photo sc-photo--d dn-xl pull-l">
+                        <img src="assets/images/Vitrine/usm_6.jpg" alt="USM Aménagement" loading="lazy">
+
+                    </div>
+
+                    <!-- esPattio -->
+                    <div class="sc-logo up-md">
+                        <a href="https://espattio.com" target="_blank" rel="noopener" title="esPattio">
+                            <img src="assets/Logo-marques/pattio.svg" alt="esPattio" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Akaba -->
+                    <div class="sc-logo dn-lg">
+                        <a href="https://www.akaba.net" target="_blank" rel="noopener" title="Akaba">
+                            <img src="assets/Logo-marques/logo-akaba_2021.png" alt="Akaba" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Vauzelle -->
+                    <div class="sc-logo up-xl">
+                        <a href="https://www.vauzelle.com" target="_blank" rel="noopener" title="Vauzelle">
+                            <img src="assets/Logo-marques/vauzelle-ligne.svg" alt="Vauzelle" loading="lazy">
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Scroll indicator progress bar -->
+                <div class="scroll-indicator-wrap">
+                    <div class="scroll-indicator-line">
+                        <div class="scroll-indicator-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ NOTRE MÉTHODE — TIMELINE ═══════════ -->
+        <section class="method-section" style="position: relative; overflow: hidden;">
+            <div class="deco-emblem deco-emblem--lg deco-emblem--bl"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header fade-up"
+                    style="text-align: center; margin-left: auto; margin-right: auto; max-width: 720px; margin-bottom: 60px;">
+                    <span class="subtitle">Comment on travaille</span>
+                    <h2>De l'idée à la livraison</h2>
+                    <p>Une méthode claire et rodée sur plus de 20 ans de projets professionnels, pour avancer pas à pas
+                        en toute sérénité.</p>
+                </div>
+
+                <div class="method-timeline">
+                    <!-- Étape 1 -->
+                    <div class="method-step fade-up">
+                        <span class="method-step-num">01</span>
+                        <h3>Brief initial</h3>
+                        <p>On vous écoute. Activité, contraintes, budget, délais — tout est posé sur la table.</p>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="method-step fade-up delay-1">
+                        <span class="method-step-num">02</span>
+                        <h3>Conception &amp; 3D</h3>
+                        <p>Plans d'aménagement, modélisations 3D et choix des matériaux pour valider le rendu.</p>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="method-step fade-up delay-2">
+                        <span class="method-step-num">03</span>
+                        <h3>Choix mobilier</h3>
+                        <p>Sélection parmi nos 80+ marques partenaires au tarif pro. Commande et stockage gérés par nos
+                            soins.</p>
+                    </div>
+
+                    <!-- Étape 4 -->
+                    <div class="method-step fade-up delay-3">
+                        <span class="method-step-num">04</span>
+                        <h3>Livraison &amp; Montage</h3>
+                        <p>Installation clé en main par nos propres monteurs salariés jusqu'aux dernières finitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ NOS RÉALISATIONS PROS — 3 CARTES ═══════════ -->
+        <section class="section-padding bg-dark" style="position: relative; overflow: hidden;">
+            <div class="deco-blob deco-blob--dark-tr"></div>
+            <div class="deco-emblem deco-emblem--light deco-emblem--lg deco-emblem--mid-l"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header white fade-up"
+                    style="text-align: center; margin-left: auto; margin-right: auto;">
+                    <span class="subtitle">Nos réalisations</span>
+                    <h2>Quelques projets pros</h2>
+                    <p>Un aperçu de ce que nous concevons pour nos clients professionnels.</p>
+                </div>
+
+                <div class="projects-grid" id="featured-projects-grid">
+                    <a href="projet.html?id=hotel-la-prison" class="project-item fade-up"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/realisations/professionnels/05-hotel-la-prison/hotel-la-prison-mobilier-bureau-design-beziers-architecte-interieur-6.webp');">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-cat">Hôtellerie</span>
+                            <h3>Hôtel La Prison</h3>
+                            <p>Béziers</p>
+                        </div>
+                    </a>
+
+                    <a href="projet.html?id=souki-lodge" class="project-item fade-up delay-1"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/realisations/professionnels/08-souki-lodge/souki-lodge-mobilier-bureau-design-beziers-architecte-interieur-2.webp');">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-cat">Hébergement</span>
+                            <h3>Souki Lodges &amp; Spa</h3>
+                            <p>Saint-Aunès</p>
+                        </div>
+                    </a>
+
+                    <a href="projet.html?id=technilum" class="project-item fade-up delay-2"
+                        style="text-decoration: none; color: inherit; display: block;">
+                        <div class="project-img"
+                            style="background-image: url('assets/images/realisations/professionnels/01-technilum/technilum-mobilier-bureau-design-beziers-architecte-interieur-1.webp');">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-cat">Bureaux</span>
+                            <h3>Technilum</h3>
+                            <p>Maureilhan</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="center-cta fade-up delay-3" style="margin-top: 60px; text-align: center;">
+                    <a href="nos-realisations.html" class="btn btn-outline-light">Voir tous nos projets pros →</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ POURQUOI NOUS — STATS ═══════════ -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item fade-up">
+                    <div class="stat-blobs">
+                        <div class="blob-dot"></div>
+                        <div class="blob-dot"></div>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="24">0</span>
+                        <span class="stat-suffix">ans</span>
+                    </div>
+                    <span class="stat-label">d'expérience pro</span>
+                </div>
+                <div class="stat-item fade-up delay-1">
+                    <div class="stat-blobs">
+                        <div class="blob-dot"></div>
+                        <div class="blob-dot"></div>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="80">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">marques partenaires</span>
+                </div>
+                <div class="stat-item fade-up delay-2">
+                    <div class="stat-blobs">
+                        <div class="blob-dot"></div>
+                        <div class="blob-dot"></div>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-suffix">%</span>
+                    </div>
+                    <span class="stat-label">monteurs salariés</span>
+                </div>
+                <div class="stat-item fade-up delay-3">
+                    <div class="stat-blobs">
+                        <div class="blob-dot"></div>
+                        <div class="blob-dot"></div>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="4">0</span>
+                    </div>
+                    <span class="stat-label">showrooms à Béziers</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ SYLVIE — INTERLOCUTRICE DÉDIÉE ═══════════ -->
+        <section class="about-section">
+            <div class="deco-emblem deco-emblem--lg deco-emblem--mid-r"></div>
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-image-container fade-up">
+                        <div class="reveal-wrap"
+                            style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                            <img src="assets/Photo-equipe/equipe-architruc-beziers-showroom-canape.webp"
+                                alt="Sylvie Cabrol — interlocutrice Architruc Business" loading="lazy" width="900"
+                                height="1200" style="aspect-ratio: auto; height: 480px;">
+                        </div>
+                    </div>
+                    <div class="split-content fade-up delay-1">
+                        <span class="subtitle" style="margin-bottom: 20px;">Votre interlocutrice</span>
+                        <h2 style="color: var(--orange);">Sylvie Cabrol</h2>
+                        <p>Après plusieurs décennies dans le design en région parisienne, Sylvie a rejoint
+                            l'équipe d'Architruc pour piloter les projets pros.</p>
+                        <p>Spécialiste de l'aménagement d'espaces de travail, elle vous accompagne du premier
+                            brief à la livraison finale.</p>
+                        <p>Associer le design à l'univers du bureau à <em>Un jeu d'enfant pour elle.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ═══════════ CTA FINAL ═══════════ -->
+        <section class="section-padding bg-dark" style="position: relative; overflow: hidden; text-align: center;">
+            <div class="deco-blob deco-blob--dark-tr"></div>
+            <div class="container"
+                style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center;">
+                <div class="fade-up" style="max-width: 700px;">
+                    <span class="subtitle">On en parle ?</span>
+                    <h2 style="margin-bottom: 24px;">Prêt à transformer vos espaces ?</h2>
+                    <p style="margin-bottom: 40px; color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        Rendez-vous en showroom, par téléphone ou par mail — comme vous préférez.
+                        On commence par discuter, ensuite on dessine.
+                    </p>
+                    <div class="cta-group" style="justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary">Démarrer mon projet</a>
+                        <a href="tel:+33467362687" class="btn btn-outline">04 67 36 26 87</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer" style="position: relative; overflow: hidden;">
+        <div class="deco-blob deco-blob--footer"></div>
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="footer-logo">
+                <p>Depuis 2002, créateurs d'espaces où se mêlent art, design et architecture à Béziers.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/architrucbaltazart" target="_blank" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/architruc/" target="_blank" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/architruc/" target="_blank" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>5 rue Montmorency — Béziers</h4>
+                <p class="footer-tag">Mobilier contemporain & objets design</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467362687">04.67.36.26.87</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>28 rue de la Citadelle — Béziers</h4>
+                <p class="footer-tag">Décoration d'intérieur</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467285433">04.67.28.54.33</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <p><a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a></p>
+                <p><a href="tel:+33467362687">04.67.36.26.87</a></p>
+                <br>
+                <h4>Archi Business</h4>
+                <p>Entreprises, collectivités,<br>professions libérales…</p>
+                <a href="archi-business.html" class="link-arrow">En savoir plus →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© Architruc & Baltaz'art 2026, Tous droits réservés. <span class="credit" style="opacity: 0.6; margin-left: 8px;">| &nbsp; Site développé par <a href="https://maxx-j.github.io/portfolio/" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Maxens Sevilla</a></span></p>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+    <!-- Compare Slider — Plan / Rendu interactif -->
+    <script>
+        (function () {
+            const slider = document.getElementById('compare-slider');
+            const overlay = document.getElementById('compare-overlay');
+            const handle = document.getElementById('compare-handle');
+            if (!slider || !overlay || !handle) return;
+
+            let dragging = false;
+
+            function setPosition(percent) {
+                percent = Math.max(0, Math.min(100, percent));
+                overlay.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+            }
+
+            function getX(e) {
+                if (e.touches && e.touches.length) return e.touches[0].clientX;
+                return e.clientX;
+            }
+
+            function move(e) {
+                if (!dragging) return;
+                const rect = slider.getBoundingClientRect();
+                const x = getX(e) - rect.left;
+                setPosition((x / rect.width) * 100);
+                e.preventDefault();
+            }
+
+            function start(e) {
+                dragging = true;
+                slider.style.cursor = 'grabbing';
+                move(e);
+            }
+            function end() {
+                dragging = false;
+                slider.style.cursor = 'ew-resize';
+            }
+
+            slider.addEventListener('mousedown', start);
+            window.addEventListener('mousemove', move);
+            window.addEventListener('mouseup', end);
+
+            slider.addEventListener('touchstart', start, { passive: false });
+            window.addEventListener('touchmove', move, { passive: false });
+            window.addEventListener('touchend', end);
+
+            // Position initiale 50%
+            setPosition(50);
+        })();
+    </script>
+
+    <!-- Secteurs Accordéon Interactif -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.sector-item');
+            items.forEach(item => {
+                const header = item.querySelector('.sector-item-header');
+                const details = item.querySelector('.sector-item-details');
+
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Fermer les autres items
+                    items.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.sector-item-details').style.maxHeight = null;
+                    });
+
+                    // Basculer l'état
+                    if (!isActive) {
+                        item.classList.add('active');
+                        details.style.maxHeight = details.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Marques Pro Galerie Horizontale Épinglée au Scroll de la Page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.getElementById('partenaires-mobilier');
+            const track = document.querySelector('.horizontal-scroll-track');
+            const watermarkText = document.querySelector('.bg-watermark-text');
+            const scrollBar = document.querySelector('.scroll-indicator-bar');
+            const indicatorLine = document.querySelector('.scroll-indicator-line');
+            if (!section || !track) return;
+
+            const lerp = (a, b, t) => a + (b - a) * t;
+            let current = 0;
+            let target = 0;
+            let maxTranslate = 0;
+
+            function computeTarget() {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const windowHeight = window.innerHeight;
+
+                let scrolled = window.pageYOffset - sectionTop;
+                scrolled = Math.max(0, Math.min(scrolled, sectionHeight - windowHeight));
+
+                maxTranslate = track.scrollWidth - window.innerWidth;
+                if (maxTranslate <= 0 || sectionHeight - windowHeight <= 0) {
+                    target = 0;
+                    return;
+                }
+                target = (scrolled / (sectionHeight - windowHeight)) * maxTranslate;
+            }
+
+            function render() {
+                computeTarget();
+
+                current = lerp(current, target, 0.08);
+                if (Math.abs(target - current) < 0.4) current = target;
+
+                track.style.transform = `translate3d(${-current}px, 0, 0)`;
+
+                const ratio = maxTranslate > 0 ? current / maxTranslate : 0;
+
+                if (watermarkText) {
+                    const wmarkMax = Math.max(0, watermarkText.scrollWidth - window.innerWidth);
+                    watermarkText.style.transform = `translate3d(${-(ratio * wmarkMax)}px, 0, 0)`;
+                    watermarkText.style.opacity = (0.3 + ratio * 0.7).toFixed(3);
+                }
+
+                if (scrollBar && indicatorLine) {
+                    const maxBarTranslate = indicatorLine.clientWidth - scrollBar.clientWidth;
+                    scrollBar.style.transform = `translate3d(${ratio * maxBarTranslate}px, 0, 0)`;
+                }
+
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        });
+    </script>
+
+    <!-- Hero Slider Auto-Play -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderWrap = document.getElementById('business-hero-slider');
+            if (!sliderWrap) return;
+
+            const slides = sliderWrap.querySelectorAll('.business-hero-bg');
+            let currentIdx = 0;
+
+            setInterval(() => {
+                slides[currentIdx].classList.remove('active');
+                currentIdx = (currentIdx + 1) % slides.length;
+                slides[currentIdx].classList.add('active');
+            }, 6000); // Change image every 6 seconds for a smooth, unhurried pace
+        });
+    </script>
+    <script src="projects-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof PROJECTS_DATA === 'undefined') return;
+
+            const proProjects = Object.entries(PROJECTS_DATA)
+                .filter(([id, data]) => data.category === 'Professionnel')
+                .map(([id, data]) => ({ id, ...data }));
+
+            if (proProjects.length < 3) return;
+
+            const shuffled = proProjects.sort(() => 0.5 - Math.random());
+            const selected = shuffled.slice(0, 3);
+
+            const grid = document.getElementById('featured-projects-grid');
+            if (!grid) return;
+
+            grid.innerHTML = '';
+
+            selected.forEach((project, index) => {
+                const delay = index === 0 ? '' : `delay-${index}`;
+                const thumb = project.thumbnail || project.hero;
+                const imgPath = `${project.folder}/${thumb}`;
+
+                const html = `
+                    <a href="projet.html?id=${project.id}" class="project-item fade-up ${delay}" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="project-img" style="background-image: url('${imgPath}');"></div>
+                        <div class="project-overlay">
+                            <span class="project-cat">Professionnel</span>
+                            <h3>${project.title}</h3>
+                            <p>${project.location || ''}</p>
+                        </div>
+                    </a>
+                `;
+                grid.insertAdjacentHTML('beforeend', html);
+            });
+
+            const newFaders = grid.querySelectorAll('.fade-up');
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            newFaders.forEach(el => obs.observe(el));
+        });
+    </script>
+</body>
+
+</html>

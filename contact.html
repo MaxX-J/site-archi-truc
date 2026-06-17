@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/webp" href="assets/Favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Showrooms Béziers | Architruc & Baltaz'art</title>
+    <meta name="description"
+        content="Architruc & Baltaz'art : deux showrooms à Béziers (rue Montmorency & rue de la Citadelle). Déco et mobilier design, livraison sur Montpellier, Sète et Narbonne.">
+    <link rel="canonical" href="https://www.archi-truc.com/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact & Showrooms Béziers | Architruc & Baltaz'art">
+    <meta property="og:description"
+        content="Deux showrooms à Béziers pour vos projets déco, mobilier et architecture d'intérieur. Venez nous rencontrer, ou écrivez-nous.">
+    <meta property="og:image" content="assets/Photo-equipe/equipe-architruc-beziers-accueil.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ═══════════ JSON-LD LocalBusiness ═══════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FurnitureStore",
+      "@id": "https://archi-truc.com/#business",
+      "name": "Architruc & Baltaz'art",
+      "image": "https://archi-truc.com/assets/logo.svg",
+      "url": "https://archi-truc.com",
+      "email": "contact@archi-truc.com",
+      "telephone": "+33467362687",
+      "priceRange": "€€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 rue Montmorency",
+        "addressLocality": "Béziers",
+        "postalCode": "34500",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.3458,
+        "longitude": 3.2186
+      },
+      "openingHoursSpecification": [
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Saturday"],"opens":"10:00","closes":"12:30"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Saturday"],"opens":"14:00","closes":"19:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"10:00","closes":"19:00"}
+      ],
+      "sameAs": [
+        "https://www.facebook.com/architrucbaltazart",
+        "https://www.instagram.com/architruc/",
+        "https://www.linkedin.com/company/architruc/"
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Béziers"},
+        {"@type": "City", "name": "Montpellier"},
+        {"@type": "City", "name": "Sète"},
+        {"@type": "City", "name": "Narbonne"},
+        {"@type": "City", "name": "Cap d'Agde"},
+        {"@type": "City", "name": "Agde"},
+        {"@type": "City", "name": "Pézenas"},
+        {"@type": "AdministrativeArea", "name": "Hérault"},
+        {"@type": "AdministrativeArea", "name": "Aude"},
+        {"@type": "AdministrativeArea", "name": "Occitanie"}
+      ],
+      "department": [
+        {
+          "@type": "FurnitureStore",
+          "name": "Architruc — Showroom Montmorency",
+          "address": {"@type":"PostalAddress","streetAddress":"5 rue Montmorency","addressLocality":"Béziers","postalCode":"34500","addressCountry":"FR"},
+          "telephone": "+33467362687"
+        },
+        {
+          "@type": "FurnitureStore",
+          "name": "Architruc — Atelier La Citadelle",
+          "address": {"@type":"PostalAddress","streetAddress":"28 rue de la Citadelle","addressLocality":"Béziers","postalCode":"34500","addressCountry":"FR"},
+          "telephone": "+33467285433"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* ═══════════════════════════════════════════════
+           PAGE CONTACT — STYLES
+        ═══════════════════════════════════════════════ */
+
+        /* ── Hero ── */
+        .contact-hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: var(--bg-dark);
+            color: white;
+            padding: 140px 20px 80px;
+        }
+
+        .contact-hero::before {
+            display: none;
+        }
+
+        .contact-hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/Photo-equipe/equipe-architruc-beziers-celebration-showroom.webp');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            animation: heroZoom 12s var(--ease) forwards;
+            z-index: 0;
+        }
+
+        @keyframes heroZoom {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .contact-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.8));
+            z-index: 1;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .contact-hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .contact-hero-content h1 .italic {
+            color: var(--orange);
+            font-style: italic;
+            font-weight: 400;
+            text-transform: none;
+        }
+
+        .contact-hero-content .sub {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            max-width: 580px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* ── Bande contact rapide ── */
+        .quick-contact-band {
+            background: var(--bg-soft);
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .quick-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .quick-contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quick-contact-item .qc-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .quick-contact-item .qc-value {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s var(--ease);
+        }
+
+        .quick-contact-item .qc-value:hover {
+            color: var(--orange);
+        }
+
+        /* ── Showrooms ── */
+        .showrooms-contact-section {
+            padding: 100px 0;
+            background: var(--bg-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showroom-contact-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .showroom-contact-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .showroom-contact-card.reverse {
+            direction: rtl;
+        }
+
+        .showroom-contact-card.reverse>* {
+            direction: ltr;
+        }
+
+        .showroom-photo-wrap {
+            position: relative;
+            height: 520px;
+            overflow: hidden;
+            border-radius: var(--blob-shape-2);
+        }
+
+        .showroom-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.5s var(--ease);
+        }
+
+        .showroom-photo-wrap:hover .showroom-photo {
+            transform: scale(1.05);
+        }
+
+        .showroom-info {
+            padding: 10px 0;
+        }
+
+        .showroom-info .badge-emblem {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        .showroom-info .badge-emblem .blob-dot:first-child {
+            width: 9px;
+            height: 20px;
+            border-radius: 0;
+            background-color: var(--orange);
+            background-image: none;
+            -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
+            mask: url('assets/picto.svg') no-repeat center / contain;
+        }
+
+        .showroom-info .badge-emblem .blob-dot:nth-child(2) {
+            display: none;
+        }
+
+        .showroom-info .badge-emblem .badge-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .showroom-info h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .showroom-info .showroom-tag {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .showroom-info .showroom-address {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .showroom-hours {
+            background: var(--bg-soft);
+            padding: 24px 28px;
+            border-radius: 2px;
+            margin-bottom: 28px;
+            border-left: 3px solid var(--orange);
+        }
+
+        .showroom-hours h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text);
+            margin-bottom: 14px;
+            font-weight: 800;
+        }
+
+        .showroom-hours .hours-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 0.95rem;
+            padding: 6px 0;
+            color: var(--text);
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+        }
+
+        .showroom-hours .hours-row:last-child {
+            border-bottom: 0;
+        }
+
+        .showroom-hours .hours-row .day {
+            font-weight: 600;
+        }
+
+        .showroom-hours .hours-note {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .showroom-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .showroom-actions .action-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            color: var(--text);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .showroom-actions .action-link:hover {
+            background: var(--text);
+            color: white;
+            border-color: var(--text);
+        }
+
+        .showroom-actions .action-link.primary {
+            background: var(--orange);
+            color: white;
+            border-color: var(--orange);
+        }
+
+        .showroom-actions .action-link.primary:hover {
+            background: var(--orange-hover);
+            border-color: var(--orange-hover);
+        }
+
+        .showroom-actions .action-link svg {
+            flex-shrink: 0;
+        }
+
+        /* ── Séparateur emblème ── */
+        .emblem-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            padding: 40px 0;
+        }
+
+        .emblem-divider .blob-dot:first-child {
+            width: 21px;
+            height: 33px;
+            transform: rotate(90deg);
+            border-radius: 0;
+            animation: none;
+            background-color: var(--orange);
+            background-image: none;
+            -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
+            mask: url('assets/picto.svg') no-repeat center / contain;
+        }
+
+        .emblem-divider .blob-dot:last-child {
+            display: none;
+        }
+
+        /* ── Section formulaire ── */
+        .form-section {
+            background: var(--bg-soft);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-section .deco-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(234, 84, 13, 0.05);
+            border-radius: var(--blob-shape-1);
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+            animation: morph 14s var(--ease) infinite;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-intro {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .form-intro h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .form-intro h2 .italic {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--orange);
+            text-transform: none;
+        }
+
+        .form-intro p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .form-intro .intro-points {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto 32px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 30px;
+            max-width: 650px;
+            text-align: left;
+        }
+
+        .form-intro .intro-points li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 8px 0;
+            font-size: 0.98rem;
+            color: var(--text);
+        }
+
+        .form-intro .intro-points li::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--orange);
+            border-radius: var(--blob-shape-1);
+            flex-shrink: 0;
+            margin-top: 7px;
+        }
+
+        .form-card {
+            background: white;
+            padding: 50px;
+            border-radius: 2px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            width: 100%;
+            max-width: 850px;
+        }
+
+        /* Champs */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+            transition: color 0.3s var(--ease);
+        }
+
+        .form-group label .required {
+            color: var(--orange);
+            margin-left: 2px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 0;
+            border: none;
+            border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--text);
+            background: transparent;
+            transition: border-color 0.3s var(--ease);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-bottom-color: var(--orange);
+        }
+
+        .form-group:focus-within label {
+            color: var(--orange);
+        }
+
+        textarea.form-control {
+            min-height: 130px;
+            resize: vertical;
+            padding-top: 10px;
+        }
+
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'><path d='M1 1l6 6 6-6' stroke='%23E8430A' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 0 center;
+            padding-right: 30px;
+        }
+
+        /* Désactiver custom cursor sur les champs */
+        @media (hover: hover) and (pointer: fine) {
+
+            .form-control,
+            .form-card label,
+            .checkbox-rgpd {
+                cursor: auto !important;
+            }
+
+            .form-card button {
+                cursor: pointer !important;
+            }
+        }
+
+        /* Case RGPD */
+        .checkbox-rgpd {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 32px 0;
+            cursor: pointer;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .checkbox-rgpd input[type="checkbox"] {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--orange);
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .checkbox-rgpd a {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        /* Bouton submit */
+        .submit-wrap {
+            margin-top: 16px;
+        }
+
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 40px;
+            background: var(--text);
+            color: white;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .btn-submit:hover {
+            background: var(--orange);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(234, 84, 13, 0.25);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-submit svg {
+            transition: transform 0.3s var(--ease);
+        }
+
+        .btn-submit:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Succès */
+        .form-success {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            background: rgba(234, 84, 13, 0.04);
+            border: 1px solid rgba(234, 84, 13, 0.15);
+            border-radius: 2px;
+        }
+
+        .form-success.visible {
+            display: block;
+        }
+
+        .form-success h3 {
+            color: var(--orange);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .form-success p {
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        /* ── Carte Google Maps ── */
+        .map-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-tabs {
+            display: flex;
+            background: var(--bg-dark);
+        }
+
+        .map-tab {
+            flex: 1;
+            padding: 22px 20px;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .map-tab.active {
+            color: white;
+        }
+
+        .map-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--orange);
+        }
+
+        .map-tab:hover:not(.active) {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .map-frame-wrap {
+            position: relative;
+            height: 500px;
+            background: var(--bg-soft);
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: none;
+        }
+
+        .map-frame.active {
+            display: block;
+        }
+
+        /* ═══════════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════════ */
+        @media (max-width: 991px) {
+
+            .showroom-contact-card,
+            .showroom-contact-card.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 70px;
+                direction: ltr;
+            }
+
+            .showroom-photo-wrap {
+                height: 380px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .form-card {
+                padding: 36px 28px;
+            }
+
+            .quick-contact-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .contact-hero {
+                height: 100vh;
+                min-height: 500px;
+                padding-top: 120px;
+            }
+
+            .form-intro .intro-points {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .showroom-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .showroom-actions .action-link {
+                justify-content: center;
+            }
+
+            .map-tab {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+            }
+
+            .map-frame-wrap {
+                height: 380px;
+            }
+        }
+
+        /* Animations légères respectant prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            .contact-hero-bg,
+            .emblem-divider .blob-dot,
+            .form-section .deco-blob,
+            .showroom-photo,
+            .btn-submit svg {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-blobs">
+            <div class="loader-blob"></div>
+            <div class="loader-blob"></div>
+        </div>
+        <div class="loader-brand">Architruc</div>
+    </div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="showrooms.html">Archi concept</a></li>
+                    <li><a href="archi-nous.html">Archi nous</a></li>
+                    <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+                    <li><a href="marques.html">Nos Marques</a></li>
+                    <li><a href="archi-business.html">Archi business</a></li>
+                    <li><a href="archi-bonne-annee.html">Archi bonne année</a></li>
+                    <li><a href="contact.html" class="nav-contact-link nav-active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- wp:section -->
+        <!-- ═══════════ HERO ═══════════ -->
+        <section class="page-hero contact-hero">
+            <div class="contact-hero-bg"></div>
+            <div class="contact-hero-overlay"></div>
+            <div class="contact-hero-content fade-up">
+                <span class="hero-eyebrow" style="color: var(--orange); opacity: 0.9;">Un projet ? Une idée ? Un café
+                    ?</span>
+                <h1>
+                    Passez nous voir<br>
+                    <span class="italic">— ou écrivez-nous.</span>
+                </h1>
+                <p class="sub">
+                    Deux showrooms au cœur de Béziers, une équipe d'architectes passionnés, et la bonne humeur en
+                    bonus.
+                </p>
+            </div>
+            <div class="scroll-indicator">
+                <div class="dots-symbol">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <span>DÉCOUVRIR</span>
+            </div>
+        </section>
+        <!-- /wp:section -->
+
+        <!-- wp:section -->
+        <!-- ═══════════ BANDE CONTACT RAPIDE ═══════════ -->
+        <section class="quick-contact-band">
+            <div class="container">
+                <div class="quick-contact-grid">
+                    <div class="quick-contact-item">
+                        <span class="qc-label">Téléphone</span>
+                        <a href="tel:+33467362687" class="qc-value">04 67 36 26 87</a>
+                    </div>
+                    <div class="quick-contact-item">
+                        <span class="qc-label">Email</span>
+                        <a href="mailto:contact@archi-truc.com" class="qc-value">contact@archi-truc.com</a>
+                    </div>
+                    <div class="quick-contact-item">
+                        <span class="qc-label">Suivez-nous</span>
+                        <div style="display: flex; gap: 18px; margin-top: 4px;">
+                            <a href="https://www.facebook.com/architrucbaltazart" target="_blank" rel="noopener"
+                                aria-label="Facebook" class="qc-value" style="font-size: 0.95rem;">Facebook</a>
+                            <a href="https://www.instagram.com/architruc/" target="_blank" rel="noopener"
+                                aria-label="Instagram" class="qc-value" style="font-size: 0.95rem;">Instagram</a>
+                            <a href="https://www.linkedin.com/company/architruc/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn" class="qc-value" style="font-size: 0.95rem;">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /wp:section -->
+
+        <!-- wp:section -->
+        <!-- ═══════════ NOS SHOWROOMS ═══════════ -->
+        <section class="showrooms-contact-section">
+            <div class="deco-emblem deco-emblem--xl deco-emblem--tl"></div>
+            <div class="deco-emblem deco-emblem--lg deco-emblem--br"></div>
+            <div class="container">
+
+                <div class="section-header fade-up" style="text-align: center; max-width: 720px; margin: 0 auto 80px;">
+                    <span class="subtitle">Nos Showrooms</span>
+                    <h2>Où nous trouver à Béziers</h2>
+                    <p style="margin-top: 16px; color: var(--text-light); line-height: 1.7;">
+                        Nos deux adresses ouvertes au public, en plein centre. Pas besoin de rendez-vous — passez quand
+                        vous voulez, on aime accueillir.
+                    </p>
+                </div>
+
+                <!-- Showroom 1 : Montmorency -->
+                <article class="showroom-contact-card fade-up">
+                    <div class="showroom-photo-wrap reveal-wrap">
+                        <img src="assets/Photo-equipe/equipe-architruc-beziers-showroom-canape.webp"
+                            alt="Showroom Architruc rue Montmorency à Béziers — mobilier contemporain et objets design"
+                            class="showroom-photo" loading="lazy" width="800" height="520">
+                    </div>
+
+                    <div class="showroom-info">
+                        <div class="badge-emblem">
+                            <div class="blob-dot"></div>
+                            <div class="blob-dot"></div>
+                            <span class="badge-label">Grande Boutique</span>
+                        </div>
+
+                        <h2>5 rue Montmorency</h2>
+                        <p class="showroom-tag">Mobilier contemporain & objets design</p>
+                        <p class="showroom-address">
+                            5 rue Montmorency<br>
+                            34500 Béziers
+                        </p>
+
+                        <div class="showroom-hours">
+                            <h4>Horaires d'ouverture</h4>
+                            <div class="hours-row">
+                                <span class="day">Lundi</span>
+                                <span>14h30 – 19h</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Mardi, Mercredi, Jeudi, Samedi</span>
+                                <span>10h – 12h30 · 14h – 19h</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Vendredi</span>
+                                <span>10h – 19h</span>
+                            </div>
+                            <p class="hours-note">
+                                Lundi : ouverture saisonnière (mi-novembre à mi-janvier, avril, mai, juin, juillet).
+                                Fermé dimanche.
+                            </p>
+                        </div>
+
+                        <div class="showroom-actions">
+                            <a href="tel:+33467362687" class="action-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                                </svg>
+                                04 67 36 26 87
+                            </a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=5+rue+Montmorency,+34500+Béziers"
+                                target="_blank" rel="noopener" class="action-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Itinéraire
+                            </a>
+                            <a href="https://waze.com/ul?q=5+rue+Montmorency+34500+Béziers" target="_blank"
+                                rel="noopener" class="action-link">Waze</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Séparateur emblème -->
+                <div class="emblem-divider" aria-hidden="true">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+
+                <!-- Showroom 2 : Citadelle -->
+                <article class="showroom-contact-card reverse fade-up">
+                    <div class="showroom-photo-wrap reveal-wrap">
+                        <img src="assets/Photo-equipe/equipe-architruc-beziers-showroom-duo.webp"
+                            alt="Atelier La Citadelle Architruc à Béziers — décoration d'intérieur et idées cadeaux"
+                            class="showroom-photo" loading="lazy" width="800" height="520">
+                    </div>
+
+                    <div class="showroom-info">
+                        <div class="badge-emblem">
+                            <div class="blob-dot"></div>
+                            <div class="blob-dot"></div>
+                            <span class="badge-label">Petite Boutique</span>
+                        </div>
+
+                        <h2>28 rue de la Citadelle</h2>
+                        <p class="showroom-tag">Décoration d'intérieur, idées cadeaux & accessoires</p>
+                        <p class="showroom-address">
+                            28 rue de la Citadelle<br>
+                            34500 Béziers
+                        </p>
+
+                        <div class="showroom-hours">
+                            <h4>Horaires d'ouverture</h4>
+                            <div class="hours-row">
+                                <span class="day">Lundi</span>
+                                <span>14h30 – 19h</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Mardi, Mercredi, Jeudi, Samedi</span>
+                                <span>10h – 12h30 · 14h – 19h</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="day">Vendredi</span>
+                                <span>10h – 19h</span>
+                            </div>
+                            <p class="hours-note">
+                                Lundi : ouverture saisonnière (mi-novembre à mi-janvier, avril, mai, juin, juillet).
+                                Fermé dimanche.
+                            </p>
+                        </div>
+
+                        <div class="showroom-actions">
+                            <a href="tel:+33467285433" class="action-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                                </svg>
+                                04 67 28 54 33
+                            </a>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=28+rue+de+la+Citadelle,+34500+Béziers"
+                                target="_blank" rel="noopener" class="action-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Itinéraire
+                            </a>
+                            <a href="https://waze.com/ul?q=28+rue+de+la+Citadelle+34500+Béziers" target="_blank"
+                                rel="noopener" class="action-link">Waze</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <!-- /wp:section -->
+
+        <!-- wp:section -->
+        <!-- ═══════════ FORMULAIRE ═══════════ -->
+        <section class="form-section">
+            <div class="deco-blob" aria-hidden="true"></div>
+            <div class="deco-emblem deco-emblem--lg deco-emblem--mid-l" style="top: 60%;"></div>
+            <div class="container">
+                <div class="form-grid">
+
+                    <!-- Intro -->
+                    <div class="form-intro fade-up">
+                        <h2>Parlons de <span class="italic">votre projet.</span></h2>
+                        <p>
+                            Particulier, professionnel, collectivité — quelle que soit la nature de votre demande,
+                            on lit tous les messages et on répond personnellement.
+                        </p>
+
+                        <ul class="intro-points">
+                            <li>Réponse sous 48h ouvrées</li>
+                            <li>Étude et conseil sans engagement</li>
+                            <li>Devis et plans 3D pour les pros</li>
+                            <li>Ici, chaque échange est humain</li>
+                        </ul>
+
+                        <p style="font-size: 0.92rem; color: var(--text-light); font-style: italic;">
+                            Pour un projet urgent, le téléphone reste le plus rapide :<br>
+                            <a href="tel:+33467362687"
+                                style="color: var(--orange); font-weight: 700; font-style: normal;">04 67 36 26 87</a>
+                        </p>
+                    </div>
+
+                    <!-- Formulaire -->
+                    <div class="form-card fade-up delay-1">
+
+                        <form id="contact-form" novalidate>
+                            <!-- Web3Forms Integration -->
+                            <input type="hidden" name="access_key" value="d1408691-e265-4c96-b174-1b6c06110690">
+                            <input type="hidden" name="subject" value="Nouveau message — Architruc & Baltaz'art">
+                            <input type="hidden" name="from_name" value="Architruc & Baltaz'art">
+
+                            <!-- Nom + Email -->
+                            <div class="form-row">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="name">Nom complet<span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        placeholder="Jean Dupont" required>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="email">Email<span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="jean@exemple.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Tél + Sujet -->
+                            <div class="form-row">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="phone">Téléphone</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control"
+                                        placeholder="06 12 34 56 78">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label for="subject">Sujet<span class="required">*</span></label>
+                                    <select id="subject" name="subject" class="form-control" required>
+                                        <option value="">Choisir…</option>
+                                        <option value="particulier">Projet particulier</option>
+                                        <option value="professionnel">Projet professionnel (Archi Business)</option>
+                                        <option value="location">Location Appart 101 (Événementiel)</option>
+                                        <option value="mobilier">Demande mobilier / marque précise</option>
+                                        <option value="decoration">Conseil en décoration</option>
+                                        <option value="cadeau">Idée cadeau</option>
+                                        <option value="autre">Autre demande</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Votre message<span class="required">*</span></label>
+                                <textarea id="message" name="message" class="form-control"
+                                    placeholder="Dites-nous en plus sur votre projet, vos envies, vos contraintes…"
+                                    required></textarea>
+                            </div>
+
+                            <!-- RGPD -->
+                            <label class="checkbox-rgpd">
+                                <input type="checkbox" id="rgpd" name="rgpd" required>
+                                <span>
+                                    J'accepte que mes informations soient utilisées pour répondre à ma demande,
+                                    conformément à notre <a href="mentions-legales.html">politique de
+                                        confidentialité</a>. Elles ne sont ni vendues ni partagées.
+                                </span>
+                            </label>
+
+                            <!-- Submit -->
+                            <div class="submit-wrap">
+                                <button type="submit" class="btn-submit" id="submit-btn">
+                                    Envoyer le message
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                                        <path d="M1 6h14M10 1l5 5-5 5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Message de succès -->
+                        <div class="form-success" id="form-success" role="status" aria-live="polite">
+                            <h3>Merci !</h3>
+                            <p>Votre message est bien parti. On revient vers vous sous 48h ouvrées.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /wp:section -->
+
+        <!-- wp:section -->
+        <!-- ═══════════ CARTE GOOGLE MAPS ═══════════ -->
+        <section class="map-section">
+            <div class="map-tabs" role="tablist">
+                <button class="map-tab active" data-target="map-montmorency" role="tab" aria-selected="true">
+                    5 rue Montmorency
+                </button>
+                <button class="map-tab" data-target="map-citadelle" role="tab" aria-selected="false">
+                    28 rue de la Citadelle
+                </button>
+            </div>
+            <div class="map-frame-wrap">
+                <iframe id="map-montmorency" class="map-frame active"
+                    src="https://www.google.com/maps?q=5+rue+Montmorency,+34500+Béziers&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Carte du showroom Architruc — 5 rue Montmorency, Béziers"></iframe>
+                <iframe id="map-citadelle" class="map-frame"
+                    src="https://www.google.com/maps?q=28+rue+de+la+Citadelle,+34500+Béziers&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Carte de l'atelier Architruc — 28 rue de la Citadelle, Béziers"></iframe>
+            </div>
+        </section>
+        <!-- /wp:section -->
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer id="contact-footer" class="footer" style="position: relative; overflow: hidden;">
+        <div class="deco-blob deco-blob--footer"></div>
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="footer-logo">
+                <p>Depuis 2002, créateurs d'espaces où se mêlent art, design et architecture à Béziers.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/architrucbaltazart" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/architruc/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/architruc/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>5 rue Montmorency — Béziers</h4>
+                <p class="footer-tag">Mobilier contemporain & objets design</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467362687">04.67.36.26.87</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>28 rue de la Citadelle — Béziers</h4>
+                <p class="footer-tag">Décoration d'intérieur</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467285433">04.67.28.54.33</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <p><a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a></p>
+                <p><a href="tel:+33467362687">04.67.36.26.87</a></p>
+                <br>
+                <h4>Archi Business</h4>
+                <p>Entreprises, collectivités,<br>professions libérales…</p>
+                <a href="archi-business.html" class="link-arrow">En savoir plus →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© Architruc & Baltaz'art 2026, Tous droits réservés. <span class="credit" style="opacity: 0.6; margin-left: 8px;">| &nbsp; Site développé par <a href="https://maxx-j.github.io/portfolio/" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Maxens Sevilla</a></span></p>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <!-- ═══════════ Script de la page contact ═══════════ -->
+    <script>
+        // ─── Onglets carte Google Maps ───
+        const mapTabs = document.querySelectorAll('.map-tab');
+        const mapFrames = document.querySelectorAll('.map-frame');
+
+        mapTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target;
+
+                mapTabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                mapFrames.forEach(frame => {
+                    frame.classList.toggle('active', frame.id === target);
+                });
+            });
+        });
+
+        // ─── Formulaire de contact — FormSubmit.co ───
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successBox = document.getElementById('form-success');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Validation
+            const requiredFields = form.querySelectorAll('[required]');
+            let valid = true;
+
+            requiredFields.forEach(field => {
+                if (field.type === 'checkbox') {
+                    if (!field.checked) valid = false;
+                } else if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderBottomColor = 'var(--orange)';
+                    setTimeout(() => { field.style.borderBottomColor = ''; }, 2000);
+                }
+            });
+
+            if (!valid) {
+                submitBtn.textContent = 'Merci de remplir les champs requis';
+                setTimeout(() => {
+                    submitBtn.innerHTML = `Envoyer le message
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                            <path d="M1 6h14M10 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>`;
+                }, 2500);
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours…';
+
+            try {
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+                if (response.status === 200) {
+                    form.style.display = 'none';
+                    successBox.classList.add('visible');
+                } else {
+                    throw new Error(result.message || 'Erreur réseau');
+                }
+            } catch (err) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Erreur, veuillez réessayer';
+                setTimeout(() => {
+                    submitBtn.innerHTML = `Envoyer le message
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+                            <path d="M1 6h14M10 1l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>`;
+                }, 2500);
+            }
+        });
+    </script>
+</body>
+
+</html>

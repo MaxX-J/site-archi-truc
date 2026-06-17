@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/webp" href="assets/Favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet | Architruc & Baltaz'art</title>
+    <meta name="description" content="Découvrez le détail de nos réalisations. Architecture d'intérieur et mobilier design à Béziers.">
+
+    <!-- Open Graph / Réseaux sociaux -->
+    <link rel="canonical" href="https://www.archi-truc.com/projet.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Architruc & Baltaz'art">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Projet | Architruc & Baltaz'art">
+    <meta property="og:description" content="Découvrez le détail de nos réalisations. Architecture d'intérieur et mobilier design à Béziers.">
+    <meta property="og:url" content="https://www.archi-truc.com/projet.html">
+    <meta property="og:image" content="https://www.archi-truc.com/assets/images/realisations/photo-hero-realisation.avif">
+    <meta property="og:image:alt" content="Projet | Architruc & Baltaz'art">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projet | Architruc & Baltaz'art">
+    <meta name="twitter:description" content="Découvrez le détail de nos réalisations. Architecture d'intérieur et mobilier design à Béziers.">
+    <meta name="twitter:image" content="https://www.archi-truc.com/assets/images/realisations/photo-hero-realisation.avif">
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Project Hero Styles */
+        .project-hero {
+            height: 100vh; /* Full screen impact */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            background-color: var(--orange);
+        }
+
+        .project-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.15;
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.6));
+            z-index: 2;
+        }
+
+        .project-hero-bg {
+            position: absolute;
+            inset: -20px;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            transform: scale(1.05);
+            animation: heroZoom 15s ease-out forwards;
+        }
+
+        .hero-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--orange);
+            filter: blur(80px);
+            opacity: 0.3;
+            border-radius: 50%;
+            z-index: 1;
+            animation: blobFloat 20s infinite alternate;
+        }
+        .hero-blob--1 { top: -100px; right: -100px; }
+        .hero-blob--2 { bottom: -150px; left: -150px; }
+
+        @keyframes blobFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 60px) scale(1.1); }
+        }
+
+        .project-hero-content {
+            position: relative;
+            z-index: 5;
+            padding: 0 20px;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Horizontal dots in hero */
+        .hero-divider-row {
+            display: flex;
+            flex-direction: row !important;
+            gap: 10px;
+        }
+
+        .project-hero h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1;
+            margin: 20px 0;
+            letter-spacing: -3px;
+        }
+
+        /* Outline Back Button in Hero */
+        .hero-back-nav {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .btn-back-hero {
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 2px;
+            transition: all 0.4s var(--ease);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .btn-back-hero:hover { 
+            border-color: var(--orange);
+            color: var(--orange);
+            transform: translateY(-3px);
+            background: transparent;
+        }
+
+        /* Footer Adjustments */
+        .project-footer {
+            margin-top: 0;
+        }
+
+        /* Scroll Indicator with Text */
+        .hero-discover {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+        .discover-text {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: white;
+            opacity: 0.8;
+        }
+        .discover-dots {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .discover-dots span {
+            width: 5px;
+            height: 5px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: blobPulse 3s ease-in-out infinite;
+        }
+        .discover-dots span:nth-child(2) { animation-delay: 1.5s; }
+
+        /* Intro Section */
+        .marque-phrase {
+            padding: 140px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: white;
+        }
+
+        .marque-phrase .subtitle {
+            margin-bottom: 30px;
+            font-size: 11px;
+        }
+
+        .marque-phrase p {
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.2;
+            font-weight: 800;
+            color: var(--text);
+            font-family: var(--font-heading);
+            letter-spacing: -0.5px;
+        }
+
+        .marque-phrase p em {
+            display: block;
+            color: var(--orange);
+            font-style: italic;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        /* Gallery Section */
+        .gallery-wrap {
+            background-color: var(--bg-soft);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .span-2 { grid-column: span 2; }
+        .span-3 { grid-column: span 3; }
+        .span-6 { grid-column: span 6; }
+
+        @media (max-width: 1024px) {
+            .project-gallery { grid-template-columns: repeat(2, 1fr); }
+            .span-2, .span-3 { grid-column: span 1 !important; }
+            .span-6 { grid-column: span 2 !important; }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery { grid-template-columns: repeat(2, 1fr); padding: 0 20px; gap: 12px; }
+            .span-2, .span-3 { grid-column: span 1 !important; }
+            .span-6 { grid-column: span 2 !important; }
+            .marque-phrase { padding: 80px 20px; }
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            background: var(--bg-soft);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+            display: flex;
+        }
+
+        .gallery-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 1.2s var(--ease);
+        }
+
+        .gallery-item { cursor: pointer; }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        .back-nav {
+            display: flex;
+            justify-content: center;
+            padding: 80px 0 120px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s var(--ease);
+        }
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.4s var(--ease);
+        }
+        .lightbox.active img {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s var(--ease);
+        }
+        .lightbox-close:hover {
+            color: var(--orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="showrooms.html">Archi concept</a></li>
+                    <li><a href="archi-nous.html">Archi nous</a></li>
+                    <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+                    <li><a href="marques.html">Nos Marques</a></li>
+                    <li><a href="archi-business.html">Archi business</a></li>
+                    <li><a href="archi-bonne-annee.html">Archi bonne année</a></li>
+                    <li><a href="contact.html" class="nav-contact-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Dynamics (100vh) -->
+        <section class="project-hero">
+            <div class="project-hero-bg" id="p-hero-bg"></div>
+            <div class="hero-blob hero-blob--1"></div>
+            <div class="hero-blob hero-blob--2"></div>
+            
+            <div class="project-hero-content">
+                <div class="blob-divider blob-divider--center blob-divider--orange hero-divider-row">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                
+                <h1 id="p-title">Chargement...</h1>
+                
+                <div class="blob-divider blob-divider--center blob-divider--orange hero-divider-row">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+
+                <div class="hero-back-nav">
+                    <a href="nos-realisations.html" class="btn-back-hero">
+                        ← Retour aux réalisations
+                    </a>
+                </div>
+            </div>
+
+            <!-- Discover Indicator -->
+            <div class="hero-discover">
+                <div class="discover-dots">
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="discover-text">DÉCOUVRIR</span>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="marque-phrase">
+            <div class="deco-blob deco-blob--left"></div>
+            <div class="deco-blob deco-blob--right"></div>
+            <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+                <span class="subtitle" id="p-meta"></span>
+                
+                <div class="blob-divider blob-divider--orange fade-up" style="margin-bottom: 40px;">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+
+                <p class="fade-up" id="p-description-content"></p>
+
+                <div class="blob-divider blob-divider--orange fade-up" style="margin-top: 40px;">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Beige) -->
+        <section class="gallery-wrap">
+            <div class="deco-emblem deco-emblem--lg deco-emblem--tl" style="top: 100px;"></div>
+            <div class="deco-emblem deco-emblem--lg deco-emblem--br"></div>
+            <div class="project-gallery" id="p-gallery"></div>
+
+            <div style="display: flex; justify-content: center; margin-top: 60px;">
+                <a href="nos-realisations.html" class="btn btn-outline-dark">← Retour aux réalisations</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════ FOOTER / CONTACT ═══════════ -->
+    <footer id="contact" class="footer" style="position: relative; overflow: hidden;">
+        <div class="deco-blob deco-blob--footer"></div>
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="assets/logo.svg" alt="Architruc & Baltaz'Art" class="footer-logo">
+                <p>Depuis 2002, créateurs d'espaces où se mêlent art, design et architecture à Béziers.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/architrucbaltazart" target="_blank" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/architruc/" target="_blank" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/architruc/" target="_blank" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>5 rue Montmorency — Béziers</h4>
+                <p class="footer-tag">Mobilier contemporain & objets design</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467362687">04.67.36.26.87</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>28 rue de la Citadelle — Béziers</h4>
+                <p class="footer-tag">Décoration d'intérieur</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467285433">04.67.28.54.33</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <p><a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a></p>
+                <p><a href="tel:+33467362687">04.67.36.26.87</a></p>
+                <br>
+                <h4>Archi Business</h4>
+                <p>Entreprises, collectivités,<br>professions libérales…</p>
+                <a href="archi-business.html" class="link-arrow">En savoir plus →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© Architruc & Baltaz'art 2026, Tous droits réservés. <span class="credit" style="opacity: 0.6; margin-left: 8px;">| &nbsp; Site développé par <a href="https://maxx-j.github.io/portfolio/" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Maxens Sevilla</a></span></p>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="Image en plein écran" id="lightbox-img" loading="lazy">
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="projects-data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+        const project = window.PROJECTS_DATA ? window.PROJECTS_DATA[projectId] : null;
+
+        // Helpers SEO : maj des balises <head> selon le projet courant
+        function setMeta(name, content) {
+            let el = document.querySelector(`meta[name="${name}"]`);
+            if (!el) {
+                el = document.createElement('meta');
+                el.setAttribute('name', name);
+                document.head.appendChild(el);
+            }
+            el.setAttribute('content', content);
+        }
+        function setCanonical(href) {
+            let el = document.querySelector('link[rel="canonical"]');
+            if (!el) {
+                el = document.createElement('link');
+                el.setAttribute('rel', 'canonical');
+                document.head.appendChild(el);
+            }
+            el.setAttribute('href', href);
+        }
+
+        if (!project) {
+            document.getElementById('p-title').textContent = "Projet non trouvé";
+            // Page inexistante : on évite l'indexation d'un contenu vide
+            setMeta('robots', 'noindex, follow');
+        } else {
+            document.title = `${project.title} | Architruc & Baltaz'art`;
+            // Description unique par projet (≈155 caractères max)
+            const metaDesc = `${project.title} — ${project.category} à ${project.location}. Réalisation Architruc & Baltaz'art : architecture d'intérieur et mobilier design.`.slice(0, 160);
+            setMeta('description', metaDesc);
+            // Canonique propre à chaque projet (évite la consolidation sur projet.html nu)
+            setCanonical(`https://www.archi-truc.com/projet.html?id=${encodeURIComponent(projectId)}`);
+            document.getElementById('p-title').textContent = project.title;
+            document.getElementById('p-meta').textContent = `${project.category} — ${project.location}`;
+
+            let description = project.description;
+            let parts = description.split(',');
+            if (parts.length > 1) {
+                let first = parts[0];
+                let second = parts.slice(1).join(',');
+                document.getElementById('p-description-content').innerHTML = `${first},<br><em>${second}</em>`;
+            } else {
+                document.getElementById('p-description-content').innerHTML = description;
+            }
+
+            if (project.hero) {
+                document.getElementById('p-hero-bg').style.backgroundImage = `url('${project.folder}/${project.hero}')`;
+            }
+
+            // Gestion des liens SEO
+            const descEl = document.getElementById('p-description-content');
+            const descriptionWrap = descEl ? descEl.parentNode : null;
+            
+            if (descriptionWrap) {
+                // 1. Lien externe (si pro avec site web)
+                if (project.website) {
+                    const webLink = document.createElement('a');
+                    webLink.href = project.website;
+                    webLink.target = "_blank";
+                    webLink.className = "btn btn-outline-dark btn-sm";
+                    webLink.style.marginTop = "25px";
+                    webLink.innerHTML = `Visiter le site du projet <span style="margin-left:8px">↗</span>`;
+                    descriptionWrap.appendChild(webLink);
+                }
+
+                // 2. Lien interne (Maillage SEO) - Uniquement pour les particuliers vers showrooms
+                if (project.category !== "Professionnel") {
+                    const internalLink = document.createElement('a');
+                    internalLink.style.display = "block";
+                    internalLink.style.marginTop = "40px";
+                    internalLink.style.fontSize = "12px";
+                    internalLink.style.textTransform = "uppercase";
+                    internalLink.style.letterSpacing = "2px";
+                    internalLink.style.color = "var(--orange)";
+                    internalLink.style.textDecoration = "none";
+                    internalLink.style.fontWeight = "700";
+                    internalLink.href = "showrooms.html";
+                    internalLink.innerHTML = "← Découvrir nos Showrooms";
+                    descriptionWrap.appendChild(internalLink);
+                }
+            }
+
+            const gallery = document.getElementById('p-gallery');
+            const total = project.images.length;
+            const remainder = total % 3;
+
+            project.images.forEach((imgName, index) => {
+                const item = document.createElement('div');
+                let spanClass = 'span-2'; // Par défaut 3 par ligne
+
+                if (remainder === 1 && index === total - 1) {
+                    spanClass = 'span-6'; // La dernière prend toute la largeur
+                } else if (remainder === 2 && index >= total - 2) {
+                    spanClass = 'span-3'; // Les 2 dernières prennent la moitié de la largeur
+                }
+
+                item.className = `gallery-item ${spanClass}`;
+                const imgSrc = `${project.folder}/${imgName}`;
+                item.innerHTML = `<img src="${imgSrc}" alt="${project.title}" loading="lazy">`;
+                
+                // Clic pour ouvrir la lightbox
+                item.addEventListener('click', () => {
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    lightboxImg.src = imgSrc;
+                    lightbox.classList.add('active');
+                });
+
+                gallery.appendChild(item);
+                setTimeout(() => item.classList.add('visible'), 400 + (index * 80));
+            });
+
+            // Gestion de la fermeture de la lightbox
+            const lightbox = document.getElementById('lightbox');
+            const closeBtn = document.getElementById('lightbox-close');
+            
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+               

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/webp" href="assets/Favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales | Architruc & Baltaz'art Béziers</title>
+    <meta name="description"
+        content="Mentions légales du site Architruc & Baltaz'art : informations sur l'éditeur, l'hébergeur, la propriété intellectuelle et la protection des données personnelles.">
+
+    <!-- Open Graph / Réseaux sociaux -->
+    <link rel="canonical" href="https://www.archi-truc.com/mentions-legales.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Architruc & Baltaz'art">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Mentions légales | Architruc & Baltaz'art">
+    <meta property="og:description" content="Mentions légales du site Architruc & Baltaz'art : informations sur l'éditeur, l'hébergeur, la propriété intellectuelle et la protection des données personnelles.">
+    <meta property="og:url" content="https://www.archi-truc.com/mentions-legales.html">
+    <meta property="og:image" content="https://www.archi-truc.com/assets/hero-page-accueil.webp">
+    <meta property="og:image:alt" content="Mentions légales | Architruc & Baltaz'art">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mentions légales | Architruc & Baltaz'art">
+    <meta name="twitter:description" content="Mentions légales du site Architruc & Baltaz'art : informations sur l'éditeur, l'hébergeur, la propriété intellectuelle et la protection des données personnelles.">
+    <meta name="twitter:image" content="https://www.archi-truc.com/assets/hero-page-accueil.webp">
+
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Styles spécifiques à la page -->
+    <style>
+        /* Force l'affichage du header avec texte sombre et fond blanc (comme après scroll) */
+        #main-header {
+            background: rgba(255, 255, 255, 0.97) !important;
+            padding: 14px 0 !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+        #main-header .desktop-nav a {
+            color: var(--text) !important;
+        }
+        #main-header .desktop-nav a:hover,
+        #main-header .desktop-nav a.nav-active {
+            color: var(--orange) !important;
+        }
+        #main-header .nav-contact-link {
+            color: var(--text) !important;
+            border-color: rgba(0, 0, 0, 0.15) !important;
+        }
+        #main-header .nav-contact-link:hover {
+            color: white !important;
+            background: var(--orange) !important;
+            border-color: var(--orange) !important;
+        }
+        #main-header .mobile-toggle span {
+            background: var(--text) !important;
+        }
+
+        /* Contenu juridique */
+        .legal-content {
+            background: var(--bg-soft);
+            padding: 120px 0 100px;
+        }
+        .legal-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 60px clamp(1.5rem, 5vw, 4rem);
+            border-radius: 6px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+        }
+        .legal-inner h2 {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin: 48px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--orange);
+            display: inline-block;
+        }
+        .legal-inner h2:first-of-type {
+            margin-top: 0;
+        }
+        .legal-inner h3 {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin: 28px 0 10px;
+            font-weight: 700;
+        }
+        .legal-inner p,
+        .legal-inner li {
+            color: var(--text-light);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .legal-inner ul {
+            padding-left: 22px;
+            margin-bottom: 14px;
+        }
+        .legal-inner li {
+            margin-bottom: 8px;
+        }
+        .legal-inner a {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .legal-inner a:hover {
+            border-color: var(--orange);
+        }
+        .legal-inner strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+        .legal-inner .placeholder {
+            background: rgba(234, 84, 13, 0.08);
+            color: var(--orange);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        .legal-meta {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e0d8;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .legal-toc {
+            background: var(--bg-soft);
+            padding: 24px 28px;
+            border-radius: 6px;
+            margin-bottom: 48px;
+        }
+        .legal-toc h4 {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+        .legal-toc ol {
+            list-style: none;
+            counter-reset: toc;
+            padding: 0;
+            margin: 0;
+            columns: 2;
+            column-gap: 32px;
+        }
+        .legal-toc li {
+            counter-increment: toc;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+        }
+        .legal-toc li::before {
+            content: counter(toc, decimal-leading-zero) ".";
+            color: var(--orange);
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        .legal-toc a {
+            color: var(--text);
+            border-bottom: none;
+        }
+        .legal-toc a:hover {
+            color: var(--orange);
+        }
+        @media (max-width: 640px) {
+            .legal-toc ol { columns: 1; }
+            .legal-inner { padding: 40px 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-blobs">
+            <div class="loader-blob"></div>
+            <div class="loader-blob"></div>
+        </div>
+        <div class="loader-brand">Architruc</div>
+    </div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.webp" alt="Architruc & Baltaz'Art" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="showrooms.html">Archi concept</a></li>
+                    <li><a href="archi-nous.html">Archi nous</a></li>
+                    <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+                    <li><a href="marques.html">Nos Marques</a></li>
+                    <li><a href="archi-business.html">Archi business</a></li>
+                    <li><a href="archi-bonne-annee.html">Archi bonne année</a></li>
+                    <li><a href="contact.html" class="nav-contact-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ═══════════ CONTENU ═══════════ -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-inner fade-up">
+
+                <h1 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; margin-bottom: 6px;">Mentions légales</h1>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 40px;">Toutes les informations sur l'éditeur du site, l'hébergeur, et la gestion de vos données personnelles.</p>
+
+                <!-- Sommaire -->
+                <nav class="legal-toc" aria-label="Sommaire">
+                    <h4>Sommaire</h4>
+                    <ol>
+                        <li><a href="#editeur">Éditeur du site</a></li>
+                        <li><a href="#hebergeur">Hébergeur</a></li>
+                        <li><a href="#conception">Conception du site</a></li>
+                        <li><a href="#propriete">Propriété intellectuelle</a></li>
+                        <li><a href="#donnees">Données personnelles</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                        <li><a href="#liens">Liens hypertextes</a></li>
+                        <li><a href="#responsabilite">Responsabilité</a></li>
+                        <li><a href="#droit">Droit applicable</a></li>
+                    </ol>
+                </nav>
+
+                <!-- 1. Éditeur -->
+                <h2 id="editeur">1. Éditeur du site</h2>
+                <p>Le site <strong>archi-truc.com</strong> est édité par&nbsp;:</p>
+                <p>
+                    <strong>BALTHAZ'ART</strong> (enseigne commerciale&nbsp;: Architruc & Baltaz'art)<br>
+                    Forme juridique&nbsp;: SARL<br>
+                    Capital social&nbsp;: 7 500&nbsp;€<br>
+                    Siège social&nbsp;: 28 rue de la Citadelle, 34500 Béziers, France<br>
+                    RCS Béziers&nbsp;: 443 897 830<br>
+                    N° SIREN&nbsp;: 443 897 830<br>
+                    N° TVA intracommunautaire&nbsp;: FR96 443 897 830<br>
+                    Téléphone&nbsp;: <a href="tel:+33467285433">04 67 28 54 33</a><br>
+                    E-mail&nbsp;: <a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a>
+                </p>
+
+                <h3>Directrice de la publication</h3>
+                <p>
+                    Mme Bernadette Boissière, en qualité de gérante.
+                </p>
+
+                <!-- 2. Hébergeur -->
+                <h2 id="hebergeur">2. Hébergeur</h2>
+                <p>Le site est hébergé par&nbsp;:</p>
+                <p>
+                    <strong>OVH</strong>, SAS au capital de 10 174 560&nbsp;€<br>
+                    Siège social&nbsp;: 2 rue Kellermann, 59100 Roubaix, France<br>
+                    RCS Lille Métropole&nbsp;: B 424 761 419<br>
+                    Site web&nbsp;: <a href="https://www.ovh.com" target="_blank" rel="noopener noreferrer">www.ovh.com</a>
+                </p>
+                <!-- 2 bis. Conception -->
+                <h2 id="conception">Conception et réalisation du site</h2>
+                <p>
+                    Refonte du site réalisée en interne par <strong>Maxens Sevilla</strong>,
+                    dans le cadre d'un stage chez BALTHAZ'ART.
+                </p>
+
+                <!-- 3. Propriété intellectuelle -->
+                <h2 id="propriete">3. Propriété intellectuelle</h2>
+                <p>
+                    Le site Internet accessible aux adresses <a href="https://www.archi-truc.com" target="_blank" rel="noopener noreferrer">www.archi-truc.com</a>
+                    et <a href="https://www.archi-truc.com" target="_blank" rel="noopener noreferrer">www.archi-truc.com</a>
+                    (le « Site »), dans son intégralité et pour chaque élément le composant (y inclus tous textes, photographies, images animées ou non,
+                    logos, graphismes, applications informatiques, etc.), constitue une œuvre protégée propriété exclusive de l'Éditeur.
+                </p>
+                <p>
+                    Toute exploitation non autorisée, y inclus toute utilisation, reproduction, représentation, publication, distribution,
+                    transmission ou extraction, sous quelque forme que ce soit, de tout ou partie du Site, de tout élément composant le Site
+                    ou de toute information contenue dans le Site est strictement interdite et susceptible d'entraîner des poursuites judiciaires,
+                    notamment au titre d'une action en contrefaçon.
+                </p>
+                <p>
+                    Les marques et logos présentés sur le Site (mobilier, luminaires, objets design) sont la propriété de leurs titulaires respectifs
+                    et sont reproduits avec leur autorisation dans le cadre de notre activité de revendeur agréé.
+                </p>
+
+                <!-- 4. Données personnelles -->
+                <h2 id="donnees">4. Données personnelles</h2>
+
+                <h3>Collecte des données</h3>
+                <p>
+                    Les informations recueillies via les formulaires du site (contact, demande de devis) font l'objet d'un traitement
+                    informatique destiné à&nbsp;: répondre à votre demande, vous proposer des conseils personnalisés, et vous tenir informé(e)
+                    de notre actualité si vous l'avez accepté.
+                </p>
+                <p>
+                    Les données collectées sont&nbsp;: nom, prénom, adresse e-mail, numéro de téléphone, et tout élément que vous nous
+                    transmettez librement dans le contenu de votre message.
+                </p>
+
+                <h3>Destinataires et durée de conservation</h3>
+                <p>
+                    Les données sont destinées uniquement à l'équipe de BALTHAZ'ART. Elles ne sont <strong>ni vendues, ni louées,
+                    ni transmises</strong> à des tiers à des fins commerciales. Elles sont conservées pendant une durée maximale de
+                    <strong>3 ans</strong> à compter du dernier contact, sauf obligation légale contraire (factures, contrats…).
+                </p>
+
+                <h3>Vos droits (RGPD)</h3>
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données (RGPD, Règlement UE 2016/679) et à la loi
+                    « Informatique et Libertés » du 6 janvier 1978 modifiée, vous disposez d'un droit&nbsp;:
+                </p>
+                <ul>
+                    <li>d'<strong>accès</strong> à vos données,</li>
+                    <li>de <strong>rectification</strong> des données inexactes,</li>
+                    <li>d'<strong>effacement</strong> de vos données,</li>
+                    <li>de <strong>limitation</strong> du traitement,</li>
+                    <li>d'<strong>opposition</strong> au traitement,</li>
+                    <li>à la <strong>portabilité</strong> de vos données,</li>
+                    <li>de définir des <strong>directives</strong> relatives au sort de vos données après votre décès.</li>
+                </ul>
+                <p>
+                    Pour exercer ces droits, vous pouvez nous contacter par e-mail à
+                    <a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a> ou par courrier à&nbsp;:
+                    BALTHAZ'ART — 28 rue de la Citadelle, 34500 Béziers.
+                </p>
+                <p>
+                    Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire
+                    une réclamation auprès de la <strong>CNIL</strong>&nbsp;: <a href="https://www.cnil.fr"
+                        target="_blank" rel="noopener noreferrer">www.cnil.fr</a>.
+                </p>
+
+                <!-- 5. Cookies -->
+                <h2 id="cookies">5. Cookies</h2>
+                <p>
+                    Le site <strong>archi-truc.com</strong> n'utilise <strong>aucun cookie de suivi, de mesure d'audience ou de publicité</strong>.
+                    Aucune donnée de navigation n'est collectée à des fins statistiques ou commerciales.
+                </p>
+                <p>
+                    Seuls des cookies strictement nécessaires au bon fonctionnement technique du site peuvent éventuellement être déposés
+                    (par exemple pour mémoriser la fermeture d'un message d'information). Ces cookies sont, conformément à la réglementation,
+                    déposés sans consentement préalable car indispensables à la fourniture du service.
+                </p>
+                <p>
+                    Vous pouvez à tout moment configurer votre navigateur pour refuser tous les cookies ou être averti(e) avant leur dépôt.
+                </p>
+
+                <!-- 6. Liens hypertextes -->
+                <h2 id="liens">6. Liens hypertextes</h2>
+                <p>
+                    L'Éditeur décline toute responsabilité quant à toutes informations rendues accessibles depuis le Site via un lien hypertexte
+                    quel qu'il soit, lesdites informations n'étant pas sous son contrôle.
+                </p>
+                <p>
+                    La mise en place de tous liens hypertextes vers tout ou partie du Site est strictement interdite, sauf autorisation expresse,
+                    préalable et écrite de l'Éditeur, étant précisé que l'Éditeur est libre de refuser une telle autorisation sans avoir à justifier
+                    de quelque manière que ce soit sa décision. Dans le cas où l'Éditeur accorderait son autorisation, celle-ci n'est dans tous les
+                    cas que temporaire et pourra être retirée à tout moment par l'Éditeur, sans obligation de justification, étant précisé que tout
+                    lien vers le Site devra être retiré immédiatement sur première demande de l'Éditeur.
+                </p>
+
+                <!-- 7. Responsabilité -->
+                <h2 id="responsabilite">7. Responsabilité</h2>
+                <p>
+                    BALTHAZ'ART s'efforce d'assurer au mieux l'exactitude et la mise à jour des informations publiées sur le Site.
+                    Toutefois, des erreurs ou omissions peuvent survenir, notamment concernant la disponibilité ou les caractéristiques
+                    des produits présentés. L'utilisateur est invité à vérifier toute information importante auprès de notre équipe
+                    avant tout engagement.
+                </p>
+                <p>
+                    BALTHAZ'ART ne pourra être tenue responsable des dommages directs ou indirects résultant de l'accès au Site ou
+                    de son utilisation, y compris l'inaccessibilité, les pertes de données, intrusions, virus, ou tout autre incident
+                    technique.
+                </p>
+
+                <!-- 8. Droit applicable -->
+                <h2 id="droit">8. Droit applicable</h2>
+                <p>
+                    Les présentes mentions légales sont régies par le droit français. En cas de litige et à défaut de résolution
+                    amiable, les tribunaux français seront seuls compétents.
+                </p>
+
+                <!-- Date -->
+                <p class="legal-meta">
+                    Dernière mise à jour&nbsp;: 3 juin 2026.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer" style="position: relative; overflow: hidden;">
+        <div class="deco-blob deco-blob--footer"></div>
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="assets/logo.webp" alt="Architruc & Baltaz'Art" class="footer-logo">
+                <p>Depuis 2002, créateurs d'espaces où se mêlent art, design et architecture à Béziers.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/architrucbaltazart" target="_blank" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/architruc/" target="_blank" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/architruc/" target="_blank" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>5 rue Montmorency — Béziers</h4>
+                <p class="footer-tag">Mobilier contemporain & objets design</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467362687">04.67.36.26.87</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>28 rue de la Citadelle — Béziers</h4>
+                <p class="footer-tag">Décoration d'intérieur</p>
+                <p>Lundi : 14h30 – 19h<br><em>(mi-nov. à mi-janv. & avr., mai, juin, juil.)</em></p>
+                <p>Mar., Mer., Jeu. & Sam. : 10h – 12h30 & 14h – 19h</p>
+                <p>Vendredi : 10h – 19h</p>
+                <p class="footer-tel"><a href="tel:+33467285433">04.67.28.54.33</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <p><a href="mailto:contact@archi-truc.com">contact@archi-truc.com</a></p>
+                <p><a href="tel:+33467362687">04.67.36.26.87</a></p>
+                <br>
+                <h4>Archi Business</h4>
+                <p>Entreprises, collectivités,<br>professions libérales…</p>
+                <a href="archi-business.html" class="link-arrow">En savoir plus →</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© Architruc & Baltaz'art 2026, Tous droits réservés</p>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+                                                                                                                

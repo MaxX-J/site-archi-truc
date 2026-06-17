@@ -1,0 +1,550 @@
+/* ═══════════════════════════════════════════════
+   PAGE HERO — Archi Nous
+═══════════════════════════════════════════════ */
+
+
+.page-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 2rem;
+    margin-top: 0;
+}
+
+.page-hero h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin: 16px 0 20px;
+    letter-spacing: -0.02em;
+}
+
+.page-hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+.page-hero .scroll-indicator {
+    z-index: 2;
+}
+
+
+/* ═══════════════════════════════════════════════
+   INTRO
+═══════════════════════════════════════════════ */
+.team-intro {
+    background: white;
+    text-align: center;
+}
+
+.team-intro-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-intro-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.8vw, 2rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.team-intro-text em {
+    font-style: italic;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+
+/* ═══════════════════════════════════════════════
+   FICHES ÉQUIPE — format éditorial (liste)
+═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════
+   FICHES ÉQUIPE — Grille de Flip Cards
+═══════════════════════════════════════════════ */
+.team-section {
+    padding: 80px 0 100px;
+    background: var(--bg-soft);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#bernadette {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 20px);
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    #bernadette {
+        width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 640px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    #bernadette {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .team-member {
+        height: 260px;
+        /* Adapté pour 2 colonnes sur mobile */
+    }
+}
+
+/* Conteneur de la perspective */
+.team-member {
+    perspective: 1500px;
+    height: 480px;
+    /* Hauteur fixe pour les cartes */
+}
+
+/* La carte qui tourne */
+.team-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.team-member:hover .team-card {
+    transform: rotateY(180deg);
+}
+
+/* Faces de la carte */
+.team-card-front,
+.team-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* FACE AVANT */
+.team-card-front {
+    background: var(--bg-soft);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.team-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.team-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    text-align: center;
+    /* Centrer le nom */
+}
+
+.team-card-info .team-name {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+/* FACE ARRIÈRE */
+.team-card-back {
+    background: var(--bg-dark);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Fond photo sur l'arrière (optionnel, très élégant) */
+.team-card-back::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--member-photo);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    filter: grayscale(1);
+    z-index: 0;
+}
+
+.team-card-back-content {
+    position: relative;
+    z-index: 1;
+}
+
+.team-card-back .team-number {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 4rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-card-back .team-quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .team-card-back {
+        padding: 16px;
+    }
+
+    .team-card-back .team-quote {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* ═══════════════════════════════════════════════
+   BLOBS DÉCO — Section équipe
+═══════════════════════════════════════════════ */
+/* Positionné à ~65% du haut, côté droit — en face de Pierre/Nathalie */
+.deco-emblem--team-r {
+    top: 72%;
+    right: 40px;
+    transform: translateY(-50%);
+}
+
+/* ═══════════════════════════════════════════════
+   CARROUSEL GALERIE
+═══════════════════════════════════════════════ */
+.gallery-section {
+    padding: 80px 0 60px;
+    overflow: hidden;
+}
+
+.gallery-section .section-header {
+    margin-bottom: 48px;
+}
+
+.gallery-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+}
+
+.gallery-carousel:active {
+    cursor: grabbing;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.55s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform;
+}
+
+.gallery-slide {
+    flex: 0 0 clamp(280px, 22vw, 400px);
+    margin-right: 32px;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    position: relative;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease);
+    pointer-events: none;
+}
+
+.gallery-slide:hover img {
+    transform: scale(1.04);
+}
+
+/* Boutons de navigation */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s var(--ease);
+    backdrop-filter: blur(4px);
+}
+
+.gallery-btn:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.gallery-btn--prev {
+    left: 24px;
+}
+
+.gallery-btn--next {
+    right: 24px;
+}
+
+/* Compteur */
+.gallery-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 32px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 10;
+}
+
+/* Dots */
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 32px 0 0;
+}
+
+.gallery-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    padding: 0;
+}
+
+.gallery-dot.active {
+    background: var(--orange);
+    transform: scale(1.5);
+}
+
+
+/* ═══════════════════════════════════════════════
+   CTA REJOINDRE
+═══════════════════════════════════════════════ */
+.join-cta {
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.join-cta-inner {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-cta-inner h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 20px 0 16px;
+}
+
+.join-cta-inner p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 36px;
+}
+
+.join-cta-inner .blob-divider-horizontal {
+    justify-content: center;
+}
+
+
+/* ═══════════════════════════════════════════════
+   NAV — page active
+═══════════════════════════════════════════════ */
+.nav-active {
+    color: var(--orange) !important;
+}
+
+.nav-active::after {
+    width: 100% !important;
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .team-member {
+        grid-template-columns: 220px 1fr;
+        gap: 40px;
+    }
+
+    .team-member-photo {
+        width: 220px;
+    }
+
+    .gallery-slide {
+        flex: 0 0 320px;
+        margin-right: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .team-member-photo {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .team-separator {
+        margin: 40px 0;
+    }
+
+    .gallery-slide {
+        flex: 0 0 calc(75% - 16px);
+        margin-right: 16px;
+    }
+
+    .gallery-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-btn--prev {
+        left: 12px;
+    }
+
+    .gallery-btn--next {
+        right: 12px;
+    }
+
+    .team-intro-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-slide {
+        flex: 0 0 calc(85% - 12px);
+        margin-right: 12px;
+    }
+}
+
+/* ═══════════════════════════════════════════════
+   LIGHTBOX MODAL
+═══════════════════════════════════════════════ */
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.lightbox-modal.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+/* Clic sur les images du carrousel */
+.gallery-slide img {
+    pointer-events: auto; /* Allow clicking on image */
+    cursor: zoom-in;
+}

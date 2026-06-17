@@ -1,0 +1,18 @@
+# robots.txt — Architruc & Baltaz'art
+# https://www.archi-truc.com
+
+User-agent: *
+Allow: /
+
+# Note : /mentions-legales.html n'est PAS bloquée ici afin que Google puisse
+# lire la balise meta robots "noindex" présente sur la page.
+
+# Bloquer l'indexation de fichiers techniques
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /skills-lock.json
+Disallow: /*.md
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://www.archi-truc.com/sitemap.xml

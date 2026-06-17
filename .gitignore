@@ -1,0 +1,69 @@
+# ═══════════════════════════════════════════════
+# Dépendances Node
+# ═══════════════════════════════════════════════
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# ═══════════════════════════════════════════════
+# Fichiers temporaires & sauvegardes
+# ═══════════════════════════════════════════════
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+*-backup/
+*-backup.*
+~$*
+
+# ═══════════════════════════════════════════════
+# Fichiers système (Mac / Windows / Linux)
+# ═══════════════════════════════════════════════
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ═══════════════════════════════════════════════
+# Éditeurs / IDE
+# ═══════════════════════════════════════════════
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# ═══════════════════════════════════════════════
+# Logs
+# ═══════════════════════════════════════════════
+*.log
+logs/
+
+# ═══════════════════════════════════════════════
+# Variables d'environnement (au cas où)
+# ═══════════════════════════════════════════════
+.env
+.env.local
+.env.*.local
+
+# ═══════════════════════════════════════════════
+# Dossier de build local (si on en ajoute un plus tard)
+# ═══════════════════════════════════════════════
+dist/
+build/
+.cache/
+
+# AI assistants directories
+.agents/
+.claude/
+.gemini/
+skills-lock.json
