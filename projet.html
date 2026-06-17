@@ -119,7 +119,8 @@
         .hero-divider-row {
             display: flex;
             flex-direction: row !important;
-            gap: 10px;
+            gap: 12px;
+            margin: 15px auto !important; /* Force closer to the title */
         }
 
         .project-hero h1 {
@@ -127,7 +128,7 @@
             text-transform: uppercase;
             font-weight: 900;
             line-height: 1;
-            margin: 20px 0;
+            margin: 5px 0; /* Closer to the dots */
             letter-spacing: -2px;
         }
 
@@ -165,8 +166,8 @@
                 gap: 6px;
             }
             .hero-divider-row .blob-dot {
-                width: 5px !important;
-                height: 5px !important;
+                width: 10px !important; /* Normal size */
+                height: 10px !important;
             }
         }
         .btn-back-hero:hover { 
@@ -396,7 +397,17 @@
             <div class="hero-blob hero-blob--2"></div>
             
             <div class="project-hero-content">
+                <div class="blob-divider blob-divider--center blob-divider--orange hero-divider-row">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
+                
                 <h1 id="p-title">Chargement...</h1>
+                
+                <div class="blob-divider blob-divider--center blob-divider--orange hero-divider-row">
+                    <div class="blob-dot"></div>
+                    <div class="blob-dot"></div>
+                </div>
 
                 <div class="hero-back-nav">
                     <a href="nos-realisations.html" onclick="goBack(event)" class="btn-back-hero">
