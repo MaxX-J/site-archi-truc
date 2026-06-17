@@ -1745,8 +1745,14 @@ img.marquee-item {
 
     /* Hero */
     .hero-content {
-        padding: 0 20px 130px;
+        padding: 60px 20px 80px; /* Reduced bottom padding */
         max-width: 100%;
+        margin-top: 40px; /* Push down away from header logo */
+    }
+    
+    .hero h1, .page-hero h1, .project-hero h1 {
+        font-size: clamp(2.2rem, 8vw, 3.2rem) !important;
+        line-height: 1.1;
     }
 
     .hero-sub {
@@ -1778,7 +1784,8 @@ img.marquee-item {
     }
 
     .page-hero .hero-content {
-        padding: 100px 20px 40px;
+        padding: 80px 20px 40px;
+        margin-top: 40px;
     }
 
     /* Marque phrase */
@@ -1789,6 +1796,11 @@ img.marquee-item {
     .marque-phrase p {
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    .blob-divider-horizontal .blob-dot {
+        width: 12px;
+        height: 12px;
     }
 
     /* Stats */
@@ -3338,8 +3350,8 @@ img.marquee-item {
     .location-hero,
     .loc-hero-v2,
     .business-hero {
-        height: 70svh !important;
-        min-height: 400px !important;
+        height: auto !important;
+        min-height: 85svh !important;
     }
 
     /* On dÃ©sactive le lÃ©ger zoom CSS (qui agrave le problÃ¨me sur les petits Ã©crans) */

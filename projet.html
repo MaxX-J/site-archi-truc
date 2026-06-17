@@ -551,14 +551,22 @@
             document.getElementById('p-title').textContent = project.title;
             document.getElementById('p-meta').textContent = `${project.category} — ${project.location}`;
 
-            let description = project.description;
-            let parts = description.split(',');
-            if (parts.length > 1) {
-                let first = parts[0];
-                let second = parts.slice(1).join(',');
-                document.getElementById('p-description-content').innerHTML = `${first},<br><em>${second}</em>`;
+            let description = project.description || "";
+            if (description) {
+                let parts = description.split(',');
+                if (parts.length > 1) {
+                    let first = parts[0];
+                    let second = parts.slice(1).join(',');
+                    document.getElementById('p-description-content').innerHTML = `${first},<br><em>${second}</em>`;
+                } else {
+                    document.getElementById('p-description-content').innerHTML = description;
+                }
             } else {
-                document.getElementById('p-description-content').innerHTML = description;
+                // S'il n'y a pas de description, on cache la section marque-phrase pour éviter les espaces vides
+                const marquePhrase = document.querySelector('.marque-phrase');
+                if (marquePhrase) {
+                    marquePhrase.style.display = 'none';
+                }
             }
 
             if (project.hero) {
