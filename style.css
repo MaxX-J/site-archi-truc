@@ -854,7 +854,7 @@ header.scrolled .mobile-toggle span {
     display: flex;
     align-items: center;
     width: max-content;
-    animation: marquee 220s linear infinite;
+    animation: marquee 100s linear infinite;
 }
 
 @keyframes marquee {
@@ -1801,6 +1801,10 @@ img.marquee-item {
     .blob-divider-horizontal .blob-dot {
         width: 12px;
         height: 12px;
+    }
+
+    .marquee-track {
+        animation-duration: 50s; /* Faster scrolling on mobile */
     }
 
     /* Stats */
