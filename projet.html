@@ -87,6 +87,15 @@
             z-index: 1;
             animation: blobFloat 20s infinite alternate;
         }
+        
+        /* Reduce orange blobs on mobile to prevent weird overlay */
+        @media (max-width: 768px) {
+            .hero-blob {
+                opacity: 0.1;
+                filter: blur(50px);
+            }
+        }
+        
         .hero-blob--1 { top: -100px; right: -100px; }
         .hero-blob--2 { bottom: -150px; left: -150px; }
 
@@ -114,12 +123,12 @@
         }
 
         .project-hero h1 {
-            font-size: clamp(3rem, 10vw, 7rem);
+            font-size: clamp(2.2rem, 8vw, 7rem);
             text-transform: uppercase;
             font-weight: 900;
             line-height: 1;
             margin: 20px 0;
-            letter-spacing: -3px;
+            letter-spacing: -2px;
         }
 
         /* Outline Back Button in Hero */
@@ -143,6 +152,22 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
+            white-space: nowrap; /* Force on one line */
+        }
+        @media (max-width: 768px) {
+            .btn-back-hero {
+                padding: 12px 18px;
+                font-size: 10px;
+                letter-spacing: 1px;
+                gap: 8px;
+            }
+            .hero-divider-row {
+                gap: 6px;
+            }
+            .hero-divider-row .blob-dot {
+                width: 8px;
+                height: 8px;
+            }
         }
         .btn-back-hero:hover { 
             border-color: var(--orange);
