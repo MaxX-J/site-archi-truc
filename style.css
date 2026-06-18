@@ -1633,17 +1633,20 @@ img.marquee-item {
 /* ── Laptops (≤ 1440px) ── */
 @media (max-width: 1440px) {
     .header-container {
-        padding: 0 4%;
+        padding: 0 3%;
     }
     .desktop-nav ul {
         gap: 12px;
     }
     .desktop-nav a {
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+    .desktop-nav .nav-contact-link {
+        padding: 8px 16px;
     }
     .logo-img {
-        height: 52px;
+        height: 42px;
     }
 }
 
