@@ -50,7 +50,8 @@
     font-weight: 400;
     line-height: 1.6;
     color: var(--text);
-    max-width: 680px;
+    max-width: 1000px;
+    padding: 0 1rem;
     margin: 0 auto;
 }
 
@@ -80,7 +81,7 @@
     margin: 0 auto;
 }
 
-#bernadette {
+#bernadette, #sylvie {
     grid-column: 1 / -1;
     justify-self: center;
     width: calc(50% - 20px);
@@ -92,7 +93,7 @@
         gap: 32px;
     }
 
-    #bernadette {
+    #bernadette, #sylvie {
         width: calc(50% - 16px);
     }
 }
@@ -103,7 +104,7 @@
         gap: 16px;
     }
 
-    #bernadette {
+    #bernadette, #sylvie {
         grid-column: 1 / -1;
         width: 100%;
     }
@@ -212,12 +213,7 @@
 }
 
 .team-card-back .team-number {
-    color: rgba(255, 255, 255, 0.1);
-    font-size: 4rem;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
 }
 
 .team-card-back .team-quote {
