@@ -1630,8 +1630,8 @@ img.marquee-item {
    RESPONSIVE
 ══════════════════════════════════════════════════════════════════  */
 
-/* ── Laptops (≤ 1440px) ── */
-@media (max-width: 1440px) {
+/* ── Laptops (≤ 1550px) ── */
+@media (max-width: 1550px) {
     .header-container {
         padding: 0 3%;
     }
