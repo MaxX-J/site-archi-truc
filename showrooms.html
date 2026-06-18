@@ -357,6 +357,91 @@
         </div>
     </section>
 
+    <!-- ═══════════ DU PLAN AU RENDU ═══════════ -->
+    <section class="section-padding" style="position: relative; overflow: hidden; background-color: var(--bg-soft);">
+        <div class="deco-emblem deco-emblem--lg deco-emblem--mid-l"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header fade-up" style="text-align: center; margin-left: auto; margin-right: auto;">
+                <span class="subtitle">Conception</span>
+                <h2>Du plan à la réalité</h2>
+                <p>Aucune surprise une fois sur place.</p>
+            </div>
+
+            <div class="compare-slider fade-up" id="compare-slider">
+                <!-- Image de fond : la photo réelle -->
+                <img src="assets/conception/rendu-photo.jpg" alt="Rendu réel de l'espace livré" class="compare-img"
+                    loading="lazy" width="1200" height="899">
+
+                <!-- Overlay : le plan 2D, masqué progressivement avec clip-path -->
+                <div class="compare-overlay" id="compare-overlay">
+                    <img src="assets/conception/plan-2d.png" alt="Plan 2D d'aménagement" class="compare-img"
+                        loading="lazy" width="1050" height="866">
+                </div>
+
+                <!-- Labels coins -->
+                <span class="compare-label compare-label--left">Plan</span>
+                <span class="compare-label compare-label--right">Rendu</span>
+
+                <!-- Poignée orange à glisser -->
+                <div class="compare-handle" id="compare-handle"></div>
+            </div>
+
+            <p class="compare-hint fade-up">⇆ Glissez pour comparer</p>
+        </div>
+    </section>
+
+    <!-- Compare Slider — Plan / Rendu interactif -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('compare-slider');
+            const overlay = document.getElementById('compare-overlay');
+            const handle = document.getElementById('compare-handle');
+            if (!slider || !overlay || !handle) return;
+
+            let dragging = false;
+
+            function setPosition(percent) {
+                percent = Math.max(0, Math.min(100, percent));
+                overlay.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+            }
+
+            function getX(e) {
+                if (e.touches && e.touches.length) return e.touches[0].clientX;
+                return e.clientX;
+            }
+
+            function move(e) {
+                if (!dragging) return;
+                const rect = slider.getBoundingClientRect();
+                const x = getX(e) - rect.left;
+                setPosition((x / rect.width) * 100);
+                e.preventDefault();
+            }
+
+            function start(e) {
+                dragging = true;
+                slider.style.cursor = 'grabbing';
+                move(e);
+            }
+            function end() {
+                dragging = false;
+                slider.style.cursor = 'ew-resize';
+            }
+
+            slider.addEventListener('mousedown', start);
+            window.addEventListener('mousemove', move);
+            window.addEventListener('mouseup', end);
+
+            slider.addEventListener('touchstart', start, { passive: false });
+            window.addEventListener('touchmove', move, { passive: false });
+            window.addEventListener('touchend', end);
+
+            // Position initiale 50%
+            setPosition(50);
+        });
+    </script>
+
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer class="footer" style="position: relative; overflow: hidden;">
         <div class="deco-blob deco-blob--footer"></div>
