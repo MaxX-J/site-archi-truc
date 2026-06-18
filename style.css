@@ -201,7 +201,7 @@ header.menu-open {
     align-items: center;
     max-width: none;
     padding: 0 10%;
-    gap: 30px; /* GARANTIE ABSOLUE QU'ILS NE SE TOUCHERONT JAMAIS */
+    /* Utilisation de clamp() plus bas pour un ajustement "pixel par pixel" fluide */
 }
 
 /* Logo */
@@ -212,7 +212,8 @@ header.menu-open {
 }
 
 .logo-img {
-    height: 52px;
+    /* Diminue proportionnellement entre 1800px et 1024px */
+    height: clamp(38px, 3.1vw, 52px);
     width: auto;
     display: block;
     /* Le logo PNG est orange sur fond transparent â€” visible sur photo foncÃ©e
@@ -229,17 +230,17 @@ header.menu-open {
 .desktop-nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: clamp(8px, 1.1vw, 20px); /* L'écart se réduit automatiquement dès 1800px */
     align-items: center;
 }
 
 .desktop-nav a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.85);
-    font-size: 14px;
+    font-size: clamp(10.5px, 0.77vw, 14px); /* Se réduit dynamiquement dès 1800px */
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: clamp(0.5px, 0.08vw, 1.5px);
     position: relative;
     padding-bottom: 4px;
     transition: color 0.25s;
@@ -1630,26 +1631,6 @@ img.marquee-item {
 /* ══════════════════════════════════════════════════════════════════ 
    RESPONSIVE
 ══════════════════════════════════════════════════════════════════  */
-
-/* ── Laptops (≤ 1650px) ── */
-@media (max-width: 1650px) {
-    .header-container {
-        padding: 0 3%;
-    }
-    .desktop-nav ul {
-        gap: 12px;
-    }
-    .desktop-nav a {
-        font-size: 11px;
-        letter-spacing: 0.5px;
-    }
-    .desktop-nav .nav-contact-link {
-        padding: 8px 16px;
-    }
-    .logo-img {
-        height: 42px;
-    }
-}
 
 /* ── Tablet (≤ 1024px) ── */
 @media (max-width: 1024px) {
