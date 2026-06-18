@@ -201,6 +201,7 @@ header.menu-open {
     align-items: center;
     max-width: none;
     padding: 0 10%;
+    gap: 30px; /* GARANTIE ABSOLUE QU'ILS NE SE TOUCHERONT JAMAIS */
 }
 
 /* Logo */
@@ -211,7 +212,7 @@ header.menu-open {
 }
 
 .logo-img {
-    height: 64px;
+    height: 52px;
     width: auto;
     display: block;
     /* Le logo PNG est orange sur fond transparent â€” visible sur photo foncÃ©e
@@ -1630,8 +1631,8 @@ img.marquee-item {
    RESPONSIVE
 ══════════════════════════════════════════════════════════════════  */
 
-/* ── Laptops (≤ 1550px) ── */
-@media (max-width: 1550px) {
+/* ── Laptops (≤ 1650px) ── */
+@media (max-width: 1650px) {
     .header-container {
         padding: 0 3%;
     }
