@@ -142,8 +142,8 @@ h4 {
     flex-shrink: 0;
     order: -1;
     background-color: var(--orange);
-    -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
-    mask: url('assets/picto.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto.svg') no-repeat center / contain;
+    mask: url('../picto.svg') no-repeat center / contain;
     margin-right: 4px;
 }
 
@@ -445,8 +445,8 @@ header.scrolled .mobile-toggle span {
     height: 18px;
     flex-shrink: 0;
     background-color: var(--orange);
-    -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
-    mask: url('assets/picto.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto.svg') no-repeat center / contain;
+    mask: url('../picto.svg') no-repeat center / contain;
     margin-right: 4px;
 }
 
@@ -671,8 +671,8 @@ header.scrolled .mobile-toggle span {
     animation: none;
     background-color: var(--orange);
     background-image: none;
-    -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
-    mask: url('assets/picto.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto.svg') no-repeat center / contain;
+    mask: url('../picto.svg') no-repeat center / contain;
 }
 
 /* SÃ©parateurs de section â€” taille confortable */
@@ -899,8 +899,8 @@ img.marquee-item {
     border-radius: 0;
     background: white;
     background-image: none;
-    -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
-    mask: url('assets/picto.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto.svg') no-repeat center / contain;
+    mask: url('../picto.svg') no-repeat center / contain;
 }
 
 .marquee-sep .blob-dot:last-child {
@@ -1032,8 +1032,8 @@ img.marquee-item {
 .deco-emblem {
     position: absolute;
     background-color: var(--orange);
-    -webkit-mask: url('assets/picto-blob-pile.svg') no-repeat center / contain;
-    mask: url('assets/picto-blob-pile.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto-blob-pile.svg') no-repeat center / contain;
+    mask: url('../picto-blob-pile.svg') no-repeat center / contain;
     -webkit-mask-mode: alpha;
     mask-mode: alpha;
     pointer-events: none;
@@ -2281,8 +2281,8 @@ img.marquee-item {
     opacity: 1;
     background-color: var(--orange);
     background-image: none;
-    -webkit-mask: url('assets/picto.svg') no-repeat center / contain;
-    mask: url('assets/picto.svg') no-repeat center / contain;
+    -webkit-mask: url('../picto.svg') no-repeat center / contain;
+    mask: url('../picto.svg') no-repeat center / contain;
 }
 
 .stat-blobs .blob-dot:last-child {
