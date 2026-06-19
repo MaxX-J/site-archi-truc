@@ -1,6 +1,6 @@
 const PROJECTS_DATA = {
     "vrac": {
-        "title": "Sélection de Réalisations",
+        "title": "Vrac",
         "category": "Mixte",
         "location": "Divers",
         "description": "Un florilège de nos réalisations et inspirations à travers différents projets.",
