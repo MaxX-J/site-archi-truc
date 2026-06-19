@@ -2,7 +2,7 @@ const PROJECTS_DATA = {
     "maison-provence": {
         "title": "Maison Provence",
         "category": "Particulier",
-        "location": "Béziers",
+        "location": "",
         "description": "Aménagement et rénovation de la Maison Provence.",
         "folder": "assets/images/realisations/particuliers/08-maison-provence",
         "hero": "maison-provence-beziers-architecte-interieur-5.webp",
