@@ -23,7 +23,7 @@ const PROJECTS_DATA = {
         "description": "Un petit pêle-mêle de nos projets, nos inspirations et tout ce qu'on aime.",
         "folder": "assets/images/realisations/Vrac",
         "hero": "IMG_4356.webp",
-        "thumbnail": "IMG_4356.webp",
+        "thumbnail": "IMG_8850.webp",
         "images": [
             "8551c524-8aa4-4e2c-a776-770a337c1b35.webp",
             "d0cedf01-b565-4994-8881-54d82f47c2c0.webp",
