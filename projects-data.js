@@ -3,7 +3,7 @@ const PROJECTS_DATA = {
         "title": "Vrac",
         "category": "Mixte",
         "location": "Divers",
-        "description": "Un florilège de nos réalisations et inspirations à travers différents projets.",
+        "description": "Un petit pêle-mêle de nos projets, nos inspirations et tout ce qu'on aime.",
         "folder": "assets/images/realisations/Vrac",
         "hero": "IMG_4356.webp",
         "thumbnail": "IMG_7803.webp",
