@@ -1,4 +1,22 @@
 const PROJECTS_DATA = {
+    "maison-provence": {
+        "title": "Maison Provence",
+        "category": "Particulier",
+        "location": "Béziers",
+        "description": "Aménagement et rénovation de la Maison Provence.",
+        "folder": "assets/images/realisations/particuliers/08-maison-provence",
+        "hero": "maison-provence-beziers-architecte-interieur-5.webp",
+        "thumbnail": "maison-provence-beziers-architecte-interieur-4.webp",
+        "images": [
+            "maison-provence-beziers-architecte-interieur-1.webp",
+            "maison-provence-beziers-architecte-interieur-2.webp",
+            "maison-provence-beziers-architecte-interieur-3.webp",
+            "maison-provence-beziers-architecte-interieur-4.webp",
+            "maison-provence-beziers-architecte-interieur-5.webp",
+            "maison-provence-beziers-architecte-interieur-6.webp",
+            "maison-provence-beziers-architecte-interieur-7.webp"
+        ]
+    },
     "appartement-st-saens": {
         "title": "Appartement St Saëns",
         "category": "Particulier",
@@ -44,13 +62,6 @@ const PROJECTS_DATA = {
             "IMG_2062.webp",
             "IMG_2066.webp",
             "IMG_2068.webp",
-            "IMG_2218.webp",
-            "IMG_2220.webp",
-            "IMG_2222.webp",
-            "IMG_2224.webp",
-            "IMG_2225.webp",
-            "IMG_2227.webp",
-            "IMG_2228.webp",
             "IMG_2630.webp",
             "IMG_2631.webp",
             "IMG_2639.webp",
