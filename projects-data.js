@@ -6,7 +6,7 @@ const PROJECTS_DATA = {
         "description": "Aménagement et rénovation de l'Appartement St Saëns au cœur de Béziers.",
         "folder": "assets/images/realisations/particuliers/07-appartement-st-saens",
         "hero": "IMG_4357.webp",
-        "thumbnail": "IMG_4357.webp",
+        "thumbnail": "IMG_4361.webp",
         "images": [
             "IMG_4357.webp",
             "IMG_4361.webp",
