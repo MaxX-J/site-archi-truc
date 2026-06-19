@@ -1,4 +1,20 @@
 const PROJECTS_DATA = {
+    "appartement-st-saens": {
+        "title": "Appartement St Saëns",
+        "category": "Particulier",
+        "location": "Béziers",
+        "description": "Aménagement et rénovation de l'Appartement St Saëns au cœur de Béziers.",
+        "folder": "assets/images/realisations/particuliers/07-appartement-st-saens",
+        "hero": "IMG_4357.webp",
+        "thumbnail": "IMG_4357.webp",
+        "images": [
+            "IMG_4357.webp",
+            "IMG_4361.webp",
+            "IMG_4367.webp",
+            "IMG_4369.webp",
+            "IMG_4371.webp"
+        ]
+    },
     "vrac": {
         "title": "Vrac",
         "category": "Mixte",
@@ -52,11 +68,6 @@ const PROJECTS_DATA = {
           "IMG_4343.webp",
           "IMG_4349.webp",
           "IMG_4356.webp",
-          "IMG_4357.webp",
-          "IMG_4361.webp",
-          "IMG_4367.webp",
-          "IMG_4369.webp",
-          "IMG_4371.webp",
           "IMG_4373.webp",
           "IMG_4382.webp",
           "IMG_4491.webp",
