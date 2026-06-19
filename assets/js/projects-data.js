@@ -12,7 +12,8 @@ const PROJECTS_DATA = {
             "appartement-st-saens-beziers-architecte-interieur-2.webp",
             "appartement-st-saens-beziers-architecte-interieur-3.webp",
             "appartement-st-saens-beziers-architecte-interieur-4.webp",
-            "appartement-st-saens-beziers-architecte-interieur-5.webp"
+            "appartement-st-saens-beziers-architecte-interieur-5.webp",
+            "appartement-st-saens-beziers-architecte-interieur-6.webp"
         ]
     },
     "vrac": {
@@ -24,7 +25,6 @@ const PROJECTS_DATA = {
         "hero": "IMG_4356.webp",
         "thumbnail": "IMG_4356.webp",
         "images": [
-            "2668AD4C-A97D-40BC-BDF4-2E3020BB35D4.webp",
             "8551c524-8aa4-4e2c-a776-770a337c1b35.webp",
             "d0cedf01-b565-4994-8881-54d82f47c2c0.webp",
             "IMG_0280.webp",
