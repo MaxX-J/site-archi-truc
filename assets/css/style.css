@@ -3509,3 +3509,12 @@ img.marquee-item {
         /* Alignement vertical fin */
     }
 }
+
+/* Lightbox Global */
+.lightbox { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.95); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease); }
+.lightbox.active { opacity: 1; pointer-events: all; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; transform: scale(0.95); transition: transform 0.4s var(--ease); }
+.lightbox.active img { transform: scale(1); }
+.lightbox-close { position: absolute; top: 30px; right: 40px; color: white; font-size: 50px; line-height: 1; cursor: pointer; z-index: 10000; transition: color 0.3s var(--ease); }
+.lightbox-close:hover { color: var(--orange); }
+.loc-bento-item { cursor: pointer; }

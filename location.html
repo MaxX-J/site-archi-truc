@@ -578,6 +578,38 @@
             });
         });
     </script>
+    <!-- Image Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="Image agrandie" id="lightbox-img" loading="lazy">
+    </div>
+
+    <!-- Image Lightbox Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.getElementById("lightbox-close");
+            const items = document.querySelectorAll(".loc-bento-item img");
+
+            items.forEach(img => {
+                img.addEventListener("click", () => {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add("active");
+                });
+            });
+
+            closeBtn.addEventListener("click", () => lightbox.classList.remove("active"));
+            lightbox.addEventListener("click", (e) => {
+                if (e.target === lightbox) lightbox.classList.remove("active");
+            });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && lightbox.classList.contains("active")) {
+                    lightbox.classList.remove("active");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
