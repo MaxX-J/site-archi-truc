@@ -157,7 +157,7 @@ const PROJECTS_DATA = {
         "location": "Nîmes",
         "description": "Minimalisme et lumière pour cet appartement de ville aux lignes pures.",
         "folder": "assets/images/realisations/particuliers/04-appartement-nimes",
-        "hero": "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-2.webp",
+        "hero": "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "thumbnail": "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "images": [
             "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-1.webp",
