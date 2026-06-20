@@ -1,102 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/webp" href="assets/images/Favicon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Engagements RSE | Architruc & Baltaz'art Béziers</title>
+    <meta name="description" content="Découvrez nos engagements RSE, nos valeurs et nos fournisseurs responsables chez Architruc & Baltaz'art Béziers.">
+
+    <!-- Open Graph / Réseaux sociaux -->
+    <link rel="canonical" href="https://www.archi-truc.com/mentions-legales.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Architruc & Baltaz'art">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Mentions légales | Architruc & Baltaz'art">
+    <meta property="og:description" content="Mentions légales du site Architruc & Baltaz'art : informations sur l'éditeur, l'hébergeur, la propriété intellectuelle et la protection des données personnelles.">
+    <meta property="og:url" content="https://www.archi-truc.com/mentions-legales.html">
+    <meta property="og:image" content="https://www.archi-truc.com/assets/images/hero-page-accueil.webp">
+    <meta property="og:image:alt" content="Mentions légales | Architruc & Baltaz'art">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mentions légales | Architruc & Baltaz'art">
+    <meta name="twitter:description" content="Mentions légales du site Architruc & Baltaz'art : informations sur l'éditeur, l'hébergeur, la propriété intellectuelle et la protection des données personnelles.">
+    <meta name="twitter:image" content="https://www.archi-truc.com/assets/images/hero-page-accueil.webp">
+
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Styles spécifiques à la page -->
+    <style>
+        /* Force l'affichage du header avec texte sombre et fond blanc (comme après scroll) */
+        #main-header {
+            background: rgba(255, 255, 255, 0.97) !important;
+            padding: 14px 0 !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+        #main-header .desktop-nav a {
+            color: var(--text) !important;
+        }
+        #main-header .desktop-nav a:hover,
+        #main-header .desktop-nav a.nav-active {
+            color: var(--orange) !important;
+        }
+        #main-header .nav-contact-link {
+            color: var(--text) !important;
+            border-color: rgba(0, 0, 0, 0.15) !important;
+        }
+        #main-header .nav-contact-link:hover {
+            color: white !important;
+            background: var(--orange) !important;
+            border-color: var(--orange) !important;
+        }
+        #main-header .mobile-toggle span {
+            background: var(--text) !important;
+        }
+
+        /* Contenu juridique */
+        .legal-content {
+            background: var(--bg-soft);
+            padding: 120px 0 100px;
+        }
+        .legal-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 60px clamp(1.5rem, 5vw, 4rem);
+            border-radius: 6px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+        }
+        .legal-inner h2 {
+            font-size: 1.4rem;
+            color: var(--text);
+            margin: 48px 0 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--orange);
+            display: inline-block;
+        }
+        .legal-inner h2:first-of-type {
+            margin-top: 0;
+        }
+        .legal-inner h3 {
+            font-size: 1.05rem;
+            color: var(--text);
+            margin: 28px 0 10px;
+            font-weight: 700;
+        }
+        .legal-inner p,
+        .legal-inner li {
+            color: var(--text-light);
+            font-size: 0.96rem;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+        .legal-inner ul {
+            padding-left: 22px;
+            margin-bottom: 14px;
+        }
+        .legal-inner li {
+            margin-bottom: 8px;
+        }
+        .legal-inner a {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .legal-inner a:hover {
+            border-color: var(--orange);
+        }
+        .legal-inner strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+        .legal-inner .placeholder {
+            background: rgba(234, 84, 13, 0.08);
+            color: var(--orange);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        .legal-meta {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e0d8;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .legal-toc {
+            background: var(--bg-soft);
+            padding: 24px 28px;
+            border-radius: 6px;
+            margin-bottom: 48px;
+        }
+        .legal-toc h4 {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+        .legal-toc ol {
+            list-style: none;
+            counter-reset: toc;
+            padding: 0;
+            margin: 0;
+            columns: 2;
+            column-gap: 32px;
+        }
+        .legal-toc li {
+            counter-increment: toc;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+        }
+        .legal-toc li::before {
+            content: counter(toc, decimal-leading-zero) ".";
+            color: var(--orange);
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        .legal-toc a {
+            color: var(--text);
+            border-bottom: none;
+        }
+        .legal-toc a:hover {
+            color: var(--orange);
+        }
+        @media (max-width: 640px) {
+            .legal-toc ol { columns: 1; }
+            .legal-inner { padding: 40px 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-blobs">
+            <div class="loader-blob"></div>
+            <div class="loader-blob"></div>
+        </div>
+        <div class="loader-brand">Architruc</div>
+    </div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.webp" alt="Architruc & Baltaz'Art" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="showrooms.html">Archi concept</a></li>
+                    <li><a href="archi-nous.html">Archi nous</a></li>
+                    <li><a href="nos-realisations.html">Nos Réalisations</a></li>
+                    <li><a href="marques.html">Nos Marques</a></li>
+                    <li><a href="archi-business.html">Archi business</a></li>
+                    <li><a href="archi-bonne-annee.html">Archi bonne année</a></li>
+                    <li><a href="contact.html" class="nav-contact-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ═══════════ CONTENU ═══════════ -->
+    
 <main>
+
+
     <!-- Background & Blobs (using mentions layout) -->
     <div class="legal-hero-bg"></div>
     <div class="hero-blob hero-blob--1"></div>
     <div class="hero-blob hero-blob--2"></div>
     <section class="legal-content">
         <div class="container">
+            <div class="legal-inner">
+                <h1 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; color: var(--orange);">ARCHITRUC & BALTAZ'ART : le design engagé</h1>
+                <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 40px;">Un univers, une équipe, des valeurs fortes.</p>
+                
+                <p><strong>ARCHITRUC & Baltaz'art, c'est plus qu'une boutique.</strong><br>
+                C'est un espace vivant, à la croisée de la décoration, de l'art, de l'artisanat et du design, porté par une équipe 90% féminine aussi dynamique que créative.</p>
+                <p>Ici, le girl power n'est pas un slogan, c'est un moteur. Une énergie collective, nourrie par la passion, la bienveillance, et l'envie de faire bouger les lignes du commerce traditionnel.</p>
 
-                <div class="legal-inner">
-                    <h1 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; color: var(--orange);">ARCHITRUC & BALTAZ’ART : le design engagé</h1>
-                    <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 40px;">Un univers, une équipe, des valeurs fortes.</p>
-                    
-                    <p><strong>ARCHITRUC & Baltaz’art, c’est plus qu’une boutique.</strong><br>
-                    C’est un espace vivant, à la croisée de la décoration, de l’art, de l’artisanat et du design, porté par une équipe 90% féminine aussi dynamique que créative.</p>
-                    <p>Ici, le girl power n’est pas un slogan, c’est un moteur. Une énergie collective, nourrie par la passion, la bienveillance, et l’envie de faire bouger les lignes du commerce traditionnel.</p>
+                <h2>Une équipe multigénérationnelle</h2>
+                <p>Chez nous, les générations se croisent, se complètent et s'enrichissent. ARCHITRUC & Baltaz'art, c'est une équipe en constante évolution.</p>
+                <p>Nous avons à cœur de former de jeunes talents, de les accompagner dans leurs projets, de les inspirer. Ici, chaque passage compte, chaque expérience laisse une empreinte, et chacun·e repart avec un bagage plus riche, plus solide.</p>
+                <p>Certains passages durent plus longtemps que d'autres : Delphine, 17 ans chez Architruc. Pierre et Sarah bientôt 6 ans après leur alternance. Notre livreur Jean-François, 4 ans de loyaux services !</p>
 
-                    <h2>Une équipe multigénérationnelle</h2>
-                    <p>Chez nous, les générations se croisent, se complètent et s’enrichissent. ARCHITRUC & Baltaz’art, c’est une équipe en constante évolution.</p>
-                    <p>Nous avons à cœur de former de jeunes talents, de les accompagner dans leurs projets, de les inspirer. Ici, chaque passage compte, chaque expérience laisse une empreinte, et chacun·e repart avec un bagage plus riche, plus solide.</p>
-                    <p>Certains passages durent plus longtemps que d’autres : Delphine, 17 ans chez Architruc. Pierre et Sarah bientôt 6 ans après leur alternance. Notre livreur Jean-François, 4 ans de loyaux services !</p>
+                <h2>Des fournisseurs choisis avec soin</h2>
+                <p>Chez nous, chaque fournisseur est choisi avec une attention particulière. Certains, comme <strong>KNOLL, CASSINA ou FLOS</strong>, que nous avons la chance de pouvoir distribuer, font partie des noms rares et emblématiques du design. Leur exigence et leur histoire en font des partenaires précieux, presque confidentiels. Ce sont des noms rares, exigeants, presque légendaires, que peu peuvent se targuer de distribuer. Nous en sommes fiers, bien sûr, mais surtout profondément attachés.</p>
+                <p>Nous aimons travailler avec des passionnés. Ceux qui fabriquent avec leurs mains, qui créent localement, qui pensent au temps long, à la durabilité. Mais il y a aussi les rencontres inattendues, les pièces qui nous touchent, les élans de beauté pure…</p>
+                <p>Chaque objet que vous trouvez chez nous a été sélectionné avec attention. Il a une histoire, une origine, une intention.</p>
 
-                    <h2>Des fournisseurs choisis avec soin</h2>
-                    <p>Chez nous, chaque fournisseur est choisi avec une attention particulière. Certains, comme <strong>KNOLL, CASSINA ou FLOS</strong>, que nous avons la chance de pouvoir distribuer, font partie des noms rares et emblématiques du design. Leur exigence et leur histoire en font des partenaires précieux, presque confidentiels. Ce sont des noms rares, exigeants, presque légendaires, que peu peuvent se targuer de distribuer. Nous en sommes fiers, bien sûr, mais surtout profondément attachés.</p>
-                    <p>Nous aimons travailler avec des passionnés. Ceux qui fabriquent avec leurs mains, qui créent localement, qui pensent au temps long, à la durabilité. Mais il y a aussi les rencontres inattendues, les pièces qui nous touchent, les élans de beauté pure…</p>
-                    <p>Chaque objet que vous trouvez chez nous a été sélectionné avec attention. Il a une histoire, une origine, une intention.</p>
-
-                    <div style="overflow-x: auto; margin: 40px 0;">
-                        <table style="width: 100%; border-collapse: collapse; text-align: left;">
-                            <thead>
-                                <tr style="border-bottom: 2px solid var(--orange);">
-                                    <th style="padding: 15px 10px; font-weight: bold;">Marque</th>
-                                    <th style="padding: 15px 10px; font-weight: bold;">Label(s) RSE & Engagements</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Alessi</td>
-                                    <td style="padding: 15px 10px;">Certifiée B Corp, attestant de son engagement envers des normes élevées de performance sociale et environnementale.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Ferm Living</td>
-                                    <td style="padding: 15px 10px;">Certifiée B Corp, démontrant son engagement envers des pratiques commerciales responsables et durables.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Fermob</td>
-                                    <td style="padding: 15px 10px;">Bien que non certifiée B Corp, Fermob met en avant des initiatives durables, telles que l'utilisation de peintures sans solvants et des matériaux recyclables.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Gervasoni</td>
-                                    <td style="padding: 15px 10px;">Met en œuvre des pratiques durables, comme l'utilisation de bois certifié FSC, mais ne possède pas de certification RSE spécifique connue.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Kartell</td>
-                                    <td style="padding: 15px 10px;">A mis en place des initiatives écologiques, comme la collection "Kartell loves the planet", mais ne détient pas de certification RSE spécifique.</td>
-                                </tr>
-                                <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
-                                    <td style="padding: 15px 10px; font-weight: 600;">Vondom</td>
-                                    <td style="padding: 15px 10px;">Propose des collections fabriquées à partir de matériaux recyclés, notamment des plastiques récupérés des océans, mais ne possède pas de label RSE spécifique.</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 15px 10px; font-weight: 600;">USM</td>
-                                    <td style="padding: 15px 10px;">Met l'accent sur la durabilité et la modularité de ses produits, avec des matériaux recyclables.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h2>Des projets plein la tête (et en action)</h2>
-                    <p>Nous ne tenons pas en place … et tant mieux !</p>
-                    <p>ARCHITRUC & Baltaz’art, c’est un terrain de jeu créatif, un lieu qui bouge, qui teste, qui innove.<br>
-                    Expositions, ateliers, collaborations, événements, pop-ups... Nous aimons faire vivre le lieu, surprendre, expérimenter.</p>
-                    <p><strong>L’avenir ? Il est en mouvement.</strong><br>
-                    Et nous sommes prêtes à le colorer, à le rêver, à le construire, avec vous.</p>
-
-                    <h2>Éco-responsabilité : des choix conscients, au quotidien</h2>
-                    <p>Chez ARCHITRUC & Baltaz’art, nous croyons que chaque geste compte. Dans un monde en pleine transformation, nous avons choisi de faire notre part en proposant des produits plus respectueux de la planète — sans jamais renoncer à la beauté, à la qualité ou à la créativité.</p>
-                    
-                    <h3>Des matières plus durables</h3>
-                    <p>Nous privilégions les matériaux naturels, recyclés ou upcyclés, les fabrications artisanales et les circuits courts quand cela est possible.</p>
-                    
-                    <h3>Des fournisseurs engagés</h3>
-                    <p>Nous collaborons avec des marques et des créateurs qui partagent nos valeurs : transparence, production éthique, respect des conditions de travail, souci de l’environnement. Chaque fournisseur est sélectionné pour son savoir-faire, mais aussi pour sa vision du monde.</p>
-                    
-                    <h3>Une consommation plus consciente</h3>
-                    <p>Ici, on préfère moins mais mieux. On mise sur des objets qui durent, qui se transmettent, qui racontent quelque chose. Pas de surstock, pas de surproduction — juste le plaisir de choisir avec sens.</p>
-                    
-                    <h3>Des gestes éco au quotidien</h3>
-                    <p>Dans notre fonctionnement interne aussi, l’éco-responsabilité est une boussole : emballages réutilisables ou recyclés, tri, seconde vie des invendus, mobilier chiné, énergie raisonnée… Nous apprenons, nous progressons, nous nous engageons — jour après jour.</p>
-
-                    <h2>Acheter mieux, c’est plus économique, plus écologique… et plus élégant.</h2>
-                    <p>Chez ARCHITRUC & Baltaz’art, nous croyons à la valeur des objets durables, à ces pièces qu’on choisit une fois, et qu’on aime pour toujours.</p>
-
-                    <h3>Qualité, émotion & transmission</h3>
-                    <p>Un meuble bien fait, c’est un meuble qui vit avec vous. Il s’imprègne des moments, Il devient un repère, une mémoire. Il se répare, se patine, se valorise. On ne le jette pas, on le chérit. Et parfois, on le transmet.</p>
-                    <p>Une table qui dure, c’est aussi un objet qui prend de la valeur émotionnelle avec le temps.</p>
+                <div style="overflow-x: auto; margin: 40px 0;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--orange);">
+                                <th style="padding: 15px 10px; font-weight: bold;">Marque</th>
+                                <th style="padding: 15px 10px; font-weight: bold;">Label(s) RSE & Engagements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Alessi</td>
+                                <td style="padding: 15px 10px;">Certifiée B Corp, attestant de son engagement envers des normes élevées de performance sociale et environnementale.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Ferm Living</td>
+                                <td style="padding: 15px 10px;">Certifiée B Corp, démontrant son engagement envers des pratiques commerciales responsables et durables.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Fermob</td>
+                                <td style="padding: 15px 10px;">Bien que non certifiée B Corp, Fermob met en avant des initiatives durables, telles que l'utilisation de peintures sans solvants et des matériaux recyclables.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Gervasoni</td>
+                                <td style="padding: 15px 10px;">Met en œuvre des pratiques durables, comme l'utilisation de bois certifié FSC, mais ne possède pas de certification RSE spécifique connue.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Kartell</td>
+                                <td style="padding: 15px 10px;">A mis en place des initiatives écologiques, comme la collection "Kartell loves the planet", mais ne détient pas de certification RSE spécifique.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <td style="padding: 15px 10px; font-weight: 600;">Vondom</td>
+                                <td style="padding: 15px 10px;">Propose des collections fabriquées à partir de matériaux recyclés, notamment des plastiques récupérés des océans, mais ne possède pas de label RSE spécifique.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 10px; font-weight: 600;">USM</td>
+                                <td style="padding: 15px 10px;">Met l'accent sur la durabilité et la modularité de ses produits, avec des matériaux recyclables.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
+                <h2>Des projets plein la tête (et en action)</h2>
+                <p>Nous ne tenons pas en place … et tant mieux !</p>
+                <p>ARCHITRUC & Baltaz'art, c'est un terrain de jeu créatif, un lieu qui bouge, qui teste, qui innove.<br>
+                Expositions, ateliers, collaborations, événements, pop-ups... Nous aimons faire vivre le lieu, surprendre, expérimenter.</p>
+                <p><strong>L'avenir ? Il est en mouvement.</strong><br>
+                Et nous sommes prêtes à le colorer, à le rêver, à le construire, avec vous.</p>
+
+                <h2>Éco-responsabilité : des choix conscients, au quotidien</h2>
+                <p>Chez ARCHITRUC & Baltaz'art, nous croyons que chaque geste compte. Dans un monde en pleine transformation, nous avons choisi de faire notre part en proposant des produits plus respectueux de la planète — sans jamais renoncer à la beauté, à la qualité ou à la créativité.</p>
+                
+                <h3>Des matières plus durables</h3>
+                <p>Nous privilégions les matériaux naturels, recyclés ou upcyclés, les fabrications artisanales et les circuits courts quand cela est possible.</p>
+                
+                <h3>Des fournisseurs engagés</h3>
+                <p>Nous collaborons avec des marques et des créateurs qui partagent nos valeurs : transparence, production éthique, respect des conditions de travail, souci de l'environnement. Chaque fournisseur est sélectionné pour son savoir-faire, mais aussi pour sa vision du monde.</p>
+                
+                <h3>Une consommation plus consciente</h3>
+                <p>Ici, on préfère moins mais mieux. On mise sur des objets qui durent, qui se transmettent, qui racontent quelque chose. Pas de surstock, pas de surproduction — juste le plaisir de choisir avec sens.</p>
+                
+                <h3>Des gestes éco au quotidien</h3>
+                <p>Dans notre fonctionnement interne aussi, l'éco-responsabilité est une boussole : emballages réutilisables ou recyclés, tri, seconde vie des invendus, mobilier chiné, énergie raisonnée… Nous apprenons, nous progressons, nous nous engageons — jour après jour.</p>
+
+                <h2>Acheter mieux, c'est plus économique, plus écologique… et plus élégant.</h2>
+                <p>Chez ARCHITRUC & Baltaz'art, nous croyons à la valeur des objets durables, à ces pièces qu'on choisit une fois, et qu'on aime pour toujours.</p>
+
+                <h3>Qualité, émotion & transmission</h3>
+                <p>Un meuble bien fait, c'est un meuble qui vit avec vous. Il s'imprègne des moments, Il devient un repère, une mémoire. Il se répare, se patine, se valorise. On ne le jette pas, on le chérit. Et parfois, on le transmet.</p>
+                <p>Une table qui dure, c'est aussi un objet qui prend de la valeur émotionnelle avec le temps.</p>
+            </div>
         </div>
     </section>
 </main>
+
 <footer class="footer" style="position: relative; overflow: hidden;">
         <div class="deco-blob deco-blob--footer"></div>
         <div class="container footer-grid">
