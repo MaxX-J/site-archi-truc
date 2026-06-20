@@ -2972,7 +2972,7 @@ img.marquee-item {
 .loc-bento {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(2, 200px);
     gap: 10px;
     padding: 0 10px;
     max-width: 100%;
@@ -3228,7 +3228,7 @@ img.marquee-item {
     }
 
     .loc-bento-item {
-        height: 250px !important;
+        height: 150px !important;
     }
 
     .loc-feature-row {
