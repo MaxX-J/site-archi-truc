@@ -499,6 +499,21 @@ const PROJECTS_DATA = {
             "amenagement-le-chameau-ivre-beziers-10.webp",
             "amenagement-le-chameau-ivre-beziers-11.webp"
         ]
+    },
+    "polyclinique-saint-privat": {
+        "title": "Crèche - Polyclinique Saint Privat",
+        "category": "Professionnel",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Crèche de la Polyclinique Saint Privat.",
+        "folder": "assets/images/realisations/professionnels/16-polyclinique-saint-privat",
+        "hero": "amenagement-creche-polyclinique-saint-privat-beziers-1.webp",
+        "thumbnail": "amenagement-creche-polyclinique-saint-privat-beziers-2.webp",
+        "images": [
+            "amenagement-creche-polyclinique-saint-privat-beziers-1.webp",
+            "amenagement-creche-polyclinique-saint-privat-beziers-2.webp",
+            "amenagement-creche-polyclinique-saint-privat-beziers-3.webp",
+            "amenagement-creche-polyclinique-saint-privat-beziers-4.webp"
+        ]
     }
 };
 
