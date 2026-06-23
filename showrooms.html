@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -36,7 +36,73 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .contact-hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: var(--bg-dark);
+            color: white;
+            padding: 140px 20px 80px;
+        }
+
+        .contact-hero::before {
+            display: none;
+        }
+
+        .contact-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.8));
+            z-index: 1;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .contact-hero-content h1 .italic {
+            color: var(--orange);
+            font-style: italic;
+            font-weight: 400;
+            text-transform: none;
+        }
+
+        .contact-hero-content .sub {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            max-width: 580px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        
+        @media (max-width: 640px) {
+            .contact-hero {
+                height: 100vh;
+                min-height: 500px;
+                padding-top: 120px;
+            }
+        }
+    </style>
 
     <script type="application/ld+json">
     {
@@ -87,11 +153,15 @@
         </div>
     </header>
 
-    <!-- ═══════════ PAGE HERO ═══════════ -->
-    <section class="page-hero"
-        style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
-        <div class="hero-content fade-up">
-            <span class="hero-eyebrow">Nos Magasins</span>
+        <!-- ═══════════ PAGE HERO ═══════════ -->
+    <section class="page-hero contact-hero">
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('assets/images/Archi-concept/Citadelle/showroom-citadelle-beziers-3.webp')"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/Archi-concept/grande/showroom-montmorency-beziers-2.webp')"></div>
+        </div>
+        <div class="contact-hero-overlay"></div>
+        <div class="contact-hero-content fade-up">
+            <span class="hero-eyebrow" style="color: var(--orange); opacity: 0.9;">Nos Magasins</span>
             <h1>Archi Concept</h1>
         </div>
         <div class="scroll-indicator">
