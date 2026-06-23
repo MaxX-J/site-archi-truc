@@ -509,10 +509,10 @@ const PROJECTS_DATA = {
         "hero": "amenagement-creche-polyclinique-saint-privat-beziers-1.webp",
         "thumbnail": "amenagement-creche-polyclinique-saint-privat-beziers-2.webp",
         "images": [
-            "amenagement-creche-polyclinique-saint-privat-beziers-1.webp",
             "amenagement-creche-polyclinique-saint-privat-beziers-2.webp",
             "amenagement-creche-polyclinique-saint-privat-beziers-3.webp",
-            "amenagement-creche-polyclinique-saint-privat-beziers-4.webp"
+            "amenagement-creche-polyclinique-saint-privat-beziers-4.webp",
+            "amenagement-creche-polyclinique-saint-privat-beziers-1.webp"
         ]
     }
 };
