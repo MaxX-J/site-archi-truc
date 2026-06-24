@@ -23,12 +23,14 @@ if (loader) {
 
     let current = 0;
 
+    setTimeout(() => {
     // Précharger les images suivantes
     slides.forEach((s, i) => {
         if (i === 0) return;
         const img = new Image();
         img.src = s.style.backgroundImage.slice(5, -2);
     });
+    }, 3000); // Retarder le préchargement de 3s pour LCP
 
     setInterval(() => {
         slides[current].classList.remove('active');
