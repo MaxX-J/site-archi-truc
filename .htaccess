@@ -9,29 +9,31 @@ Redirect 301 /archi-business/ /archi-business.html
 Redirect 301 /nos-magasins/ /showrooms.html
 Redirect 301 /contact/ /contact.html
 Redirect 301 /mentions-legales/ /mentions-legales.html
+Redirect 301 /location/ /location.html
+Redirect 301 /engagements-rse/ /engagements-rse.html
 Redirect 301 /archi-bonne-annee/ /archi-bonne-annee.html
 
 # --- Marques (Tout redirigé vers la nouvelle page globale) ---
 RedirectMatch 301 ^/nos-marques/(.*) /marques.html
 Redirect 301 /tables/ /marques.html
 
-# --- Anciens Projets (Portfolio) -> redirigés vers nos-realisations.html ---
-Redirect 301 /hotel-particulier/ /nos-realisations.html
-Redirect 301 /appartement-lago-villa-guy/ /nos-realisations.html
-Redirect 301 /appartement-nimes/ /nos-realisations.html
-Redirect 301 /souki-lodge/ /nos-realisations.html
-Redirect 301 /clinique-veterinaire/ /nos-realisations.html
-Redirect 301 /cabinet-darchitecte/ /nos-realisations.html
-Redirect 301 /lago-welcome-cap-dagde/ /nos-realisations.html
-Redirect 301 /bureau-nemesis/ /nos-realisations.html
-Redirect 301 /projet-photo/ /nos-realisations.html
-Redirect 301 /hotel-la-prison-a-beziers/ /nos-realisations.html
-Redirect 301 /maison-cersoise/ /nos-realisations.html
-Redirect 301 /mediatheque-beziers/ /nos-realisations.html
-Redirect 301 /projet-maison-a-cers/ /nos-realisations.html
-Redirect 301 /technilum/ /nos-realisations.html
-Redirect 301 /la-maison-dagde/ /nos-realisations.html
-Redirect 301 /perspective-cassina-a-la-villa-guy/ /nos-realisations.html
+# --- Anciens Projets (Portfolio) -> Redirigés vers la page projet dynamique ---
+Redirect 301 /hotel-particulier/ /projet.html?id=hotel-particulier
+Redirect 301 /appartement-lago-villa-guy/ /projet.html?id=appartement-lago-villa-guy
+Redirect 301 /appartement-nimes/ /projet.html?id=appartement-nimes
+Redirect 301 /souki-lodge/ /projet.html?id=souki-lodge
+Redirect 301 /clinique-veterinaire/ /projet.html?id=clinique-veterinaire
+Redirect 301 /cabinet-darchitecte/ /projet.html?id=cabinet-darchitecte
+Redirect 301 /lago-welcome-cap-dagde/ /projet.html?id=lago-cap-dagde
+Redirect 301 /bureau-nemesis/ /projet.html?id=bureaux
+Redirect 301 /projet-photo/ /projet.html?id=projet-photo
+Redirect 301 /hotel-la-prison-a-beziers/ /projet.html?id=hotel-la-prison
+Redirect 301 /maison-cersoise/ /projet.html?id=maison-cersoise
+Redirect 301 /mediatheque-beziers/ /projet.html?id=mediatheque-beziers
+Redirect 301 /projet-maison-a-cers/ /projet.html?id=maison-coloree
+Redirect 301 /technilum/ /projet.html?id=technilum
+Redirect 301 /la-maison-dagde/ /projet.html?id=maison-dagde
+Redirect 301 /perspective-cassina-a-la-villa-guy/ /projet.html?id=cassina-villa-guy
 
 # --- Nettoyage divers ---
 Redirect 301 /braderie/ /
