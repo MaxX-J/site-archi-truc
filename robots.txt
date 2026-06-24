@@ -1,5 +1,5 @@
 # robots.txt — Architruc & Baltaz'art
-# https://www.archi-truc.com
+# https://archi-truc-beziers.com
 
 User-agent: *
 Allow: /
@@ -15,4 +15,4 @@ Disallow: /*.md
 Disallow: /node_modules/
 
 # Sitemap
-Sitemap: https://www.archi-truc.com/sitemap.xml
+Sitemap: https://archi-truc-beziers.com/sitemap.xml

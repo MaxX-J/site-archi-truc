@@ -1,6 +1,46 @@
 RewriteEngine On
 
-# --- Pages Principales ---
+# =====================================================================
+#  CANONICALISATION : forcer HTTPS + version sans www
+#  (le site indexé par Google est https://archi-truc-beziers.com sans www)
+# =====================================================================
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://archi-truc-beziers.com%{REQUEST_URI} [R=301,L]
+
+# =====================================================================
+#  PAGE 404 PERSONNALISÉE
+# =====================================================================
+ErrorDocument 404 /404.html
+
+# =====================================================================
+#  ANCIENS PROJETS (portfolio WordPress) -> page projet dynamique
+#  RewriteRule + QSD : fiable avec une query string (contrairement à Redirect)
+#  gère l'URL avec ou sans slash final
+# =====================================================================
+RewriteRule ^hotel-particulier/?$              /projet.html?id=hotel-particulier [R=301,L,QSD]
+RewriteRule ^appartement-lago-villa-guy/?$     /projet.html?id=appartement-lago-villa-guy [R=301,L,QSD]
+RewriteRule ^appartement-nimes/?$              /projet.html?id=appartement-nimes [R=301,L,QSD]
+RewriteRule ^souki-lodge/?$                    /projet.html?id=souki-lodge [R=301,L,QSD]
+RewriteRule ^lago-welcome-cap-dagde/?$         /projet.html?id=lago-cap-dagde [R=301,L,QSD]
+RewriteRule ^bureau-nemesis/?$                 /projet.html?id=bureaux [R=301,L,QSD]
+RewriteRule ^projet-photo/?$                   /projet.html?id=projet-photo [R=301,L,QSD]
+RewriteRule ^hotel-la-prison-a-beziers/?$      /projet.html?id=hotel-la-prison [R=301,L,QSD]
+RewriteRule ^maison-cersoise/?$                /projet.html?id=maison-cersoise [R=301,L,QSD]
+RewriteRule ^mediatheque-beziers/?$            /projet.html?id=mediatheque-beziers [R=301,L,QSD]
+RewriteRule ^projet-maison-a-cers/?$           /projet.html?id=maison-coloree [R=301,L,QSD]
+RewriteRule ^technilum/?$                      /projet.html?id=technilum [R=301,L,QSD]
+RewriteRule ^la-maison-dagde/?$                /projet.html?id=maison-dagde [R=301,L,QSD]
+RewriteRule ^perspective-cassina-a-la-villa-guy/?$ /projet.html?id=cassina-villa-guy [R=301,L,QSD]
+
+# --- Projets WordPress qui n'existent plus sur le nouveau site ---
+# (aucune fiche équivalente -> on évite un soft 404 en pointant vers la liste)
+RewriteRule ^clinique-veterinaire/?$           /nos-realisations.html [R=301,L]
+RewriteRule ^cabinet-darchitecte/?$            /nos-realisations.html [R=301,L]
+
+# =====================================================================
+#  PAGES PRINCIPALES
+# =====================================================================
 Redirect 301 /nos-realisations/particuliers/ /nos-realisations.html
 Redirect 301 /nos-realisations/professionnels/ /archi-business.html
 Redirect 301 /nos-realisations/ /nos-realisations.html
@@ -13,27 +53,13 @@ Redirect 301 /location/ /location.html
 Redirect 301 /engagements-rse/ /engagements-rse.html
 Redirect 301 /archi-bonne-annee/ /archi-bonne-annee.html
 
-# --- Marques (Tout redirigé vers la nouvelle page globale) ---
-RedirectMatch 301 ^/nos-marques/(.*) /marques.html
+# =====================================================================
+#  MARQUES (toutes les sous-catégories -> page globale)
+# =====================================================================
+RedirectMatch 301 ^/nos-marques(/.*)?$ /marques.html
 Redirect 301 /tables/ /marques.html
 
-# --- Anciens Projets (Portfolio) -> Redirigés vers la page projet dynamique ---
-Redirect 301 /hotel-particulier/ /projet.html?id=hotel-particulier
-Redirect 301 /appartement-lago-villa-guy/ /projet.html?id=appartement-lago-villa-guy
-Redirect 301 /appartement-nimes/ /projet.html?id=appartement-nimes
-Redirect 301 /souki-lodge/ /projet.html?id=souki-lodge
-Redirect 301 /clinique-veterinaire/ /projet.html?id=clinique-veterinaire
-Redirect 301 /cabinet-darchitecte/ /projet.html?id=cabinet-darchitecte
-Redirect 301 /lago-welcome-cap-dagde/ /projet.html?id=lago-cap-dagde
-Redirect 301 /bureau-nemesis/ /projet.html?id=bureaux
-Redirect 301 /projet-photo/ /projet.html?id=projet-photo
-Redirect 301 /hotel-la-prison-a-beziers/ /projet.html?id=hotel-la-prison
-Redirect 301 /maison-cersoise/ /projet.html?id=maison-cersoise
-Redirect 301 /mediatheque-beziers/ /projet.html?id=mediatheque-beziers
-Redirect 301 /projet-maison-a-cers/ /projet.html?id=maison-coloree
-Redirect 301 /technilum/ /projet.html?id=technilum
-Redirect 301 /la-maison-dagde/ /projet.html?id=maison-dagde
-Redirect 301 /perspective-cassina-a-la-villa-guy/ /projet.html?id=cassina-villa-guy
-
-# --- Nettoyage divers ---
+# =====================================================================
+#  NETTOYAGE DIVERS
+# =====================================================================
 Redirect 301 /braderie/ /
