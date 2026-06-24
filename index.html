@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -38,9 +38,8 @@
     <noscript><link rel="stylesheet" href="https://use.typekit.net/cfk3dsk.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;600&display=swap"></noscript>
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -1382,7 +1381,9 @@
                     const data = PROJECTS_DATA[key];
                     return `
                         <a href="projet.html?id=${key}" class="project-item" style="text-decoration: none; color: inherit; display: block;">
-                            <div class="project-img" style="background-image: url('${data.folder}/${data.thumbnail || data.hero}');"></div>
+                            <div class="project-img" style="background-color: #222;">
+                                <img src="${data.folder}/${data.thumbnail || data.hero}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" loading="lazy">
+                            </div>
                             <div class="project-overlay">
                                 <span class="project-cat">${data.category}</span>
                                 <h3>${data.title}</h3>
