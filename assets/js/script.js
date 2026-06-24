@@ -64,6 +64,15 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('appear');
+        if (entry.target.dataset.bg) {
+            entry.target.style.backgroundImage = `url('${entry.target.dataset.bg}')`;
+            delete entry.target.dataset.bg;
+        }
+        const childWithBg = entry.target.querySelector('[data-bg]');
+        if (childWithBg) {
+            childWithBg.style.backgroundImage = `url('${childWithBg.dataset.bg}')`;
+            delete childWithBg.dataset.bg;
+        }
         observer.unobserve(entry.target);
     });
 }, {
