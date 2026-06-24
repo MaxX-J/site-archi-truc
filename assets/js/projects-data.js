@@ -523,3 +523,4 @@ const PROJECTS_DATA = {
         ]
     }
 };
+window.PROJECTS_DATA = PROJECTS_DATA;
