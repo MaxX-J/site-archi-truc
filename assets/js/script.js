@@ -8,8 +8,8 @@ if (loader) {
     } else {
         sessionStorage.setItem('site-visited', '1');
         const dismiss = () => loader.classList.add('hidden');
-        window.addEventListener('load', () => setTimeout(dismiss, 400));
-        setTimeout(dismiss, 1200);
+        window.addEventListener('load', () => setTimeout(dismiss, 50));
+        setTimeout(dismiss, 600);
     }
 }
 
@@ -23,18 +23,23 @@ if (loader) {
 
     let current = 0;
 
-    setTimeout(() => {
-    // Précharger les images suivantes
-    slides.forEach((s, i) => {
-        if (i === 0) return;
-        const img = new Image();
-        img.src = s.style.backgroundImage.slice(5, -2);
-    });
-    }, 3000); // Retarder le préchargement de 3s pour LCP
-
+    
     setInterval(() => {
         slides[current].classList.remove('active');
         current = (current + 1) % slides.length;
+        
+        const nextSlide = slides[current];
+        if (nextSlide.dataset.bg) {
+            nextSlide.style.backgroundImage = `url('${nextSlide.dataset.bg}')`;
+            delete nextSlide.dataset.bg;
+        }
+        
+        const afterNext = slides[(current + 1) % slides.length];
+        if (afterNext && afterNext.dataset.bg) {
+            afterNext.style.backgroundImage = `url('${afterNext.dataset.bg}')`;
+            delete afterNext.dataset.bg;
+        }
+        
         slides[current].classList.add('active');
     }, 6000);
 })();
