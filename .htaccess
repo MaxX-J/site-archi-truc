@@ -1,0 +1,37 @@
+RewriteEngine On
+
+# --- Pages Principales ---
+Redirect 301 /nos-realisations/particuliers/ /nos-realisations.html
+Redirect 301 /nos-realisations/professionnels/ /archi-business.html
+Redirect 301 /nos-realisations/ /nos-realisations.html
+Redirect 301 /archi-nous/ /archi-nous.html
+Redirect 301 /archi-business/ /archi-business.html
+Redirect 301 /nos-magasins/ /showrooms.html
+Redirect 301 /contact/ /contact.html
+Redirect 301 /mentions-legales/ /mentions-legales.html
+Redirect 301 /archi-bonne-annee/ /archi-bonne-annee.html
+
+# --- Marques (Tout redirigé vers la nouvelle page globale) ---
+RedirectMatch 301 ^/nos-marques/(.*) /marques.html
+Redirect 301 /tables/ /marques.html
+
+# --- Anciens Projets (Portfolio) -> redirigés vers nos-realisations.html ---
+Redirect 301 /hotel-particulier/ /nos-realisations.html
+Redirect 301 /appartement-lago-villa-guy/ /nos-realisations.html
+Redirect 301 /appartement-nimes/ /nos-realisations.html
+Redirect 301 /souki-lodge/ /nos-realisations.html
+Redirect 301 /clinique-veterinaire/ /nos-realisations.html
+Redirect 301 /cabinet-darchitecte/ /nos-realisations.html
+Redirect 301 /lago-welcome-cap-dagde/ /nos-realisations.html
+Redirect 301 /bureau-nemesis/ /nos-realisations.html
+Redirect 301 /projet-photo/ /nos-realisations.html
+Redirect 301 /hotel-la-prison-a-beziers/ /nos-realisations.html
+Redirect 301 /maison-cersoise/ /nos-realisations.html
+Redirect 301 /mediatheque-beziers/ /nos-realisations.html
+Redirect 301 /projet-maison-a-cers/ /nos-realisations.html
+Redirect 301 /technilum/ /nos-realisations.html
+Redirect 301 /la-maison-dagde/ /nos-realisations.html
+Redirect 301 /perspective-cassina-a-la-villa-guy/ /nos-realisations.html
+
+# --- Nettoyage divers ---
+Redirect 301 /braderie/ /
