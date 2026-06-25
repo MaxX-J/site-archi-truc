@@ -327,9 +327,9 @@ header.scrolled .mobile-toggle span {
 }
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• 
    HERO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â• â•  */
 .hero {
     height: 100vh;
     min-height: 700px;
@@ -338,6 +338,7 @@ header.scrolled .mobile-toggle span {
     position: relative;
     overflow: hidden;
     color: white;
+    padding-top: 140px; /* Safe space to prevent overlap with fixed header on short screens */
 }
 
 /* Slideshow */
@@ -378,6 +379,7 @@ header.scrolled .mobile-toggle span {
     position: relative;
     overflow: hidden;
     color: white;
+    padding-top: 110px; /* Prevent overlap with fixed header */
 }
 
 .page-hero::before {
@@ -422,8 +424,9 @@ header.scrolled .mobile-toggle span {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 0 10% 120px;
-    max-width: 860px;
+    padding: 0 clamp(5%, 8vw, 10%) clamp(60px, 10vh, 120px);
+    max-width: 900px;
+    width: 100%;
 }
 
 .hero-eyebrow {
@@ -451,7 +454,7 @@ header.scrolled .mobile-toggle span {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 7.5vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.02;
     margin-bottom: 24px;
     font-weight: 900;
