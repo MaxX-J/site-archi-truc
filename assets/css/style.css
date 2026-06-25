@@ -814,7 +814,7 @@ header.scrolled .mobile-toggle span {
 
 .marque-phrase .blob-divider {
     align-items: center;
-    margin-bottom: 28px;
+    margin-bottom: 12px;
 }
 
 .marque-phrase .blob-divider {
@@ -1896,7 +1896,7 @@ img.marquee-item {
 
     /* Hero */
     .hero-content {
-        padding: 60px 20px 80px; /* Reduced bottom padding */
+        padding: 60px 20px 100px; /* Reduced bottom padding */
         max-width: 100%;
         margin-top: 40px; /* Push down away from header logo */
     }
@@ -1908,7 +1908,7 @@ img.marquee-item {
 
     .hero-sub {
         font-size: 0.95rem;
-        margin-bottom: 28px;
+        margin-bottom: 12px;
     }
 
     /* Boutons hero â€” restent en ligne, compacts */
@@ -1926,7 +1926,7 @@ img.marquee-item {
 
     /* Scroll indicator â€” remonter lÃ©gÃ¨rement */
     .scroll-indicator {
-        bottom: 28px;
+        bottom: 12px;
     }
 
     /* Page hero (pages internes) */

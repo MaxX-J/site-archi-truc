@@ -448,7 +448,7 @@
     }
 
     .gallery-slide {
-        flex: 0 0 calc(75% - 16px);
+        flex: 0 0 calc(60% - 16px);
         margin-right: 16px;
     }
 
@@ -472,7 +472,7 @@
 
 @media (max-width: 480px) {
     .gallery-slide {
-        flex: 0 0 calc(85% - 12px);
+        flex: 0 0 calc(70% - 12px);
         margin-right: 12px;
     }
 }
