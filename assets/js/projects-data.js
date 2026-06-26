@@ -511,7 +511,7 @@ const PROJECTS_DATA = {
         "title": "Conexio Telecom",
         "category": "Professionnel",
         "location": "Béziers",
-        "description": "Aménagement sur-mesure des nouveaux espaces professionnels de Conexio Telecom. Un projet global mené en étroite collaboration avec des partenaires locaux de talent : l'architecture est signée Julien Passerieux, l'espace cuisine a été conçu par Yannick Création, l'ensemble des travaux généraux assuré par Viaterra, le tout couronné par l'intervention artistique de Lou Raunier.",
+        "description": "Aménagement d'espaces professionnels pour Conexio Telecom.<br><br><div style='display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.85em; opacity: 0.8; justify-content: center; max-width: 500px; margin: 0 auto;'><span style='flex: 1 1 45%; text-align: left;'><strong>Cuisine :</strong> Yannick Création</span><span style='flex: 1 1 45%; text-align: left;'><strong>Travaux :</strong> Viaterra</span><span style='flex: 1 1 45%; text-align: left;'><strong>Architecte :</strong> Julien Passerieux</span><span style='flex: 1 1 45%; text-align: left;'><strong>Artiste :</strong> Lou Raunier</span></div>",
         "folder": "assets/images/realisations/professionnels/Conexio-telecom",
         "hero": "amenagement-bureaux-conexio-telecom-beziers-7.webp",
         "thumbnail": "amenagement-bureaux-conexio-telecom-beziers-3.webp",
