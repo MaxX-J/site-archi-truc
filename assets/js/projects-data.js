@@ -507,6 +507,31 @@ const PROJECTS_DATA = {
             "amenagement-le-chameau-ivre-beziers-11.webp"
         ]
     },
+    "conexio-telecom": {
+        "title": "Conexio Telecom",
+        "category": "Professionnel",
+        "location": "Béziers",
+        "description": "Aménagement d'espaces professionnels pour Conexio Telecom.",
+        "folder": "assets/images/realisations/professionnels/Conexio-telecom",
+        "hero": "IMG_9518.jpeg",
+        "thumbnail": "IMG_9509.jpeg",
+        "images": [
+            "IMG_9507.jpeg",
+            "IMG_9508.jpeg",
+            "IMG_9509.jpeg",
+            "IMG_9510.jpeg",
+            "IMG_9513.jpeg",
+            "IMG_9516.jpeg",
+            "IMG_9518.jpeg",
+            "IMG_9520.jpeg",
+            "IMG_9521.jpeg",
+            "IMG_9523.jpeg",
+            "IMG_9524.jpeg",
+            "IMG_9527.jpeg",
+            "IMG_9528.jpeg",
+            "IMG_9530.jpeg"
+        ]
+    },
     "polyclinique-saint-privat": {
         "title": "CrÃ¨che - Polyclinique Saint Privat",
         "category": "Professionnel",
