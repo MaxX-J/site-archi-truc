@@ -1,4 +1,4 @@
-const PROJECTS_DATA = {
+﻿const PROJECTS_DATA = {
     "maison-provence": {
         "title": "Maison Provence",
         "category": "Particulier",
@@ -511,7 +511,7 @@ const PROJECTS_DATA = {
         "title": "Conexio Telecom",
         "category": "Professionnel",
         "location": "Béziers",
-        "description": "Aménagement d'espaces professionnels pour Conexio Telecom.<br><br><div style='display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.85em; opacity: 0.8; justify-content: center; max-width: 500px; margin: 0 auto;'><span style='flex: 1 1 45%; text-align: left;'><strong>Cuisine :</strong> Yannick Création</span><span style='flex: 1 1 45%; text-align: left;'><strong>Travaux :</strong> Viaterra</span><span style='flex: 1 1 45%; text-align: left;'><strong>Architecte :</strong> Julien Passerieux</span><span style='flex: 1 1 45%; text-align: left;'><strong>Artiste :</strong> Lou Raunier</span></div>",
+        "description": "Aménagement d'espaces professionnels pour Conexio Telecom.<br><br><div style='font-size: 0.85em; opacity: 0.8; display: flex; flex-direction: column; align-items: center; gap: 8px;'><div style='display: flex; gap: 30px; justify-content: center;'><span style='white-space: nowrap;'><strong>Cuisine :</strong> Yannick Création</span><span style='white-space: nowrap;'><strong>Travaux généraux :</strong> Viaterra</span></div><div style='display: flex; gap: 30px; justify-content: center;'><span style='white-space: nowrap;'><strong>Architecte :</strong> Julien Passerieux</span><span style='white-space: nowrap;'><strong>Artiste :</strong> Lou Raunier</span></div></div>",
         "folder": "assets/images/realisations/professionnels/Conexio-telecom",
         "hero": "amenagement-bureaux-conexio-telecom-beziers-7.webp",
         "thumbnail": "amenagement-bureaux-conexio-telecom-beziers-3.webp",
