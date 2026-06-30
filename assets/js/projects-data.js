@@ -3,7 +3,7 @@ const PROJECTS_DATA = {
         "title": "Maison Provence",
         "category": "Particulier",
         "location": "",
-        "description": "AmÃ©nagement et rÃ©novation de la Maison Provence.",
+        "description": "Aménagement et rénovation de la Maison Provence.",
         "folder": "assets/images/realisations/particuliers/08-maison-provence",
         "hero": "maison-provence-beziers-architecte-interieur-5.webp",
         "thumbnail": "maison-provence-beziers-architecte-interieur-4-thumb.webp",
@@ -18,10 +18,10 @@ const PROJECTS_DATA = {
         ]
     },
     "appartement-st-saens": {
-        "title": "Appartement St SaÃ«ns",
+        "title": "Appartement St Saëns",
         "category": "Particulier",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement de l'Appartement St SaÃ«ns au cÅ“ur de BÃ©ziers.",
+        "location": "Béziers",
+        "description": "Aménagement de l'Appartement St Saëns au cœur de Béziers.",
         "folder": "assets/images/realisations/particuliers/07-appartement-st-saens",
         "hero": "appartement-st-saens-beziers-architecte-interieur-1.webp",
         "thumbnail": "appartement-st-saens-beziers-architecte-interieur-2-thumb.webp",
@@ -38,7 +38,7 @@ const PROJECTS_DATA = {
         "title": "Vrac",
         "category": "Mixte",
         "location": "Divers",
-        "description": "Un petit pÃªle-mÃªle de nos projets, nos inspirations et tout ce qu'on aime.",
+        "description": "Un petit pêle-mêle de nos projets, nos inspirations et tout ce qu'on aime.",
         "folder": "assets/images/realisations/Vrac",
         "hero": "projet-divers-decoration-interieur-beziers-architruc-32.webp",
         "thumbnail": "projet-divers-decoration-interieur-beziers-architruc-53-thumb.webp",
@@ -111,7 +111,7 @@ const PROJECTS_DATA = {
         "title": "La Maison d'Agde",
         "category": "Particulier",
         "location": "Agde",
-        "description": "Une rÃ©novation contemporaine alliant Ã©pure et confort dans le centre historique.",
+        "description": "Une rénovation contemporaine alliant épure et confort dans le centre historique.",
         "folder": "assets/images/realisations/particuliers/01-maison-dagde",
         "hero": "maison-dagde-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "images": [
@@ -126,7 +126,7 @@ const PROJECTS_DATA = {
         "title": "Maison Cersoise",
         "category": "Particulier",
         "location": "Cers",
-        "description": "L'Ã©lÃ©gance du design italien au cÅ“ur d'une villa mÃ©diterranÃ©enne.",
+        "description": "L'élégance du design italien au cœur d'une villa méditerranéenne.",
         "folder": "assets/images/realisations/particuliers/02-maison-cersoise",
         "hero": "maison-cersoise-mobilier-design-luxueux-beziers-architecte-interieur-1.webp",
         "images": [
@@ -137,10 +137,10 @@ const PROJECTS_DATA = {
         "thumbnail": "maison-cersoise-mobilier-design-luxueux-beziers-architecte-interieur-1-thumb.webp"
     },
     "maison-coloree": {
-        "title": "La Maison ColorÃ©e",
+        "title": "La Maison Colorée",
         "category": "Particulier",
-        "location": "BÃ©ziers",
-        "description": "Un jeu audacieux de textures et de couleurs pour un intÃ©rieur vibrant.",
+        "location": "Béziers",
+        "description": "Un jeu audacieux de textures et de couleurs pour un intérieur vibrant.",
         "folder": "assets/images/realisations/particuliers/03-maison-coloree",
         "hero": "maison-coloree-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "thumbnail": "maison-coloree-mobilier-design-luxueux-beziers-architecte-interieur-5-thumb.webp",
@@ -154,10 +154,10 @@ const PROJECTS_DATA = {
         ]
     },
     "appartement-nimes": {
-        "title": "Appartement NÃ®mes",
+        "title": "Appartement Nîmes",
         "category": "Particulier",
-        "location": "NÃ®mes",
-        "description": "Minimalisme et lumiÃ¨re pour cet appartement de ville aux lignes pures.",
+        "location": "Nîmes",
+        "description": "Minimalisme et lumière pour cet appartement de ville aux lignes pures.",
         "folder": "assets/images/realisations/particuliers/04-appartement-nimes",
         "hero": "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "thumbnail": "appartement-nimes-mobilier-design-luxueux-beziers-architecte-interieur-3-thumb.webp",
@@ -174,7 +174,7 @@ const PROJECTS_DATA = {
         "title": "Lago Welcome Cap d'Agde",
         "category": "Particulier",
         "location": "Cap d'Agde",
-        "description": "L'univers suspendu de Lago pour une expÃ©rience de vie unique face Ã  la mer.",
+        "description": "L'univers suspendu de Lago pour une expérience de vie unique face à la mer.",
         "folder": "assets/images/realisations/particuliers/05-lago-cap-dagde",
         "hero": "lago-cap-dagde-mobilier-design-luxueux-beziers-architecte-interieur-3.webp",
         "thumbnail": "lago-cap-dagde-mobilier-design-luxueux-beziers-architecte-interieur-1-thumb.webp",
@@ -188,10 +188,10 @@ const PROJECTS_DATA = {
         ]
     },
     "maison-st-clement": {
-        "title": "Maison St ClÃ©ment",
+        "title": "Maison St Clément",
         "category": "Particulier",
-        "location": "St ClÃ©ment de RiviÃ¨re",
-        "description": "AmÃ©nagement et dÃ©coration d'une maison de caractÃ¨re pour un intÃ©rieur Ã©lÃ©gant et intemporel.",
+        "location": "St Clément de Rivière",
+        "description": "Aménagement et décoration d'une maison de caractère pour un intérieur élégant et intemporel.",
         "folder": "assets/images/realisations/particuliers/06-maison-st-clement",
         "hero": "maison-st-clement-mobilier-design-beziers-1.webp",
         "thumbnail": "maison-st-clement-mobilier-design-beziers-6-thumb.webp",
@@ -212,7 +212,7 @@ const PROJECTS_DATA = {
         "title": "Technilum",
         "category": "Professionnel",
         "location": "Maureilhan",
-        "description": "AmÃ©nagement d'espaces de travail innovants alliant ergonomie et esthÃ©tique industrielle.",
+        "description": "Aménagement d'espaces de travail innovants alliant ergonomie et esthétique industrielle.",
         "folder": "assets/images/realisations/professionnels/01-technilum",
         "hero": "technilum-mobilier-bureau-design-beziers-architecte-interieur-1.webp",
         "website": "https://www.technilum.com/",
@@ -232,9 +232,9 @@ const PROJECTS_DATA = {
         "thumbnail": "technilum-mobilier-bureau-design-beziers-architecte-interieur-1-thumb.webp"
     },
     "cassina-villa-guy": {
-        "title": "Cassina Ã  la Villa Guy",
+        "title": "Cassina à la Villa Guy",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
+        "location": "Béziers",
         "description": "Une rencontre prestigieuse entre le mobilier Cassina et le cadre historique de la Villa Guy.",
         "folder": "assets/images/realisations/professionnels/02-cassina-villa-guy",
         "hero": "cassina-villa-guy-mobilier-bureau-design-beziers-architecte-interieur-3.webp",
@@ -255,10 +255,10 @@ const PROJECTS_DATA = {
         ]
     },
     "mediatheque-beziers": {
-        "title": "MÃ©diathÃ¨que BÃ©ziers",
+        "title": "Médiathèque Béziers",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "Un espace public repensÃ© pour le confort, la lecture et l'Ã©change culturel.",
+        "location": "Béziers",
+        "description": "Un espace public repensé pour le confort, la lecture et l'échange culturel.",
         "folder": "assets/images/realisations/professionnels/03-mediatheque-beziers",
         "hero": "mediatheque-beziers-mobilier-bureau-design-beziers-architecte-interieur-2.webp",
         "thumbnail": "mediatheque-beziers-mobilier-bureau-design-beziers-architecte-interieur-4-thumb.webp",
@@ -273,8 +273,8 @@ const PROJECTS_DATA = {
     "projet-photo": {
         "title": "Projet Photo",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "Mise en scÃ¨ne artistique de mobiliers iconiques dans un cadre architectural singulier.",
+        "location": "Béziers",
+        "description": "Mise en scène artistique de mobiliers iconiques dans un cadre architectural singulier.",
         "folder": "assets/images/realisations/professionnels/04-projet-photo",
         "hero": "projet-photo-mobilier-bureau-design-beziers-architecte-interieur-1.webp",
         "images": [
@@ -289,10 +289,10 @@ const PROJECTS_DATA = {
         "thumbnail": "projet-photo-mobilier-bureau-design-beziers-architecte-interieur-1-thumb.webp"
     },
     "hotel-la-prison": {
-        "title": "HÃ´tel La Prison",
+        "title": "Hôtel La Prison",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "Une mÃ©tamorphose audacieuse oÃ¹ l'histoire rencontre le luxe contemporain.",
+        "location": "Béziers",
+        "description": "Une métamorphose audacieuse où l'histoire rencontre le luxe contemporain.",
         "folder": "assets/images/realisations/professionnels/05-hotel-la-prison",
         "hero": "hotel-la-prison-mobilier-bureau-design-beziers-architecte-interieur-1.webp",
         "thumbnail": "hotel-la-prison-mobilier-bureau-design-beziers-architecte-interieur-6-thumb.webp",
@@ -307,10 +307,10 @@ const PROJECTS_DATA = {
         ]
     },
     "hotel-particulier": {
-        "title": "HÃ´tel Particulier",
+        "title": "Hôtel Particulier",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "Restauration d'un lieu d'exception avec une sÃ©lection de piÃ¨ces de design intemporelles.",
+        "location": "Béziers",
+        "description": "Restauration d'un lieu d'exception avec une sélection de pièces de design intemporelles.",
         "folder": "assets/images/realisations/professionnels/06-hotel-particulier",
         "hero": "hotel-particulier-mobilier-bureau-design-beziers-architecte-interieur-1.webp",
         "website": "https://hotelparticulierbeziers.com",
@@ -327,8 +327,8 @@ const PROJECTS_DATA = {
     "appartement-lago-villa-guy": {
         "title": "Appartement Lago Villa Guy",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "L'Ã©lÃ©gance du mobilier italien dans un Ã©crin biterrois historique.",
+        "location": "Béziers",
+        "description": "L'élégance du mobilier italien dans un écrin biterrois historique.",
         "folder": "assets/images/realisations/professionnels/07-appartement-lago-villa-guy",
         "hero": "appartement-lago-villa-guy-mobilier-bureau-design-beziers-architecte-interieur-1.webp",
         "website": "https://www.lavillaguy.com",
@@ -345,7 +345,7 @@ const PROJECTS_DATA = {
     "souki-lodge": {
         "title": "Souki Lodge",
         "category": "Professionnel",
-        "location": "CabriÃ¨res",
+        "location": "Cabrières",
         "description": "Une immersion sensorielle au design organique, suspendue entre ciel et terre.",
         "folder": "assets/images/realisations/professionnels/08-souki-lodge",
         "hero": "souki-lodge-mobilier-bureau-design-beziers-architecte-interieur-2.webp",
@@ -363,10 +363,10 @@ const PROJECTS_DATA = {
         "thumbnail": "souki-lodge-mobilier-bureau-design-beziers-architecte-interieur-2-thumb.webp"
     },
     "grand-hotel-du-golfe": {
-        "title": "Grand HÃ´tel du Golfe",
+        "title": "Grand Hôtel du Golfe",
         "category": "Professionnel",
-        "location": "ArgelÃ¨s-sur-Mer",
-        "description": "Mobilier contemporain et scÃ©nographie d'exception pour cet Ã©tablissement historique de la CÃ´te Vermeille, oÃ¹ le design dialogue avec la mer.",
+        "location": "Argelès-sur-Mer",
+        "description": "Mobilier contemporain et scénographie d'exception pour cet établissement historique de la Côte Vermeille, où le design dialogue avec la mer.",
         "folder": "assets/images/realisations/professionnels/09-grand-hotel-du-golfe",
         "hero": "grand-hotel-du-golfe-mobilier-design-beziers-4.webp",
         "thumbnail": "grand-hotel-du-golfe-mobilier-design-beziers-2-thumb.webp",
@@ -379,10 +379,10 @@ const PROJECTS_DATA = {
         ]
     },
     "arlett-cafe": {
-        "title": "Arlett CafÃ©",
+        "title": "Arlett Café",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Arlett CafÃ©.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Arlett Café.",
         "folder": "assets/images/realisations/professionnels/10-arlett-cafe",
         "hero": "amenagement-arlett-cafe-beziers-8.webp",
         "thumbnail": "amenagement-arlett-cafe-beziers-8-thumb.webp",
@@ -405,8 +405,8 @@ const PROJECTS_DATA = {
     "bureaux": {
         "title": "Bureaux",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Bureaux.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Bureaux.",
         "folder": "assets/images/realisations/professionnels/11-bureaux",
         "hero": "amenagement-bureaux-professionnels-beziers-2.webp",
         "thumbnail": "amenagement-bureaux-professionnels-beziers-2-thumb.webp",
@@ -430,8 +430,8 @@ const PROJECTS_DATA = {
     "halles": {
         "title": "Les Halles",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Les Halles.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Les Halles.",
         "folder": "assets/images/realisations/professionnels/12-halles",
         "hero": "amenagement-les-halles-beziers-1.webp",
         "thumbnail": "amenagement-les-halles-beziers-1-thumb.webp",
@@ -454,8 +454,8 @@ const PROJECTS_DATA = {
     "imprimerie-combes-hund": {
         "title": "Imprimerie Combes Hund",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Imprimerie Combes Hund.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Imprimerie Combes Hund.",
         "folder": "assets/images/realisations/professionnels/13-imprimerie-combes-hund",
         "hero": "amenagement-imprimerie-combes-hund-beziers-2.webp",
         "thumbnail": "amenagement-imprimerie-combes-hund-beziers-2-thumb.webp",
@@ -469,8 +469,8 @@ const PROJECTS_DATA = {
     "le-bistrot-cersois": {
         "title": "Le Bistrot Cersois",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Le Bistrot Cersois.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Le Bistrot Cersois.",
         "folder": "assets/images/realisations/professionnels/14-le-bistrot-cersois",
         "hero": "amenagement-le-bistrot-cersois-1.webp",
         "thumbnail": "amenagement-le-bistrot-cersois-1-thumb.webp",
@@ -488,8 +488,8 @@ const PROJECTS_DATA = {
     "le-chameau-ivre": {
         "title": "Le Chameau Ivre",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - Le Chameau Ivre.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Le Chameau Ivre.",
         "folder": "assets/images/realisations/professionnels/15-le-chameau-ivre",
         "hero": "amenagement-le-chameau-ivre-beziers-1.webp",
         "thumbnail": "amenagement-le-chameau-ivre-beziers-1-thumb.webp",
@@ -533,10 +533,10 @@ const PROJECTS_DATA = {
         ]
     },
     "polyclinique-saint-privat": {
-        "title": "CrÃ¨che - Polyclinique Saint Privat",
+        "title": "Crèche - Polyclinique Saint Privat",
         "category": "Professionnel",
-        "location": "BÃ©ziers",
-        "description": "AmÃ©nagement professionnel - CrÃ¨che de la Polyclinique Saint Privat.",
+        "location": "Béziers",
+        "description": "Aménagement professionnel - Crèche de la Polyclinique Saint Privat.",
         "folder": "assets/images/realisations/professionnels/16-polyclinique-saint-privat",
         "hero": "amenagement-creche-polyclinique-saint-privat-beziers-1.webp",
         "thumbnail": "amenagement-creche-polyclinique-saint-privat-beziers-2-thumb.webp",
