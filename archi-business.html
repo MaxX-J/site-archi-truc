@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -648,7 +648,7 @@
             --s: 0.92;
         }
 
-        .sc-logo img[src*="Schönbush"] {
+        .sc-logo img[src*="schonbush"] {
             --s: 0.95;
         }
 
@@ -1581,7 +1581,7 @@
 
                     <!-- Photo 3 : Standard Chair Prouvé (portrait) -->
                     <div class="sc-photo sc-photo--c up-md pull-l">
-                        <img src="assets/images/Vitrine/9891272_Referenz - DHBW Villingen Schwenningen 27_v_fullbleed_1440x.jpg"
+                        <img src="assets/images/Vitrine/dhbw-villingen-schwenningen.jpg"
                             alt="Référence DHBW Villingen" loading="lazy">
 
                     </div>
@@ -1644,7 +1644,7 @@
                     <!-- Schönbuch -->
                     <div class="sc-logo dn-xl pull-l">
                         <a href="https://www.schoenbuch.com" target="_blank" rel="noopener" title="Schönbuch">
-                            <img src="assets/images/Logo-marques/Schönbush.png" alt="Schönbuch" loading="lazy">
+                            <img src="assets/images/Logo-marques/schonbush.png" alt="Schönbuch" loading="lazy">
                         </a>
                     </div>
 
@@ -1671,7 +1671,7 @@
 
                     <!-- Photo : On the Rocks Edra (portrait) -->
                     <div class="sc-photo sc-photo--a up-lg">
-                        <img src="assets/images/Vitrine/9725717_Standard Chair, Prouvé Blé Vert_v_fullbleed_1440x.jpg"
+                        <img src="assets/images/Vitrine/standard-chair-prouve.jpg"
                             alt="Standard Chair Prouvé" loading="lazy">
 
                     </div>
@@ -2168,6 +2168,21 @@
                 });
             }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
             newFaders.forEach(el => obs.observe(el));
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.business-hero-bg');
+            if (slides.length > 0) {
+                setTimeout(() => {
+                    slides.forEach(slide => {
+                        if (slide.dataset.bg) {
+                            slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
+                            slide.removeAttribute('data-bg');
+                        }
+                    });
+                }, 1000);
+            }
         });
     </script>
 </body>
