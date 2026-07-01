@@ -1633,10 +1633,10 @@ img.marquee-item {
 /* ── Project Details Grid (Responsive 2 cols) ── */
 .project-details-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 15px;
-    width: 100%;
-    max-width: 650px;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 10px 40px;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
     text-align: left;
     opacity: 0.9;
@@ -1646,7 +1646,7 @@ img.marquee-item {
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Si l'écran est ridiculement petit, ça coupe avec '...' au lieu de déborder */
+    text-overflow: ellipsis;
 }
 .project-details-grid strong {
     color: var(--orange);
@@ -1654,8 +1654,8 @@ img.marquee-item {
 }
 @media (max-width: 768px) {
     .project-details-grid {
-        gap: 8px;
-        font-size: clamp(8px, 2.8vw, 12px);
+        gap: 8px 15px;
+        font-size: clamp(9px, 2.8vw, 13px);
     }
 }
 
