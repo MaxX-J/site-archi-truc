@@ -3391,7 +3391,9 @@ img.marquee-item {
         overflow-x: auto !important;
         overflow-y: hidden !important;
         -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        scroll-snap-type: x proximity;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
         gap: 16px;
         padding-bottom: 24px;
         margin-right: -15px;
@@ -3438,7 +3440,9 @@ img.marquee-item {
         overflow-x: auto !important;
         overflow-y: hidden !important;
         -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        scroll-snap-type: x proximity;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
         gap: 20px !important;
         width: auto !important;
         padding: 0 20px !important;
