@@ -1630,6 +1630,35 @@ img.marquee-item {
     }
 }
 
+/* ── Project Details Grid (Responsive 2 cols) ── */
+.project-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    opacity: 0.9;
+    font-size: 14px;
+}
+.project-details-grid span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Si l'écran est ridiculement petit, ça coupe avec '...' au lieu de déborder */
+}
+.project-details-grid strong {
+    color: var(--orange);
+    font-weight: 700;
+}
+@media (max-width: 768px) {
+    .project-details-grid {
+        gap: 8px;
+        font-size: clamp(8px, 2.8vw, 12px);
+    }
+}
+
 /* ── Plan 2D Split Layout (Archi Business) ── */
 .plan-split-layout {
     display: grid;
