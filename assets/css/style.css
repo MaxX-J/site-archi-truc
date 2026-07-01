@@ -1661,7 +1661,7 @@ img.marquee-item {
 /* ── Plan 2D Split Layout (Archi Business) ── */
 .plan-split-layout {
     display: grid;
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 6fr 4fr;
     gap: 60px;
     align-items: center;
     max-width: 1200px;
