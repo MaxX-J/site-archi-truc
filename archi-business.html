@@ -1070,7 +1070,9 @@
                 margin-top: 90px;
             }
 
-            .bg-watermark { display: none; }
+            .bg-watermark {
+                display: none;
+            }
 
             .dn-xl {
                 margin-top: 130px;
@@ -1329,14 +1331,13 @@
                 <div class="plan-split-layout fade-up">
                     <div class="plan-split-image">
                         <img src="assets/images/conception/Plan-2d-burreaux.png" alt="Plan 2D d'aménagement de bureaux"
-                            loading="lazy">
+                            loading="lazy" class="zoomable-plan" style="cursor: pointer;">
                     </div>
                     <div class="plan-split-text">
                         <span class="subtitle">Organisation spatiale</span>
                         <h2>Plans d'aménagement</h2>
-                        <p style="margin-top: 20px; color: var(--text-light); line-height: 1.6;">Optimisation des flux
-                            et ergonomie de vos espaces professionnels. Nous repensons vos espaces pour allier confort
-                            de travail, circulation fluide et esthétique contemporaine.</p>
+                        <p style="margin-top: 20px; color: var(--text-light); line-height: 1.6;">Nous créons vos espaces
+                            de travail pour allier ergonomie, confort et environnement contemporain.</p>
                     </div>
                 </div>
             </div>
@@ -1581,8 +1582,8 @@
 
                     <!-- Photo 3 : Standard Chair Prouvé (portrait) -->
                     <div class="sc-photo sc-photo--c up-md pull-l">
-                        <img src="assets/images/Vitrine/dhbw-villingen-schwenningen.jpg"
-                            alt="Référence DHBW Villingen" loading="lazy">
+                        <img src="assets/images/Vitrine/dhbw-villingen-schwenningen.jpg" alt="Référence DHBW Villingen"
+                            loading="lazy">
 
                     </div>
 
@@ -1671,8 +1672,8 @@
 
                     <!-- Photo : On the Rocks Edra (portrait) -->
                     <div class="sc-photo sc-photo--a up-lg">
-                        <img src="assets/images/Vitrine/standard-chair-prouve.jpg"
-                            alt="Standard Chair Prouvé" loading="lazy">
+                        <img src="assets/images/Vitrine/standard-chair-prouve.jpg" alt="Standard Chair Prouvé"
+                            loading="lazy">
 
                     </div>
 
@@ -2182,6 +2183,44 @@
                         }
                     });
                 }, 1000);
+            }
+        });
+    </script>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img src="" alt="Image agrandie" id="lightbox-img" loading="lazy">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const planImg = document.querySelector('.zoomable-plan');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('lightbox-close');
+
+            if (planImg && lightbox && lightboxImg && closeBtn) {
+                planImg.addEventListener('click', () => {
+                    lightboxImg.src = planImg.src;
+                    lightbox.classList.add('active');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    lightbox.classList.remove('active');
+                });
+
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.classList.remove('active');
+                    }
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                        lightbox.classList.remove('active');
+                    }
+                });
             }
         });
     </script>
