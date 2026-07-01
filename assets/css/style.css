@@ -1640,7 +1640,7 @@ img.marquee-item {
     margin: 0 auto;
     text-align: left;
     opacity: 0.9;
-    font-size: 14px;
+    font-size: clamp(9px, 1vw + 0.4rem, 16px); /* Taille parfaitement fluide selon les pixels de l'écran */
 }
 .project-details-grid span {
     display: block;
@@ -1655,7 +1655,6 @@ img.marquee-item {
 @media (max-width: 768px) {
     .project-details-grid {
         gap: 8px 15px;
-        font-size: clamp(9px, 2.8vw, 13px);
     }
 }
 
